@@ -1,7 +1,8 @@
 #include <Entities/Player/Player.hpp>
 #include "gtest/gtest.h"
 
-TEST(PlayerTestSuite, TestDefaultConstructor) {
+TEST(PlayerTestSuite, TestDefaultConstructor)
+{
 	Player player;
 
 	EXPECT_EQ(player.get_health(), 100);
@@ -12,7 +13,8 @@ TEST(PlayerTestSuite, TestDefaultConstructor) {
 	EXPECT_EQ(player.get_position(), Position(0, 0));
 }
 
-TEST(PlayerTestSuite, TestBasicConstructor) {
+TEST(PlayerTestSuite, TestBasicConstructor)
+{
 	Player player(Position(1, 1), 100, 15);
 
 	EXPECT_EQ(player.get_health(), 100);
@@ -23,7 +25,8 @@ TEST(PlayerTestSuite, TestBasicConstructor) {
 	EXPECT_EQ(player.get_position(), Position(1, 1));
 }
 
-TEST(PlayerTestSuite, TestCopyConstructor) {
+TEST(PlayerTestSuite, TestCopyConstructor)
+{
 	Player player(Position(10, 5), 10, 1, 1, 2, 100);
 	Player player_copy(player);
 
@@ -35,14 +38,16 @@ TEST(PlayerTestSuite, TestCopyConstructor) {
 	EXPECT_EQ(player.get_position(), player_copy.get_position());
 }
 
-TEST(PlayerTestSuite, TestMoveConstructor) {
+TEST(PlayerTestSuite, TestMoveConstructor)
+{
 	Player player(Player(Position(10, 10), 50));
 
 	EXPECT_EQ(player.get_health(), 50);
 	EXPECT_EQ(player.get_position(), Position(10, 10));
 }
 
-TEST(PlayerTestSuite, TestSetters) {
+TEST(PlayerTestSuite, TestSetters)
+{
 	Player player;
 
 	EXPECT_EQ(player.get_position(), Position(0, 0));

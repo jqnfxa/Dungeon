@@ -20,11 +20,11 @@ Map::~Map()
 Map::Map() : Map(10, 10)
 {
 }
-Map::Map(const Map &other) : map_(nullptr)
+Map::Map(const Map &other) : Map()
 {
 	*this = other;
 }
-Map::Map(Map &&other) noexcept
+Map::Map(Map &&other) noexcept: Map()
 {
 	*this = std::move(other);
 }
@@ -39,9 +39,9 @@ Map &Map::operator=(const Map &other)
 		start_ = other.start_;
 		finish_ = other.finish_;
 
-		for (uint32_t i = 0U; i < dimensions_.get_x(); ++i)
+		for (int32_t i = 0; i < dimensions_.get_x(); ++i)
 		{
-			for (uint32_t j = 0U; j < dimensions_.get_y(); ++j)
+			for (int32_t j = 0; j < dimensions_.get_y(); ++j)
 			{
 				this->map_[i][j] = other.map_[i][j];
 			}
@@ -53,6 +53,7 @@ Map &Map::operator=(Map &&other) noexcept
 {
 	if (&other != this)
 	{
+		clear_map();
 		dimensions_ = std::move(other.dimensions_);
 		start_ = std::move(other.start_);
 		finish_ = std::move(other.finish_);
@@ -70,11 +71,16 @@ void Map::clear_map()
 		return;
 	}
 
-	for (uint32_t i = 0U; i < dimensions_.get_x(); ++i)
+	for (int32_t i = 0; i < dimensions_.get_x(); ++i)
 	{
+		for (int32_t j = 0; j < dimensions_.get_y(); ++j)
+		{
+			map_[i][j].remove_event();
+		}
 		delete[] map_[i];
 	}
 	delete[] map_;
+	map_ = nullptr;
 }
 Cell **Map::allocate_map(const Dimension &dimensions)
 {
@@ -86,7 +92,7 @@ Cell **Map::allocate_map(const Dimension &dimensions)
 	}
 	return map;
 }
-const Cell &Map::get_cell(const Position &point) const
+Cell &Map::get_cell(const Position &point) const
 {
 	if (!is_on_map(point))
 	{

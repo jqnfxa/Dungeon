@@ -1,6 +1,6 @@
 #include "PlayerHandler.hpp"
 
-PlayerHandler::PlayerHandler(Player *player) : player_(player)
+PlayerHandler::PlayerHandler(Player *player) : player_(player), map_(nullptr)
 {
 	if (player_ == nullptr)
 	{
@@ -43,6 +43,10 @@ void PlayerHandler::set_health(const int32_t &new_value)
 {
 	player_->set_health(new_value);
 }
+void PlayerHandler::set_armor(const int32_t &new_value)
+{
+	player_->set_armor(new_value);
+}
 void PlayerHandler::set_attack(const int32_t &new_value)
 {
 	player_->set_attack(new_value);
@@ -64,12 +68,18 @@ void PlayerHandler::move_by_direction(const DIRECTION &direction, const int32_t 
 		if (map_->is_on_map(new_position) && map_->get_cell(new_position).is_movable())
 		{
 			set_position(new_position);
+
+			auto active_event = map_->get_cell(new_position).get_active_event();
+			if (active_event != nullptr)
+			{
+				active_event->interaction(this);
+			}
 		}
 	}
 
 	// TODO notify subscribers about player move
 }
-void PlayerHandler::set_map(Map *map)
+void PlayerHandler::reset_map(Map *map)
 {
 	map_ = map;
 }

@@ -1,15 +1,22 @@
 #include <World/Cell.hpp>
 #include "gtest/gtest.h"
+#include "Event/Spikes.hpp"
+#include "Event/RandomMine.hpp"
 
-TEST(CellTestSuite, TestDefaultConstructor) {
+TEST(CellTestSuite, TestDefaultConstructor)
+{
 	Cell cell;
 
 	EXPECT_EQ(cell.is_movable(), true);
 }
 
-TEST(CellTestSuite, TestTypeConstructor) {
+TEST(CellTestSuite, TestTypeConstructor)
+{
 	{
 		Cell cell(Cell::Type::wall);
+		cell.add_event(new Spikes);
+		cell.remove_event();
+		cell.add_event(new RandomMine);
 
 		EXPECT_EQ(cell.is_movable(), false);
 		EXPECT_EQ(cell.is_entrance(), false);
@@ -23,9 +30,11 @@ TEST(CellTestSuite, TestTypeConstructor) {
 	}
 }
 
-TEST(CellTestSuite, TestMoveConstructor) {
+TEST(CellTestSuite, TestMoveConstructor)
+{
 
 	Cell cell(Cell::Type::wall);
+	cell.add_event(new Spikes);
 	Cell other = std::move(cell);
 
 	EXPECT_EQ(other.is_movable(), false);

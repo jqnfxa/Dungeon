@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Event/Interface/EventInterface.hpp"
+
 class Cell {
  public:
   enum Type {
@@ -21,10 +23,10 @@ class Cell {
   [[nodiscard]] bool is_exit() const;
   [[nodiscard]] bool is_movable() const;
 
-  // TODO
-  // Event *get_active_event();
-  // void add_event(Event *event);
-  // void remove_event();
+  [[nodiscard]] const EventInterface *get_active_event() const;
+  void add_event(EventInterface *event);
+  void remove_event();
  private:
   Type type_;
+  EventInterface *event_;
 };

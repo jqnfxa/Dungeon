@@ -29,6 +29,7 @@ class Player : public EntityInterface {
 
   void set_position(const Position &new_value) override;
   void set_health(const int32_t &new_value) override;
+  void set_armor(const int32_t &new_value) override;
   void set_attack(const int32_t &new_value) override;
   void set_defense(const int32_t &new_value) override;
   void set_points(const int32_t &new_value);

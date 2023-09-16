@@ -1,17 +1,22 @@
 #include <Handlers/PlayerHandler/PlayerHandler.hpp>
 #include "gtest/gtest.h"
 
-TEST(PlayerHandlerTestSuite, TestInvalidConstructor) {
-	try {
+TEST(PlayerHandlerTestSuite, TestInvalidConstructor)
+{
+	try
+	{
 		PlayerHandler handler(nullptr);
 
 		// should not be here any way
 		FAIL();
 	}
-	catch (const std::invalid_argument &ex) {}
+	catch (const std::invalid_argument &ex)
+	{
+	}
 }
 
-TEST(PlayerHandlerTestSuite, TestConstructor) {
+TEST(PlayerHandlerTestSuite, TestConstructor)
+{
 	Player *player = new Player;
 	PlayerHandler handler(player);
 
@@ -22,11 +27,12 @@ TEST(PlayerHandlerTestSuite, TestConstructor) {
 	EXPECT_EQ(player->get_points(), handler.get_points());
 }
 
-TEST(PlayerHandlerTestSuite, TestPlayerMove) {
+TEST(PlayerHandlerTestSuite, TestPlayerMove)
+{
 	Player *player = new Player;
 	Map *map = new Map;
 	PlayerHandler handler(player);
-	handler.set_map(map);
+	handler.reset_map(map);
 
 	map->build_wall({0, 1});
 	handler.move_by_direction(right, 1);

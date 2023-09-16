@@ -2,16 +2,18 @@
 #include "../../Entities/Player/Player.hpp"
 #include "../../Movement/Direction.hpp"
 #include "../../World/Map.hpp"
+#include "../Interface/HandlerInterface.hpp"
 
-class PlayerHandler {
+// TODO rework relation with map (we should use its handler)
+class PlayerHandler : public HandlerInterface {
  private:
   Player *player_;
   Map *map_;
  public:
-  ~PlayerHandler();
+  ~PlayerHandler() override;
   PlayerHandler() = delete;
   explicit PlayerHandler(Player *player);
-  void set_map(Map *map);
+  void reset_map(Map *map);
   Map *release_map();
 
   [[nodiscard]] Position get_position() const;
@@ -24,6 +26,7 @@ class PlayerHandler {
   void move_by_direction(const DIRECTION &direction, const int32_t &multiplier);
   void set_position(const Position &new_value);
   void set_health(const int32_t &new_value);
+  void set_armor(const int32_t &new_value);
   void set_attack(const int32_t &new_value);
   void set_defense(const int32_t &new_value);
   void set_points(const int32_t &new_value);

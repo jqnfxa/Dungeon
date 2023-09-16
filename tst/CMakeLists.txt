@@ -8,7 +8,11 @@ add_executable(${BINARY} ${TEST_SOURCES}
         PlayerTest.cpp
         CellTest.cpp
         MapTest.cpp
-        PlayerHandlerTest.cpp)
+        PlayerHandlerTest.cpp
+        SpikesTest.cpp
+        PotionTest.cpp
+        RandomMineTest.cpp
+        GenerateLevel1Test.cpp)
 
 add_test(NAME ${BINARY} COMMAND ${BINARY})
 

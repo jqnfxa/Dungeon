@@ -77,6 +77,11 @@ void Player::set_health(const int32_t &new_value)
 	health_ = new_value;
 	adjust(health_, 100);
 }
+void Player::set_armor(const int32_t &new_value)
+{
+	armor_ = new_value;
+	adjust(armor_, 100);
+}
 void Player::set_attack(const int32_t &new_value)
 {
 	attack_ = new_value;

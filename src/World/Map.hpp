@@ -17,7 +17,7 @@ class Map {
  public:
   Map();
   Map(int32_t dim_x, int32_t dim_y);
-  Map(const Dimension &dimensions);
+  explicit Map(const Dimension &dimensions);
 
   Map(const Map &other);
   Map(Map &&other) noexcept;
@@ -35,7 +35,7 @@ class Map {
 
   [[nodiscard]] Position get_start_point() const;
   [[nodiscard]] Position get_finish_point() const;
-  [[nodiscard]] const Cell &get_cell(const Position &point) const;
+  [[nodiscard]] Cell &get_cell(const Position &point) const;
   [[nodiscard]] Dimension get_dimensions() const;
   [[nodiscard]] bool is_on_map(const Position &point) const;
   ~Map();
