@@ -323,6 +323,34 @@ build src/install/strip: phony src/CMakeFiles/install/strip.util
 
 build cmake_object_order_depends_target_DungeonGame_tst: phony || cmake_object_order_depends_target_DungeonGame_lib cmake_object_order_depends_target_gtest
 
+build tst/CMakeFiles/DungeonGame_tst.dir/CellTest.cpp.o: CXX_COMPILER__DungeonGame_tst_unscanned_Debug /home/shard/CLionProjects/DungeonGame/tst/CellTest.cpp || cmake_object_order_depends_target_DungeonGame_tst
+  DEP_FILE = tst/CMakeFiles/DungeonGame_tst.dir/CellTest.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src -isystem /home/shard/CLionProjects/DungeonGame/lib/googletest/googletest/include -isystem /home/shard/CLionProjects/DungeonGame/lib/googletest/googletest
+  OBJECT_DIR = tst/CMakeFiles/DungeonGame_tst.dir
+  OBJECT_FILE_DIR = tst/CMakeFiles/DungeonGame_tst.dir
+
+build tst/CMakeFiles/DungeonGame_tst.dir/MapTest.cpp.o: CXX_COMPILER__DungeonGame_tst_unscanned_Debug /home/shard/CLionProjects/DungeonGame/tst/MapTest.cpp || cmake_object_order_depends_target_DungeonGame_tst
+  DEP_FILE = tst/CMakeFiles/DungeonGame_tst.dir/MapTest.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src -isystem /home/shard/CLionProjects/DungeonGame/lib/googletest/googletest/include -isystem /home/shard/CLionProjects/DungeonGame/lib/googletest/googletest
+  OBJECT_DIR = tst/CMakeFiles/DungeonGame_tst.dir
+  OBJECT_FILE_DIR = tst/CMakeFiles/DungeonGame_tst.dir
+
+build tst/CMakeFiles/DungeonGame_tst.dir/PlayerHandlerTest.cpp.o: CXX_COMPILER__DungeonGame_tst_unscanned_Debug /home/shard/CLionProjects/DungeonGame/tst/PlayerHandlerTest.cpp || cmake_object_order_depends_target_DungeonGame_tst
+  DEP_FILE = tst/CMakeFiles/DungeonGame_tst.dir/PlayerHandlerTest.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src -isystem /home/shard/CLionProjects/DungeonGame/lib/googletest/googletest/include -isystem /home/shard/CLionProjects/DungeonGame/lib/googletest/googletest
+  OBJECT_DIR = tst/CMakeFiles/DungeonGame_tst.dir
+  OBJECT_FILE_DIR = tst/CMakeFiles/DungeonGame_tst.dir
+
+build tst/CMakeFiles/DungeonGame_tst.dir/PlayerTest.cpp.o: CXX_COMPILER__DungeonGame_tst_unscanned_Debug /home/shard/CLionProjects/DungeonGame/tst/PlayerTest.cpp || cmake_object_order_depends_target_DungeonGame_tst
+  DEP_FILE = tst/CMakeFiles/DungeonGame_tst.dir/PlayerTest.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src -isystem /home/shard/CLionProjects/DungeonGame/lib/googletest/googletest/include -isystem /home/shard/CLionProjects/DungeonGame/lib/googletest/googletest
+  OBJECT_DIR = tst/CMakeFiles/DungeonGame_tst.dir
+  OBJECT_FILE_DIR = tst/CMakeFiles/DungeonGame_tst.dir
+
 build tst/CMakeFiles/DungeonGame_tst.dir/main.cpp.o: CXX_COMPILER__DungeonGame_tst_unscanned_Debug /home/shard/CLionProjects/DungeonGame/tst/main.cpp || cmake_object_order_depends_target_DungeonGame_tst
   DEP_FILE = tst/CMakeFiles/DungeonGame_tst.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -338,7 +366,7 @@ build tst/CMakeFiles/DungeonGame_tst.dir/main.cpp.o: CXX_COMPILER__DungeonGame_t
 #############################################
 # Link the executable tst/DungeonGame_tst
 
-build tst/DungeonGame_tst: CXX_EXECUTABLE_LINKER__DungeonGame_tst_Debug tst/CMakeFiles/DungeonGame_tst.dir/main.cpp.o | src/libDungeonGame_lib.a lib/libgtest.a || lib/libgtest.a src/libDungeonGame_lib.a
+build tst/DungeonGame_tst: CXX_EXECUTABLE_LINKER__DungeonGame_tst_Debug tst/CMakeFiles/DungeonGame_tst.dir/CellTest.cpp.o tst/CMakeFiles/DungeonGame_tst.dir/MapTest.cpp.o tst/CMakeFiles/DungeonGame_tst.dir/PlayerHandlerTest.cpp.o tst/CMakeFiles/DungeonGame_tst.dir/PlayerTest.cpp.o tst/CMakeFiles/DungeonGame_tst.dir/main.cpp.o | src/libDungeonGame_lib.a lib/libgtest.a || lib/libgtest.a src/libDungeonGame_lib.a
   FLAGS = -g
   LINK_LIBRARIES = src/libDungeonGame_lib.a  lib/libgtest.a
   OBJECT_DIR = tst/CMakeFiles/DungeonGame_tst.dir

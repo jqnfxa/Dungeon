@@ -13,6 +13,7 @@ class Cell {
   Cell(Cell &&other) noexcept;
   Cell &operator=(const Cell &other) noexcept;
   Cell &operator=(Cell &&other) noexcept;
+  bool operator==(const Cell &other) const;
 
   void set_type(const Type &new_type);
 

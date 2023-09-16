@@ -20,7 +20,7 @@ Map::~Map()
 Map::Map() : Map(10, 10)
 {
 }
-Map::Map(const Map &other)
+Map::Map(const Map &other) : map_(nullptr)
 {
 	*this = other;
 }
@@ -33,9 +33,11 @@ Map &Map::operator=(const Map &other)
 	if (&other != this)
 	{
 		clear_map();
-		allocate_map(other.dimensions_);
+		map_ = allocate_map(other.dimensions_);
 
 		dimensions_ = other.dimensions_;
+		start_ = other.start_;
+		finish_ = other.finish_;
 
 		for (uint32_t i = 0U; i < dimensions_.get_x(); ++i)
 		{
@@ -52,6 +54,8 @@ Map &Map::operator=(Map &&other) noexcept
 	if (&other != this)
 	{
 		dimensions_ = std::move(other.dimensions_);
+		start_ = std::move(other.start_);
+		finish_ = std::move(other.finish_);
 		map_ = std::move(other.map_);
 
 		// manually zeroing ptr because we moved it

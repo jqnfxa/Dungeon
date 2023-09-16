@@ -51,3 +51,8 @@ Cell::~Cell()
 {
 	// release event resources
 }
+bool Cell::operator==(const Cell &other) const
+{
+	// TODO check for events
+	return type_ == other.type_;
+}

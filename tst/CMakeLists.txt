@@ -4,7 +4,11 @@ file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false *.hpp *.cpp)
 
 set(SOURCES ${TEST_SOURCES})
 
-add_executable(${BINARY} ${TEST_SOURCES})
+add_executable(${BINARY} ${TEST_SOURCES}
+        PlayerTest.cpp
+        CellTest.cpp
+        MapTest.cpp
+        PlayerHandlerTest.cpp)
 
 add_test(NAME ${BINARY} COMMAND ${BINARY})
 
