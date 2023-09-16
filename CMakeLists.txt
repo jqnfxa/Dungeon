@@ -3,18 +3,8 @@ project(DungeonGame)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(DungeonGame main.cpp
-        Entities/Player/Player.cpp
-        Entities/Player/Player.hpp
-        Entities/Interface/EntityInterface.hpp
-        Math/Vector2.hpp
-        Entities/Player/Player.cpp
-        Handlers/PlayerHandler/PlayerHandler.cpp
-        Handlers/PlayerHandler/PlayerHandler.hpp
-        Movement/Direction.hpp
-        Movement/Direction.cpp
-        World/Cell.cpp
-        World/Cell.hpp
-        World/Map.cpp
-        World/Map.hpp
-        Movement/Aliases.hpp)
+include_directories(src)
+
+add_subdirectory(src)
+add_subdirectory(tst)
+add_subdirectory(lib/googletest)
