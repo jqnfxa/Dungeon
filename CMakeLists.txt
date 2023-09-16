@@ -12,4 +12,9 @@ add_executable(DungeonGame main.cpp
         Handlers/PlayerHandler/PlayerHandler.cpp
         Handlers/PlayerHandler/PlayerHandler.hpp
         Movement/Direction.hpp
-        Movement/Direction.cpp)
+        Movement/Direction.cpp
+        World/Cell.cpp
+        World/Cell.hpp
+        World/Map.cpp
+        World/Map.hpp
+        Movement/Aliases.hpp)

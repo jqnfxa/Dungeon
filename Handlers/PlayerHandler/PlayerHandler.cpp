@@ -59,6 +59,23 @@ void PlayerHandler::move_by_direction(const DIRECTION &direction, const int32_t 
 {
 	for (int32_t i = 0; i < multiplier; ++i)
 	{
-		set_position(Direction::getInstance().calculate_position(player_->get_position(), direction));
+		auto new_position = Direction::getInstance().calculate_position(player_->get_position(), direction);
+
+		if (map_->is_on_map(new_position) && map_->get_cell(new_position).is_movable())
+		{
+			set_position(new_position);
+		}
 	}
+
+	// TODO notify subscribers about player move
+}
+void PlayerHandler::set_map(Map *map)
+{
+	map_ = map;
+}
+Map *PlayerHandler::release_map()
+{
+	auto *ret = map_;
+	map_ = nullptr;
+	return ret;
 }

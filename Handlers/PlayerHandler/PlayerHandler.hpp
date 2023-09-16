@@ -1,14 +1,18 @@
 #pragma once
 #include "../../Entities/Player/Player.hpp"
 #include "../../Movement/Direction.hpp"
+#include "../../World/Map.hpp"
 
 class PlayerHandler {
  private:
   Player *player_;
+  Map *map_;
  public:
   ~PlayerHandler();
   PlayerHandler() = delete;
   explicit PlayerHandler(Player *player);
+  void set_map(Map *map);
+  Map *release_map();
 
   [[nodiscard]] Position get_position() const;
   [[nodiscard]] int32_t get_health() const;

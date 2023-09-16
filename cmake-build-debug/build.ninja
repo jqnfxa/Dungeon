@@ -73,6 +73,18 @@ build CMakeFiles/DungeonGame.dir/Movement/Direction.cpp.o: CXX_COMPILER__Dungeon
   OBJECT_DIR = CMakeFiles/DungeonGame.dir
   OBJECT_FILE_DIR = CMakeFiles/DungeonGame.dir/Movement
 
+build CMakeFiles/DungeonGame.dir/World/Cell.cpp.o: CXX_COMPILER__DungeonGame_unscanned_Debug /home/shard/CLionProjects/DungeonGame/World/Cell.cpp || cmake_object_order_depends_target_DungeonGame
+  DEP_FILE = CMakeFiles/DungeonGame.dir/World/Cell.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/DungeonGame.dir
+  OBJECT_FILE_DIR = CMakeFiles/DungeonGame.dir/World
+
+build CMakeFiles/DungeonGame.dir/World/Map.cpp.o: CXX_COMPILER__DungeonGame_unscanned_Debug /home/shard/CLionProjects/DungeonGame/World/Map.cpp || cmake_object_order_depends_target_DungeonGame
+  DEP_FILE = CMakeFiles/DungeonGame.dir/World/Map.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/DungeonGame.dir
+  OBJECT_FILE_DIR = CMakeFiles/DungeonGame.dir/World
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DungeonGame
@@ -81,7 +93,7 @@ build CMakeFiles/DungeonGame.dir/Movement/Direction.cpp.o: CXX_COMPILER__Dungeon
 #############################################
 # Link the executable DungeonGame
 
-build DungeonGame: CXX_EXECUTABLE_LINKER__DungeonGame_Debug CMakeFiles/DungeonGame.dir/main.cpp.o CMakeFiles/DungeonGame.dir/Entities/Player/Player.cpp.o CMakeFiles/DungeonGame.dir/Handlers/PlayerHandler/PlayerHandler.cpp.o CMakeFiles/DungeonGame.dir/Movement/Direction.cpp.o
+build DungeonGame: CXX_EXECUTABLE_LINKER__DungeonGame_Debug CMakeFiles/DungeonGame.dir/main.cpp.o CMakeFiles/DungeonGame.dir/Entities/Player/Player.cpp.o CMakeFiles/DungeonGame.dir/Handlers/PlayerHandler/PlayerHandler.cpp.o CMakeFiles/DungeonGame.dir/Movement/Direction.cpp.o CMakeFiles/DungeonGame.dir/World/Cell.cpp.o CMakeFiles/DungeonGame.dir/World/Map.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/DungeonGame.dir
   POST_BUILD = :

@@ -1,7 +1,6 @@
 #pragma once
 #include "../../Math/Vector2.hpp"
-
-using Position = Vector2<int32_t>;
+#include "../../Movement/Aliases.hpp"
 
 class EntityInterface {
  public:

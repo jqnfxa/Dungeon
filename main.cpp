@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Entities/Player/Player.hpp"
 
 int main()
 {
