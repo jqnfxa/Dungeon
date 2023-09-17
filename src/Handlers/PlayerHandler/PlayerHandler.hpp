@@ -3,18 +3,16 @@
 #include "../../Movement/Direction.hpp"
 #include "../../World/Map.hpp"
 #include "../Interface/HandlerInterface.hpp"
+#include "Handlers/MapHandler/MapHandler.hpp"
 
-// TODO rework relation with map (we should use its handler)
 class PlayerHandler : public HandlerInterface {
  private:
   Player *player_;
-  Map *map_;
+  MapHandler &map_handler_;
  public:
   ~PlayerHandler() override;
   PlayerHandler() = delete;
-  explicit PlayerHandler(Player *player);
-  void reset_map(Map *map);
-  Map *release_map();
+  explicit PlayerHandler(Player *player, MapHandler &handler);
 
   [[nodiscard]] Position get_position() const;
   [[nodiscard]] int32_t get_health() const;

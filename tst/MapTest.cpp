@@ -88,9 +88,10 @@ TEST(MapTestSuite, TestIsOnMap)
 TEST(MapTestSuite, TestMapCellEvents)
 {
 	auto *player = new Player(Position(4, 4));
-	PlayerHandler handler(player);
 	Map map(11, 11);
-	handler.reset_map(&map);
+	MapHandler map_handler(&map);
+	PlayerHandler handler(player, map_handler);
+
 	Cell cell;
 	cell.add_event(new Spikes);
 	map.set_cell({5, 5}, cell);

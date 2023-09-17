@@ -10,7 +10,7 @@ class MapHandler : public HandlerInterface {
   explicit MapHandler(Map *map);
 
   [[nodiscard]] bool can_move(const Position &point) const;
-  [[nodiscard]] const Cell &get_cell(const Position &point) const;
+  [[nodiscard]] Cell &get_cell(const Position &point) const;
   void set_cell(const Position &point, const Cell &new_cell) const;
   void set_cell(const Position &point, Cell &&new_cell) const;
 };

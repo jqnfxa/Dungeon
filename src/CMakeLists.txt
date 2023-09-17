@@ -17,5 +17,12 @@ add_library(${BINARY}_lib STATIC ${SOURCES}
         Event/Potion.hpp
         Event/RandomMine.cpp
         Event/RandomMine.hpp
-        MapGenerator/Level_1/GenerateLevel1.cpp
-        MapGenerator/Level_1/GenerateLevel1.hpp)
+        Random/Random.cpp
+        Random/Random.hpp
+        MapGenerator/RandomLevelGen/Generator.cpp
+        MapGenerator/RandomLevelGen/Generator.hpp
+        MapGenerator/MediumMap/MediumMap.cpp
+        MapGenerator/MediumMap/MediumMap.hpp
+        MapGenerator/SmallMap/SmallMap.cpp
+        MapGenerator/SmallMap/SmallMap.hpp
+)

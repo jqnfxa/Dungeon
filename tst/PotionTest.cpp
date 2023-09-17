@@ -6,7 +6,9 @@
 TEST(TestPotionSuite, TestPotionInteraction)
 {
 	auto *player = new Player(Position(0, 0), 100, 20);
-	PlayerHandler player_handler(player);
+	Map map;
+	MapHandler map_handler(&map);
+	PlayerHandler player_handler(player, map_handler);
 
 	EXPECT_EQ(player_handler.get_health(), 100);
 	EXPECT_EQ(player_handler.get_attack(), 10);

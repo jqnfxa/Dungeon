@@ -30,6 +30,7 @@ class Vector2 {
   Vector2 &operator=(const Vector2 &other);
   Vector2 &operator=(Vector2 &&other) noexcept;
   bool operator==(const Vector2 &other) const;
+  bool operator<(const Vector2 &other) const;
 };
 
 template<typename T>
@@ -148,4 +149,13 @@ template<typename T>
 bool Vector2<T>::operator==(const Vector2 &other) const
 {
 	return x_ == other.x_ && y_ == other.y_;
+}
+template<typename T>
+bool Vector2<T>::operator<(const Vector2 &other) const
+{
+	if (x_ == other.x_)
+	{
+		return y_ < other.y_;
+	}
+	return x_ < other.x_;
 }

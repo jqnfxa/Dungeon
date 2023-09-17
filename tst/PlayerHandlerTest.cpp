@@ -5,7 +5,9 @@ TEST(PlayerHandlerTestSuite, TestInvalidConstructor)
 {
 	try
 	{
-		PlayerHandler handler(nullptr);
+		Map map;
+		MapHandler map_handler(&map);
+		PlayerHandler handler(nullptr, map_handler);
 
 		// should not be here any way
 		FAIL();
@@ -18,7 +20,9 @@ TEST(PlayerHandlerTestSuite, TestInvalidConstructor)
 TEST(PlayerHandlerTestSuite, TestConstructor)
 {
 	Player *player = new Player;
-	PlayerHandler handler(player);
+	Map map;
+	MapHandler map_handler(&map);
+	PlayerHandler handler(player, map_handler);
 
 	EXPECT_EQ(player->get_position(), handler.get_position());
 	EXPECT_EQ(player->get_health(), handler.get_health());
@@ -31,8 +35,8 @@ TEST(PlayerHandlerTestSuite, TestPlayerMove)
 {
 	Player *player = new Player;
 	Map *map = new Map;
-	PlayerHandler handler(player);
-	handler.reset_map(map);
+	MapHandler map_handler(map);
+	PlayerHandler handler(player, map_handler);
 
 	map->build_wall({0, 1});
 	handler.move_by_direction(right, 1);

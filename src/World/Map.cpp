@@ -1,5 +1,8 @@
-#include <algorithm>
 #include "Map.hpp"
+#include "Event/Spikes.hpp"
+#include "Event/Potion.hpp"
+#include "Event/RandomMine.hpp"
+#include <ostream>
 
 Map::Map(const Dimension &dimensions) : dimensions_(dimensions), start_(-1, -1), finish_(-1, -1), map_(nullptr)
 {
@@ -86,9 +89,14 @@ Cell **Map::allocate_map(const Dimension &dimensions)
 {
 	auto map = new Cell *[dimensions.get_x()];
 
-	for (uint32_t i = 0U; i < dimensions.get_x(); ++i)
+	for (int32_t i = 0; i < dimensions.get_x(); ++i)
 	{
 		map[i] = new Cell[dimensions.get_y()];
+
+		for (int32_t j = 0; j < dimensions.get_y(); ++j)
+		{
+			map[i][j] = Cell();
+		}
 	}
 	return map;
 }
@@ -171,4 +179,68 @@ Position Map::get_start_point() const
 Position Map::get_finish_point() const
 {
 	return finish_;
+}
+std::ostream &Map::print(std::ostream &out) const
+{
+	for (int i = 0; i < dimensions_.get_x(); i++)
+	{
+		for (int j = 0; j < dimensions_.get_y(); j++)
+		{
+			auto &cell = get_cell({i, j});
+			if (cell.is_entrance())
+			{
+				out << '0';
+			}
+			else if (cell.is_exit())
+			{
+				out << '1';
+			}
+			else if (!cell.is_movable())
+			{
+				out << '*';
+			}
+			else
+			{
+				if (cell.get_active_event() == nullptr)
+				{
+					out << ' ';
+				}
+				else if (const auto *p = dynamic_cast<const Spikes *>(cell.get_active_event()); p != nullptr)
+				{
+					out << '#';
+				}
+				else if (const auto *k = dynamic_cast<const Potion *>(cell.get_active_event()); k != nullptr)
+				{
+					out << '+';
+				}
+				else if (const auto *d = dynamic_cast<const RandomMine *>(cell.get_active_event()); d != nullptr)
+				{
+					out << '?';
+				}
+			}
+		}
+		out << '\n';
+	}
+	return out << std::endl;
+}
+bool Map::is_adjacent_to_movable(const Position &point) const
+{
+	for (int dx = -1; dx <= 1; ++dx)
+	{
+		for (int dy = -1; dy <= 1; ++dy)
+		{
+			if (dx == 0 && dy == 0)
+			{
+				continue;
+			}
+
+			Position neighbor(point.get_x() + dx, point.get_y() + dy);
+
+			if (is_on_map(neighbor) && get_cell(neighbor).is_movable())
+			{
+				return true;
+			}
+		}
+	}
+	return false;
 }

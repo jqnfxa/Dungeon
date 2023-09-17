@@ -1,5 +1,6 @@
 #include "RandomMine.hpp"
 #include "../Handlers/PlayerHandler/PlayerHandler.hpp"
+#include "Random/Random.hpp"
 #include <cmath>
 #include <random>
 
@@ -17,26 +18,11 @@ void RandomMine::interaction(HandlerInterface *handler) const
 }
 DIRECTION RandomMine::pick_direction() const
 {
-	// TODO don't forget to change picking if only 4 moves will possible
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_int_distribution<int16_t> dis(1, 8);
-
-	int16_t dir = 0;
-	while (dir == 0 || dir % 2)
-	{
-		dir = dis(gen);
-	}
-
-	return static_cast<DIRECTION>(dir);
+	return Random::get_instance().pick_direction();
 }
 int32_t RandomMine::pick_power() const
 {
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_int_distribution<int16_t> dis(1, 5);
-
-	return dis(gen);
+	return Random::get_instance().pick_num(1, 5);
 }
 
 RandomMine *RandomMine::copy() const

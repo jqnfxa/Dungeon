@@ -1,12 +1,5 @@
 #include "PlayerHandler.hpp"
 
-PlayerHandler::PlayerHandler(Player *player) : player_(player), map_(nullptr)
-{
-	if (player_ == nullptr)
-	{
-		throw std::invalid_argument("Nullptr passed to PlayerHandler");
-	}
-}
 PlayerHandler::~PlayerHandler()
 {
 	delete player_;
@@ -65,11 +58,11 @@ void PlayerHandler::move_by_direction(const DIRECTION &direction, const int32_t 
 	{
 		auto new_position = Direction::getInstance().calculate_position(player_->get_position(), direction);
 
-		if (map_->is_on_map(new_position) && map_->get_cell(new_position).is_movable())
+		if (map_handler_.can_move(new_position))
 		{
 			set_position(new_position);
 
-			auto active_event = map_->get_cell(new_position).get_active_event();
+			auto active_event = map_handler_.get_cell(new_position).get_active_event();
 			if (active_event != nullptr)
 			{
 				active_event->interaction(this);
@@ -79,13 +72,10 @@ void PlayerHandler::move_by_direction(const DIRECTION &direction, const int32_t 
 
 	// TODO notify subscribers about player move
 }
-void PlayerHandler::reset_map(Map *map)
+PlayerHandler::PlayerHandler(Player *player, MapHandler &handler) : player_(player), map_handler_(handler)
 {
-	map_ = map;
-}
-Map *PlayerHandler::release_map()
-{
-	auto *ret = map_;
-	map_ = nullptr;
-	return ret;
+	if (player_ == nullptr)
+	{
+		throw std::invalid_argument("Nullptr passed to PlayerHandler");
+	}
 }

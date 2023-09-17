@@ -7,7 +7,7 @@ MapHandler::MapHandler(Map *map) : map_(map)
 		throw std::invalid_argument("Nullptr passed to MapHandler");
 	}
 }
-const Cell &MapHandler::get_cell(const Position &point) const
+Cell &MapHandler::get_cell(const Position &point) const
 {
 	return map_->get_cell(point);
 }

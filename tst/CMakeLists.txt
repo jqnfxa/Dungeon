@@ -12,7 +12,9 @@ add_executable(${BINARY} ${TEST_SOURCES}
         SpikesTest.cpp
         PotionTest.cpp
         RandomMineTest.cpp
-        GenerateLevel1Test.cpp)
+        SmallMapTest.cpp
+        RandomLevelGenTest.cpp
+        MediumMapTest.cpp)
 
 add_test(NAME ${BINARY} COMMAND ${BINARY})
 

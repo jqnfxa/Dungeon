@@ -11,8 +11,8 @@ TEST(TestRandomMineSuite, TestMineInteraction)
 	map->build_wall({49, 50});
 	map->build_wall({50, 49});
 
-	PlayerHandler player_handler(player);
-	player_handler.reset_map(map);
+	MapHandler map_handler(map);
+	PlayerHandler player_handler(player, map_handler);
 
 	EXPECT_EQ(player_handler.get_health(), 100);
 	EXPECT_EQ(player_handler.get_armor(), 20);

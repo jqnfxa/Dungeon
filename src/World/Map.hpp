@@ -38,5 +38,8 @@ class Map {
   [[nodiscard]] Cell &get_cell(const Position &point) const;
   [[nodiscard]] Dimension get_dimensions() const;
   [[nodiscard]] bool is_on_map(const Position &point) const;
+  bool is_adjacent_to_movable(const Position &point) const;
+
+  std::ostream &print(std::ostream &out) const;
   ~Map();
 };
