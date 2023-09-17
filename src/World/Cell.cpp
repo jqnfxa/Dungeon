@@ -4,7 +4,7 @@
 Cell::Cell() : Cell(Type::movable)
 {
 }
-Cell::Cell(const Type &type) : type_(type), event_(nullptr)
+Cell::Cell(Type type) : type_(type), event_(nullptr)
 {
 }
 bool Cell::is_entrance() const
@@ -48,7 +48,7 @@ Cell &Cell::operator=(const Cell &other) noexcept
 	}
 	return *this;
 }
-void Cell::set_type(const Type &new_type)
+void Cell::set_type(Type new_type)
 {
 	type_ = new_type;
 }

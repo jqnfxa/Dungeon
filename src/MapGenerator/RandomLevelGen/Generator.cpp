@@ -51,7 +51,7 @@ Map *Generator::generate() const
 		Position next;
 		bool found_unvisited = false;
 
-		for (int32_t i = 0; i < 4; ++i)
+		for (int32_t i = 0; i < random_tries_limit; ++i)
 		{
 			next = Direction::getInstance().calculate_position(current, engine.pick_direction());
 
@@ -150,6 +150,7 @@ Map *Generator::generate() const
 Generator::Generator(int32_t m, int32_t n, int32_t closed_cells_percent, int32_t total_events, int32_t positive_events_percent, int32_t negative_events_percent) : m_(m),
 																																								   n_(n)
 {
+	// TODO what if positive_events_percent + negative_events_percent > 100 ?
 	int32_t cells_available = m_ * n_ - 2;
 	double other_event_percent = (1.0 - positive_events_percent / 100.0 - negative_events_percent / 100.0) * 100.0;
 

@@ -32,27 +32,27 @@ void PlayerHandler::set_position(const Position &new_value)
 {
 	player_->set_position(new_value);
 }
-void PlayerHandler::set_health(const int32_t &new_value)
+void PlayerHandler::set_health(int32_t new_value)
 {
 	player_->set_health(new_value);
 }
-void PlayerHandler::set_armor(const int32_t &new_value)
+void PlayerHandler::set_armor(int32_t new_value)
 {
 	player_->set_armor(new_value);
 }
-void PlayerHandler::set_attack(const int32_t &new_value)
+void PlayerHandler::set_attack(int32_t new_value)
 {
 	player_->set_attack(new_value);
 }
-void PlayerHandler::set_defense(const int32_t &new_value)
+void PlayerHandler::set_defense(int32_t new_value)
 {
 	player_->set_defense(new_value);
 }
-void PlayerHandler::set_points(const int32_t &new_value)
+void PlayerHandler::set_points(int32_t new_value)
 {
 	player_->set_points(new_value);
 }
-void PlayerHandler::move_by_direction(const DIRECTION &direction, const int32_t &multiplier)
+void PlayerHandler::move_by_direction(DIRECTION direction, int32_t multiplier)
 {
 	for (int32_t i = 0; i < multiplier; ++i)
 	{

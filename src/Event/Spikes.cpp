@@ -9,7 +9,7 @@ void Spikes::interaction(HandlerInterface *handler) const
 	{
 		return;
 	}
-	if (ptr->get_armor() > 10)
+	if (ptr->get_armor() > critical_armor_value)
 	{
 		ptr->set_armor(std::floor(armor_decrease_multiplier * ptr->get_armor()));
 	}

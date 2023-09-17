@@ -1,11 +1,17 @@
 #include "Player.hpp"
 
-Player::Player(const Position &position, const int32_t &health, const int32_t &armor, const int32_t &attack, const int32_t &defence, const int32_t &points) : position_(position),
-																																							  health_(health),
-																																							  armor_(armor),
-																																							  attack_(attack),
-																																							  defence_(defence),
-																																							  points_(points)
+Player::Player(const Position &position,
+			   int32_t health,
+			   int32_t armor,
+			   int32_t attack,
+			   int32_t defence,
+			   int32_t points) :
+			   position_(position),
+			   health_(health),
+			   armor_(armor),
+			   attack_(attack),
+			   defence_(defence),
+			   points_(points)
 {
 }
 Player::Player(const Player &player)
@@ -72,32 +78,32 @@ void Player::set_position(const Position &new_value)
 {
 	position_ = new_value;
 }
-void Player::set_health(const int32_t &new_value)
+void Player::set_health(int32_t new_value)
 {
 	health_ = new_value;
-	adjust(health_, 100);
+	adjust(health_, health_lim_);
 }
-void Player::set_armor(const int32_t &new_value)
+void Player::set_armor(int32_t new_value)
 {
 	armor_ = new_value;
-	adjust(armor_, 100);
+	adjust(armor_, armor_lim_);
 }
-void Player::set_attack(const int32_t &new_value)
+void Player::set_attack(int32_t new_value)
 {
 	attack_ = new_value;
-	adjust(attack_, 50);
+	adjust(attack_, attack_lim_);
 }
-void Player::set_defense(const int32_t &new_value)
+void Player::set_defense(int32_t new_value)
 {
 	defence_ = new_value;
-	adjust(defence_, 50);
+	adjust(defence_, defence_lim_);
 }
-void Player::set_points(const int32_t &new_value)
+void Player::set_points(int32_t new_value)
 {
 	points_ = new_value;
-	adjust(points_, 1000);
+	adjust(points_, points_lim_);
 }
-void Player::adjust(int32_t &value, const int32_t &limit)
+void Player::adjust(int32_t &value, int32_t limit)
 {
 	value = std::max(0, value);
 	value = std::min(value, limit);

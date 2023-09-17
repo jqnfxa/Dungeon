@@ -28,5 +28,5 @@ class Direction {
 	  static Direction instance;
 	  return instance;
   }
-  Position calculate_position(const Position &old, const DIRECTION &direction);
+  Position calculate_position(const Position &old, DIRECTION direction);
 };

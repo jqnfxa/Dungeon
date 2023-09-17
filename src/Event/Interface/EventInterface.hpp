@@ -1,12 +1,6 @@
 #pragma once
 #include "../../Handlers/Interface/HandlerInterface.hpp"
 
-enum EventType
-{
-	potion,
-	spikes,
-	booster
-};
 class EventInterface {
  public:
   virtual ~EventInterface() = default;

@@ -13,8 +13,8 @@ class EntityInterface {
   [[nodiscard]] virtual int32_t get_defense() const = 0;
 
   virtual void set_position(const Position &new_position) = 0;
-  virtual void set_health(const int32_t &new_value) = 0;
-  virtual void set_armor(const int32_t &new_value) = 0;
-  virtual void set_attack(const int32_t &new_value) = 0;
-  virtual void set_defense(const int32_t &new_value) = 0;
+  virtual void set_health(int32_t new_value) = 0;
+  virtual void set_armor(int32_t new_value) = 0;
+  virtual void set_attack(int32_t new_value) = 0;
+  virtual void set_defense(int32_t new_value) = 0;
 };

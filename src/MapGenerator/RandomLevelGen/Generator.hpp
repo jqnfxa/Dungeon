@@ -3,6 +3,8 @@
 #include "World/Map.hpp"
 
 class Generator {
+  const int16_t random_tries_limit = 4;
+
   int32_t m_;
   int32_t n_;
   int32_t closed_cells;

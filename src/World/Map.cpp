@@ -6,8 +6,8 @@
 
 Map::Map(const Dimension &dimensions) : dimensions_(dimensions), start_(-1, -1), finish_(-1, -1), map_(nullptr)
 {
-	if (dimensions_.get_x() < 10 || dimensions_.get_y() < 10 || dimensions_.get_x() > 1000
-		|| dimensions_.get_y() > 1000)
+	if (dimensions_.get_x() < MAP_DIMENSION_LOWER_BOUND || dimensions_.get_y() < MAP_DIMENSION_LOWER_BOUND || dimensions_.get_x() > MAP_DIMENSION_UPPER_BOUND
+		|| dimensions_.get_y() > MAP_DIMENSION_UPPER_BOUND)
 	{
 		throw std::logic_error("Unexpected dimensions for map (too small or too big)");
 	}
@@ -20,7 +20,7 @@ Map::~Map()
 {
 	clear_map();
 }
-Map::Map() : Map(10, 10)
+Map::Map() : Map(MAP_DIMENSION_LOWER_BOUND, MAP_DIMENSION_LOWER_BOUND)
 {
 }
 Map::Map(const Map &other) : Map()
