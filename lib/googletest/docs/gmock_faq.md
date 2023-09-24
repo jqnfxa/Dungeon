@@ -93,7 +93,7 @@ comparison between the actual arguments and the expected arguments.
 
 ### My program crashed and `ScopedMockLog` spit out tons of messages. Is it a gMock bug?
 
-gMock and `ScopedMockLog` are likely doing the right thing here.
+gMock and `ScopedMockLog` are likely doing the RIGHT thing here.
 
 When a test crashes, the failure signal handler will try to log a lot of
 information (the stack trace, and the address map, for example). The messages
@@ -330,7 +330,7 @@ sometimes called "state-based testing".
 
 Mocks are great for what some call "interaction-based" testing: instead of
 checking the system state at the very end, mock objects verify that they are
-invoked the right way and report an error as soon as it arises, giving you a
+invoked the RIGHT way and report an error as soon as it arises, giving you a
 handle on the precise context in which the error was triggered. This is often
 more effective and economical to do than state-based testing.
 
@@ -338,7 +338,7 @@ If you are doing state-based testing and using a test double just to simulate
 the real object, you are probably better off using a fake. Using a mock in this
 case causes pain, as it's not a strong point for mocks to perform complex
 actions. If you experience this and think that mocks suck, you are just not
-using the right tool for your problem. Or, you might be trying to solve the
+using the RIGHT tool for your problem. Or, you might be trying to solve the
 wrong problem. :-)
 
 ### I got a warning "Uninteresting function call encountered - default action taken.." Should I panic?

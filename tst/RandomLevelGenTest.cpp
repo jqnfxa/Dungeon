@@ -9,7 +9,7 @@ TEST(MapGeneratorSuite, TestSmallMapGeneration) {
 	Generator generator(m, n, 35, 0.4 * m * n, 10, 70);
 	Map *new_map = generator.generate();
 
-	// new_map->print(std::cerr);
+	new_map->print(std::cerr);
 
 	delete new_map;
 }
@@ -33,7 +33,7 @@ TEST(MapGeneratorSuite, TestBigMapGeneration) {
 	Generator generator(m, n, 50, 0.3 * m * n, 50, 20);
 	Map *new_map = generator.generate();
 
-	// new_map->print(std::cerr);
+	new_map->print(std::cerr);
 
 	delete new_map;
 }

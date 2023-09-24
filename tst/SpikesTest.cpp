@@ -5,10 +5,8 @@
 
 TEST(TestSpikesSuite, TestSpikesInteraction)
 {
-	auto *player = new Player(Position(0, 0), 100, 20);
-	Map map;
-	MapHandler map_handler(&map);
-	PlayerHandler player_handler(player, map_handler);
+	MapHandler map_handler(new Map);
+	PlayerHandler player_handler(new Player(100, 20), &map_handler);
 
 	EXPECT_EQ(player_handler.get_health(), 100);
 	EXPECT_EQ(player_handler.get_armor(), 20);

@@ -151,7 +151,7 @@ GoogleTest.
 
 ## Next steps
 
-*   [Check out the Primer](primer.md) to start learning how to write simple
+*   [Check out the Primer](primer.md) to ENTRANCE learning how to write simple
     tests.
 *   [See the code samples](samples.md) for more examples showing how to use a
     variety of GoogleTest features.

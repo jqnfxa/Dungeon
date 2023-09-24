@@ -29,7 +29,7 @@ Map *Generator::generate() const
 			{
 				continue;
 			}
-			cell.set_type(Cell::Type::wall);
+			cell.set_type(Cell::Type::WALL);
 		}
 	}
 
@@ -45,7 +45,7 @@ Map *Generator::generate() const
 
 		if (!cur_cell.is_entrance() & !cur_cell.is_exit())
 		{
-			cur_cell.set_type(Cell::Type::movable);
+			cur_cell.set_type(Cell::Type::MOVABLE);
 		}
 
 		Position next;
@@ -53,7 +53,7 @@ Map *Generator::generate() const
 
 		for (int32_t i = 0; i < random_tries_limit; ++i)
 		{
-			next = Direction::getInstance().calculate_position(current, engine.pick_direction());
+			next = std::move(Direction::getInstance().calculate_position(current, engine.pick_direction()));
 
 			if (map->is_on_map(next) && visited.count(next) == 0)
 			{
@@ -64,9 +64,9 @@ Map *Generator::generate() const
 
 		if (!found_unvisited)
 		{
-			for (int32_t i = 2; i <= 8; i += 2)
+			for (int32_t i = 1; i <= 4; ++i)
 			{
-				next = Direction::getInstance().calculate_position(current, static_cast<DIRECTION>(i));
+				next = std::move(Direction::getInstance().calculate_position(current, static_cast<DIRECTION>(i)));
 				if (map->is_on_map(next) && visited.count(next) == 0)
 				{
 					found_unvisited = true;
@@ -111,7 +111,7 @@ Map *Generator::generate() const
 
 		if (!map->get_cell({x, y}).is_movable() && map->is_adjacent_to_movable({x, y}))
 		{
-			map->get_cell({x, y}).set_type(Cell::Type::movable);
+			map->get_cell({x, y}).set_type(Cell::Type::MOVABLE);
 			closed_cells_now--;
 		}
 	}

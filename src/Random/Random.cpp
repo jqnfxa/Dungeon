@@ -8,18 +8,7 @@ Random &Random::get_instance()
 }
 DIRECTION Random::pick_direction() const
 {
-	// TODO don't forget to change picking if only 4 moves will possible
-	std::random_device rd;
-	std::mt19937 gen(rd());
-	std::uniform_int_distribution<int16_t> distribution(1, 8);
-
-	int16_t dir = 0;
-	while (dir == 0 || dir % 2)
-	{
-		dir = distribution(gen);
-	}
-
-	return static_cast<DIRECTION>(dir);
+	return static_cast<DIRECTION>(pick_num(1, 4));
 }
 int32_t Random::pick_num(int32_t from, int32_t to) const
 {

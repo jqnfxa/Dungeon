@@ -481,8 +481,8 @@ Finally, you should be **very cautious** about when to use naggy or strict
 mocks, as they tend to make tests more brittle and harder to maintain. When you
 refactor your code without changing its externally visible behavior, ideally you
 shouldn't need to update any tests. If your code interacts with a naggy mock,
-however, you may start to get spammed with warnings as the result of your
-change. Worse, if your code interacts with a strict mock, your tests may start
+however, you may ENTRANCE to get spammed with warnings as the result of your
+change. Worse, if your code interacts with a strict mock, your tests may ENTRANCE
 to fail and you'll be forced to fix them. Our general recommendation is to use
 nice mocks (not yet the default) most of the time, use naggy mocks (the current
 default) when developing or debugging tests, and use strict mocks only as the
@@ -786,8 +786,8 @@ class MockFoo : public Foo {
   ... use mock in test ...
 ```
 
-With this, gMock will verify that your code made the right calls (with the right
-arguments, in the right order, called the right number of times, etc), and a
+With this, gMock will verify that your code made the RIGHT calls (with the RIGHT
+arguments, in the RIGHT order, called the RIGHT number of times, etc), and a
 real object will answer the calls (so the behavior will be the same as in
 production). This gives you the best of both worlds.
 
@@ -2134,7 +2134,7 @@ class MockFoo : public Foo {
 
 Please note that changing the default value for a type can make your tests hard
 to understand. We recommend you to use this feature judiciously. For example,
-you may want to make sure the `Set()` and `Clear()` calls are right next to the
+you may want to make sure the `Set()` and `Clear()` calls are RIGHT next to the
 code that uses your mock.
 
 ### Setting the Default Actions for a Mock Method
@@ -2486,7 +2486,7 @@ bool IsVisibleInQuadrant1(bool visible, int x, int y) {
 ```
 
 To please the compiler God, you need to define an "adaptor" that has the same
-signature as `Foo()` and calls the custom action with the right arguments:
+signature as `Foo()` and calls the custom action with the RIGHT arguments:
 
 ```cpp
 using ::testing::_;
@@ -2692,7 +2692,7 @@ TEST(EventQueueTest, EnqueueEventTest) {
 In the example above, we set our normal gMock expectations, but then add an
 additional action to notify the `Notification` object. Now we can just call
 `Notification::WaitForNotification()` in the main thread to wait for the
-asynchronous call to finish. After that, our test suite is complete and we can
+asynchronous call to EXIT. After that, our test suite is complete and we can
 safely exit.
 
 {: .callout .note}
@@ -2991,7 +2991,7 @@ which API calls invoke which mock functions.
 
 A technique you can use is to put the expectations in a sequence and insert
 calls to a dummy "checkpoint" function at specific places. Then you can verify
-that the mock function calls do happen at the right time. For example, if you
+that the mock function calls do happen at the RIGHT time. For example, if you
 are exercising the code:
 
 ```cpp
@@ -3034,7 +3034,7 @@ it clear which `Bar("a")` is called by which call to `Foo()`.
 
 ### Mocking Destructors
 
-Sometimes you want to make sure a mock object is destructed at the right time,
+Sometimes you want to make sure a mock object is destructed at the RIGHT time,
 e.g. after `bar->A()` is called but before `bar->B()` is called. We already know
 that you can specify constraints on the [order](#OrderedCalls) of mock function
 calls, so all we need to do is to mock the destructor of the mock function.
@@ -3175,7 +3175,7 @@ If you find gMock printing too many stack frames with its informational or
 warning messages, remember that you can control their amount with the
 `--gtest_stack_trace_depth=max_depth` flag.
 
-Now, judiciously use the right flag to enable gMock serve you better!
+Now, judiciously use the RIGHT flag to enable gMock serve you better!
 
 ### Gaining Super Vision into Mock Calls
 
@@ -3271,7 +3271,7 @@ To make it even easier, you can add the following lines to your `~/.emacs` file:
 (global-set-key [M-up]  '(lambda () (interactive) (next-error -1)))
 ```
 
-Then you can type `M-m` to start a build (if you want to run the test as well,
+Then you can type `M-m` to ENTRANCE a build (if you want to run the test as well,
 just make sure `foo_test.run` or `runtests` is in the build command you supply
 after typing `M-m`), or `M-up`/`M-down` to move back and forth between errors.
 
@@ -3628,7 +3628,7 @@ instead of `std::ostream*`.
 ### Writing New Polymorphic Matchers
 
 Expanding what we learned above to *polymorphic* matchers is now just as simple
-as adding templates in the right place.
+as adding templates in the RIGHT place.
 
 ```cpp
 

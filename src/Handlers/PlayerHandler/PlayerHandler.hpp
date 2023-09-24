@@ -8,13 +8,15 @@
 class PlayerHandler : public HandlerInterface {
  private:
   Player *player_;
-  MapHandler &map_handler_;
+  Position position_;
+  MapHandler *map_handler_;
  public:
   ~PlayerHandler() override;
   PlayerHandler() = delete;
-  explicit PlayerHandler(Player *player, MapHandler &handler);
+  explicit PlayerHandler(Player *player, MapHandler *handler = nullptr);
+  MapHandler *reset_map_handler(MapHandler *handler);
 
-  [[nodiscard]] Position get_position() const;
+  [[nodiscard]] const Position &get_position() const;
   [[nodiscard]] int32_t get_health() const;
   [[nodiscard]] int32_t get_armor() const;
   [[nodiscard]] int32_t get_attack() const;

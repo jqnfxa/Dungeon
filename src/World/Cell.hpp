@@ -5,7 +5,7 @@
 class Cell {
  public:
   enum Type {
-	  start, finish, movable, wall
+	  ENTRANCE, EXIT, MOVABLE, WALL
   };
  public:
   Cell();

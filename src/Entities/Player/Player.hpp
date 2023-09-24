@@ -3,13 +3,11 @@
 
 class Player : public EntityInterface {
  private:
-  const int32_t health_lim_ = 200;
+  const int32_t health_lim_ = 500;
   const int32_t armor_lim_ = 100;
   const int32_t attack_lim_ = 50;
   const int32_t defence_lim_ = 50;
-  const int32_t points_lim_ = 1000;
-
-  Position position_;
+  const int32_t points_lim_ = 100000;
 
   int32_t health_;
   int32_t armor_;
@@ -24,21 +22,18 @@ class Player : public EntityInterface {
   Player &operator=(const Player &player);
   Player &operator=(Player &&player) noexcept;
 
-  explicit Player(const Position &position = Position(0, 0),
-				  int32_t health = 100,
+  explicit Player(int32_t health = 100,
 				  int32_t armor = 0,
 				  int32_t attack = 10,
 				  int32_t defence = 10,
 				  int32_t points = 0);
 
-  [[nodiscard]] Position get_position() const override;
   [[nodiscard]] int32_t get_health() const override;
   [[nodiscard]] int32_t get_armor() const override;
   [[nodiscard]] int32_t get_attack() const override;
   [[nodiscard]] int32_t get_defense() const override;
   [[nodiscard]] int32_t get_points() const;
 
-  void set_position(const Position &new_value) override;
   void set_health(int32_t new_value) override;
   void set_armor(int32_t new_value) override;
   void set_attack(int32_t new_value) override;

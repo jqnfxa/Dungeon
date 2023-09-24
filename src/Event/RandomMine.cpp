@@ -11,20 +11,11 @@ void RandomMine::interaction(HandlerInterface *handler) const
 	{
 		return;
 	}
-	auto direction = pick_direction();
-	auto power = pick_power();
+	auto direction = Random::get_instance().pick_direction();
+	auto power = Random::get_instance().pick_num(power_lower_bound_, power_upper_bound_);
 
 	ptr->move_by_direction(direction, power);
 }
-DIRECTION RandomMine::pick_direction() const
-{
-	return Random::get_instance().pick_direction();
-}
-int32_t RandomMine::pick_power() const
-{
-	return Random::get_instance().pick_num(1, 5);
-}
-
 RandomMine *RandomMine::copy() const
 {
 	return new RandomMine(*this);

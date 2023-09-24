@@ -9,9 +9,9 @@
 
 class Map {
  private:
-  Vector2<int32_t> dimensions_;
-  Vector2<int32_t> start_;
-  Vector2<int32_t> finish_;
+  Dimension dimensions_;
+  Position start_;
+  Position finish_;
 
   Cell **map_;
 
@@ -36,10 +36,10 @@ class Map {
   void set_cell(const Position &point, Cell &&new_cell);
   void set_cell(const Position &point, const Cell &new_cell);
 
-  [[nodiscard]] Position get_start_point() const;
-  [[nodiscard]] Position get_finish_point() const;
+  [[nodiscard]] const Position &get_start_point() const;
+  [[nodiscard]] const Position &get_finish_point() const;
   [[nodiscard]] Cell &get_cell(const Position &point) const;
-  [[nodiscard]] Dimension get_dimensions() const;
+  [[nodiscard]] const Dimension &get_dimensions() const;
   [[nodiscard]] bool is_on_map(const Position &point) const;
   [[nodiscard]] bool is_adjacent_to_movable(const Position &point) const;
 

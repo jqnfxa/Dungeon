@@ -13,7 +13,7 @@ TEST(CellTestSuite, TestDefaultConstructor)
 TEST(CellTestSuite, TestTypeConstructor)
 {
 	{
-		Cell cell(Cell::Type::wall);
+		Cell cell(Cell::Type::WALL);
 		cell.add_event(new Spikes);
 		cell.remove_event();
 		cell.add_event(new RandomMine);
@@ -23,7 +23,7 @@ TEST(CellTestSuite, TestTypeConstructor)
 		EXPECT_EQ(cell.is_exit(), false);
 	}
 	{
-		Cell cell(Cell::Type::start);
+		Cell cell(Cell::Type::ENTRANCE);
 
 		EXPECT_EQ(cell.is_movable(), true);
 		EXPECT_EQ(cell.is_entrance(), true);
@@ -33,7 +33,7 @@ TEST(CellTestSuite, TestTypeConstructor)
 TEST(CellTestSuite, TestMoveConstructor)
 {
 
-	Cell cell(Cell::Type::wall);
+	Cell cell(Cell::Type::WALL);
 	cell.add_event(new Spikes);
 	Cell other = std::move(cell);
 

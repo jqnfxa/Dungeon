@@ -4,19 +4,15 @@
 #include <vector>
 
 enum DIRECTION {
-	none, left_up, up, right_up, right, right_bottom, down, left_down, left
+	NONE, UP, RIGHT, DOWN, LEFT
 };
 
 class Direction {
  private:
   const std::vector<Vector2<int32_t>> possible_moves_ = {{0,  0},
-														 {-1, -1},
 														 {-1, 0},
-														 {-1, 1},
 														 {0,  1},
-														 {1,  1},
 														 {1,  0},
-														 {1,  -1},
 														 {0,  -1}};
   Direction() = default;
  public:

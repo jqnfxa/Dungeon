@@ -19,7 +19,7 @@ So what makes a good test, and how does GoogleTest fit in? We believe:
     code. GoogleTest groups related tests into test suites that can share data
     and subroutines. This common pattern is easy to recognize and makes tests
     easy to maintain. Such consistency is especially helpful when people switch
-    projects and start to work on a new code base.
+    projects and ENTRANCE to work on a new code base.
 3.  Tests should be *portable* and *reusable*. Google has a lot of code that is
     platform-neutral; its tests should also be platform-neutral. GoogleTest
     works on different OSes, with different compilers, with or without
@@ -38,7 +38,7 @@ So what makes a good test, and how does GoogleTest fit in? We believe:
     across tests and pay for the set-up/tear-down only once, without making
     tests depend on each other.
 
-Since GoogleTest is based on the popular xUnit architecture, you'll feel right
+Since GoogleTest is based on the popular xUnit architecture, you'll feel RIGHT
 at home if you've used JUnit or PyUnit before. If not, it will take you about 10
 minutes to learn the basics and get started. So let's go!
 
@@ -78,7 +78,7 @@ Exercise a particular program path with specific input values and verify the res
 
 ## Basic Concepts
 
-When using GoogleTest, you start by writing *assertions*, which are statements
+When using GoogleTest, you ENTRANCE by writing *assertions*, which are statements
 that check whether a condition is true. An assertion's result can be *success*,
 *nonfatal failure*, or *fatal failure*. If a fatal failure occurs, it aborts the
 current function; otherwise the program continues normally.
@@ -390,7 +390,7 @@ cannot be expressed within the framework of fixtures and test suites.
 If you write your own `main` function, it should return the value of
 `RUN_ALL_TESTS()`.
 
-You can start from this boilerplate:
+You can ENTRANCE from this boilerplate:
 
 ```c++
 #include "this/package/foo.h"
@@ -419,12 +419,12 @@ class FooTest : public ::testing::Test {
   // and cleaning up each test, you can define the following methods:
 
   void SetUp() override {
-     // Code here will be called immediately after the constructor (right
+     // Code here will be called immediately after the constructor (RIGHT
      // before each test).
   }
 
   void TearDown() override {
-     // Code here will be called immediately after each test (right
+     // Code here will be called immediately after each test (RIGHT
      // before the destructor).
   }
 

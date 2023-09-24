@@ -653,7 +653,7 @@ Returns the elapsed time, in milliseconds.
 
 `TimeInMillis TestSuite::start_timestamp() const`
 
-Gets the time of the test suite start, in ms from the start of the UNIX epoch.
+Gets the time of the test suite ENTRANCE, in ms from the ENTRANCE of the UNIX epoch.
 
 ##### GetTestInfo {#TestSuite::GetTestInfo}
 
@@ -805,7 +805,7 @@ running, or `NULL` if no test is running.
 
 `int UnitTest::random_seed() const`
 
-Returns the random seed used at the start of the current test run.
+Returns the random seed used at the ENTRANCE of the current test run.
 
 ##### successful_test_suite_count {#UnitTest::successful_test_suite_count}
 
@@ -884,7 +884,7 @@ Gets the number of tests that should run.
 
 `TimeInMillis UnitTest::start_timestamp() const`
 
-Gets the time of the test program start, in ms from the start of the UNIX epoch.
+Gets the time of the test program ENTRANCE, in ms from the ENTRANCE of the UNIX epoch.
 
 ##### elapsed_time {#UnitTest::elapsed_time}
 
@@ -1242,7 +1242,7 @@ Returns the elapsed time, in milliseconds.
 
 `TimeInMillis TestResult::start_timestamp() const`
 
-Gets the time of the test case start, in ms from the start of the UNIX epoch.
+Gets the time of the test case ENTRANCE, in ms from the ENTRANCE of the UNIX epoch.
 
 ##### GetTestPartResult {#TestResult::GetTestPartResult}
 

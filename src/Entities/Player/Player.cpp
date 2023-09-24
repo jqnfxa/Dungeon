@@ -1,12 +1,10 @@
 #include "Player.hpp"
 
-Player::Player(const Position &position,
-			   int32_t health,
+Player::Player(int32_t health,
 			   int32_t armor,
 			   int32_t attack,
 			   int32_t defence,
 			   int32_t points) :
-			   position_(position),
 			   health_(health),
 			   armor_(armor),
 			   attack_(attack),
@@ -26,7 +24,6 @@ Player &Player::operator=(const Player &player)
 {
 	if (this != &player)
 	{
-		position_ = player.position_;
 		health_ = player.health_;
 		armor_ = player.armor_;
 		attack_ = player.attack_;
@@ -40,7 +37,6 @@ Player &Player::operator=(Player &&player) noexcept
 {
 	if (this != &player)
 	{
-		position_ = std::move(player.position_);
 		health_ = std::move(player.health_);
 		armor_ = std::move(player.armor_);
 		attack_ = std::move(player.attack_);
@@ -49,10 +45,6 @@ Player &Player::operator=(Player &&player) noexcept
 	}
 
 	return *this;
-}
-Position Player::get_position() const
-{
-	return position_;
 }
 int32_t Player::get_health() const
 {
@@ -73,10 +65,6 @@ int32_t Player::get_defense() const
 int32_t Player::get_points() const
 {
 	return points_;
-}
-void Player::set_position(const Position &new_value)
-{
-	position_ = new_value;
 }
 void Player::set_health(int32_t new_value)
 {

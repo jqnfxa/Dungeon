@@ -8,6 +8,7 @@ class MapHandler : public HandlerInterface {
  public:
   MapHandler() = delete;
   explicit MapHandler(Map *map);
+  ~MapHandler();
 
   [[nodiscard]] bool can_move(const Position &point) const;
   [[nodiscard]] Cell &get_cell(const Position &point) const;

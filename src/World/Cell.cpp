@@ -1,7 +1,7 @@
 #include <algorithm>
 #include "Cell.hpp"
 
-Cell::Cell() : Cell(Type::movable)
+Cell::Cell() : Cell(Type::MOVABLE)
 {
 }
 Cell::Cell(Type type) : type_(type), event_(nullptr)
@@ -9,15 +9,15 @@ Cell::Cell(Type type) : type_(type), event_(nullptr)
 }
 bool Cell::is_entrance() const
 {
-	return type_ == Type::start;
+	return type_ == Type::ENTRANCE;
 }
 bool Cell::is_exit() const
 {
-	return type_ == Type::finish;
+	return type_ == Type::EXIT;
 }
 bool Cell::is_movable() const
 {
-	return type_ == Type::movable || is_exit() || is_entrance();
+	return type_ == Type::MOVABLE || is_exit() || is_entrance();
 }
 Cell::Cell(const Cell &other) : Cell()
 {

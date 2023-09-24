@@ -22,7 +22,7 @@ community:
 If all this seems too abstract for you, don't worry - the most important thing
 to remember is that a mock allows you to check the *interaction* between itself
 and code that uses it. The difference between fakes and mocks shall become much
-clearer once you start to use mocks.
+clearer once you ENTRANCE to use mocks.
 
 **gMock** is a library (sometimes we also call it a "framework" to make it sound
 cool) for creating mock classes and using them. It does to C++ what
@@ -53,7 +53,7 @@ them fast and reliable, using mocks manually in C++ is *hard*:
 In contrast, Java and Python programmers have some fine mock frameworks (jMock,
 EasyMock, etc), which automate the creation of mocks. As a result, mocking is a
 proven effective technique and widely adopted practice in those communities.
-Having the right tool absolutely makes the difference.
+Having the RIGHT tool absolutely makes the difference.
 
 gMock was built to help C++ programmers. It was inspired by jMock and EasyMock,
 but designed with C++'s specifics in mind. It is your friend if any of the
@@ -69,7 +69,7 @@ following problems is bothering you:
 *   You want to test how your code handles a failure (e.g. a file checksum
     error), but it's not easy to cause one.
 *   You need to make sure that your module interacts with other modules in the
-    right way, but it's hard to observe the interaction; therefore you resort to
+    RIGHT way, but it's hard to observe the interaction; therefore you resort to
     observing the side effects at the end of the action, but it's awkward at
     best.
 *   You want to "mock out" your dependencies, except that they don't have mock
@@ -91,13 +91,13 @@ gMock is bundled with googletest.
 
 Let's look at an example. Suppose you are developing a graphics program that
 relies on a [LOGO](https://en.wikipedia.org/wiki/Logo_programming_language)-like
-API for drawing. How would you test that it does the right thing? Well, you can
+API for drawing. How would you test that it does the RIGHT thing? Well, you can
 run it and compare the screen with a golden screen snapshot, but let's admit it:
 tests like this are expensive to run and fragile (What if you just upgraded to a
 shiny new graphics card that has better anti-aliasing? Suddenly you have to
 update all your golden images.). It would be too painful if all your tests are
 like this. Fortunately, you learned about
-[Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection) and know the right thing
+[Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection) and know the RIGHT thing
 to do: instead of having your application talk to the system API directly, wrap
 the API in an interface (say, `Turtle`) and code to that interface:
 
@@ -254,7 +254,7 @@ Stack trace:
 ```
 
 **Tip 1:** If you run the test from an Emacs buffer, you can hit `<Enter>` on
-the line number to jump right to the failed expectation.
+the line number to jump RIGHT to the failed expectation.
 
 **Tip 2:** If your mock objects are never deleted, the final verification won't
 happen. Therefore it's a good idea to turn on the heap checker in your tests
@@ -278,12 +278,12 @@ allows you to do *so much more* with the mocks.
 
 ## Setting Expectations
 
-The key to using a mock object successfully is to set the *right expectations*
+The key to using a mock object successfully is to set the *RIGHT expectations*
 on it. If you set the expectations too strict, your test will fail as the result
 of unrelated changes. If you set them too loose, bugs can slip through. You want
-to do it just right such that your test can catch exactly the kind of bugs you
+to do it just RIGHT such that your test can catch exactly the kind of bugs you
 intend it to catch. gMock provides the necessary means for you to do it "just
-right."
+RIGHT."
 
 ### General Syntax
 
@@ -516,7 +516,7 @@ EXPECT_CALL(turtle, GetY())
 Obviously `turtle.GetY()` is expected to be called four times. But if you think
 it will return 100 every time, think twice! Remember that one `WillOnce()`
 clause will be consumed each time the function is invoked and the default action
-will be taken afterwards. So the right answer is that `turtle.GetY()` will
+will be taken afterwards. So the RIGHT answer is that `turtle.GetY()` will
 return 100 the first time, but **return 0 from the second time on**, as
 returning 0 is the default action for `int` functions.
 
@@ -555,7 +555,7 @@ one with more specific matchers **after** the other, or the more specific rule
 would be shadowed by the more general one that comes after it.
 
 {: .callout .tip}
-**Tip:** It is very common to start with a catch-all expectation for a method
+**Tip:** It is very common to ENTRANCE with a catch-all expectation for a method
 and `Times(AnyNumber())` (omitting arguments, or with `_` for all arguments, if
 overloaded). This makes any calls to the method expected. This is not necessary
 for methods that are not mentioned at all (these are "uninteresting"), but is

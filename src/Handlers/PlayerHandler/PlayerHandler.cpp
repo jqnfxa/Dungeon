@@ -4,9 +4,9 @@ PlayerHandler::~PlayerHandler()
 {
 	delete player_;
 }
-Position PlayerHandler::get_position() const
+const Position &PlayerHandler::get_position() const
 {
-	return player_->get_position();
+	return position_;
 }
 int32_t PlayerHandler::get_health() const
 {
@@ -30,7 +30,7 @@ int32_t PlayerHandler::get_points() const
 }
 void PlayerHandler::set_position(const Position &new_value)
 {
-	player_->set_position(new_value);
+	position_ = new_value;
 }
 void PlayerHandler::set_health(int32_t new_value)
 {
@@ -56,13 +56,17 @@ void PlayerHandler::move_by_direction(DIRECTION direction, int32_t multiplier)
 {
 	for (int32_t i = 0; i < multiplier; ++i)
 	{
-		auto new_position = Direction::getInstance().calculate_position(player_->get_position(), direction);
+		auto new_position = Direction::getInstance().calculate_position(position_, direction);
 
-		if (map_handler_.can_move(new_position))
+		if (map_handler_ == nullptr)
+		{
+			throw std::invalid_argument("MapHandler was not initialized");
+		}
+		if (map_handler_->can_move(new_position))
 		{
 			set_position(new_position);
 
-			auto active_event = map_handler_.get_cell(new_position).get_active_event();
+			auto active_event = map_handler_->get_cell(new_position).get_active_event();
 			if (active_event != nullptr)
 			{
 				active_event->interaction(this);
@@ -72,10 +76,16 @@ void PlayerHandler::move_by_direction(DIRECTION direction, int32_t multiplier)
 
 	// TODO notify subscribers about player move
 }
-PlayerHandler::PlayerHandler(Player *player, MapHandler &handler) : player_(player), map_handler_(handler)
+PlayerHandler::PlayerHandler(Player *player, MapHandler *handler) : player_(player), map_handler_(handler)
 {
 	if (player_ == nullptr)
 	{
 		throw std::invalid_argument("Nullptr passed to PlayerHandler");
 	}
+}
+MapHandler *PlayerHandler::reset_map_handler(MapHandler *handler)
+{
+	auto *old = map_handler_;
+	map_handler_ = handler;
+	return old;
 }

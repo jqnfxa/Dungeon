@@ -6,8 +6,8 @@
 
 Map::Map(const Dimension &dimensions) : dimensions_(dimensions), start_(-1, -1), finish_(-1, -1), map_(nullptr)
 {
-	if (dimensions_.get_x() < MAP_DIMENSION_LOWER_BOUND || dimensions_.get_y() < MAP_DIMENSION_LOWER_BOUND || dimensions_.get_x() > MAP_DIMENSION_UPPER_BOUND
-		|| dimensions_.get_y() > MAP_DIMENSION_UPPER_BOUND)
+	if (dimensions_.get_x() < MAP_DIMENSION_LOWER_BOUND || dimensions_.get_y() < MAP_DIMENSION_LOWER_BOUND
+		|| dimensions_.get_x() > MAP_DIMENSION_UPPER_BOUND || dimensions_.get_y() > MAP_DIMENSION_UPPER_BOUND)
 	{
 		throw std::logic_error("Unexpected dimensions for map (too small or too big)");
 	}
@@ -125,7 +125,7 @@ void Map::set_cell(const Position &point, const Cell &new_cell)
 	}
 	map_[point.get_x()][point.get_y()] = new_cell;
 }
-Dimension Map::get_dimensions() const
+const Dimension &Map::get_dimensions() const
 {
 	return dimensions_;
 }
@@ -135,10 +135,10 @@ void Map::reset_start(const Position &point)
 	{
 		if (start_ != Vector2<int32_t>(-1, -1))
 		{
-			map_[start_.get_x()][start_.get_y()].set_type(Cell::Type::movable);
+			map_[start_.get_x()][start_.get_y()].set_type(Cell::Type::MOVABLE);
 		}
 		start_ = point;
-		map_[start_.get_x()][start_.get_y()].set_type(Cell::Type::start);
+		map_[start_.get_x()][start_.get_y()].set_type(Cell::Type::ENTRANCE);
 	}
 }
 void Map::reset_finish(const Vector2<int32_t> &point)
@@ -147,24 +147,24 @@ void Map::reset_finish(const Vector2<int32_t> &point)
 	{
 		if (finish_ != Vector2<int32_t>(-1, -1))
 		{
-			map_[finish_.get_x()][finish_.get_y()].set_type(Cell::Type::movable);
+			map_[finish_.get_x()][finish_.get_y()].set_type(Cell::Type::MOVABLE);
 		}
 		finish_ = point;
-		map_[finish_.get_x()][finish_.get_y()].set_type(Cell::Type::finish);
+		map_[finish_.get_x()][finish_.get_y()].set_type(Cell::Type::EXIT);
 	}
 }
 void Map::build_wall(const Position &point)
 {
 	if (is_on_map(point) && get_cell(point).is_movable())
 	{
-		map_[point.get_x()][point.get_y()].set_type(Cell::Type::wall);
+		map_[point.get_x()][point.get_y()].set_type(Cell::Type::WALL);
 	}
 }
 void Map::destroy_wall(const Position &point)
 {
 	if (is_on_map(point) && !get_cell(point).is_movable())
 	{
-		map_[point.get_x()][point.get_y()].set_type(Cell::Type::movable);
+		map_[point.get_x()][point.get_y()].set_type(Cell::Type::MOVABLE);
 	}
 }
 bool Map::is_on_map(const Position &point) const
@@ -172,11 +172,11 @@ bool Map::is_on_map(const Position &point) const
 	return point.get_x() >= 0 && point.get_y() >= 0 && point.get_x() < dimensions_.get_x()
 		   && point.get_y() < dimensions_.get_y();
 }
-Position Map::get_start_point() const
+const Position &Map::get_start_point() const
 {
 	return start_;
 }
-Position Map::get_finish_point() const
+const Position &Map::get_finish_point() const
 {
 	return finish_;
 }
@@ -225,21 +225,13 @@ std::ostream &Map::print(std::ostream &out) const
 }
 bool Map::is_adjacent_to_movable(const Position &point) const
 {
-	for (int dx = -1; dx <= 1; ++dx)
+	for (int i = 1; i <= 4; ++i)
 	{
-		for (int dy = -1; dy <= 1; ++dy)
+		Position neighbor(Direction::getInstance().calculate_position(point, static_cast<DIRECTION>(i)));
+
+		if (is_on_map(neighbor) && get_cell(neighbor).is_movable())
 		{
-			if (dx == 0 && dy == 0)
-			{
-				continue;
-			}
-
-			Position neighbor(point.get_x() + dx, point.get_y() + dy);
-
-			if (is_on_map(neighbor) && get_cell(neighbor).is_movable())
-			{
-				return true;
-			}
+			return true;
 		}
 	}
 	return false;

@@ -32,10 +32,10 @@ contains `_`?
 4.  If `TestName` ends with an `_` (say, `Bar_`), we get
     `TestSuiteName_Bar__Test`, which is invalid.
 
-So clearly `TestSuiteName` and `TestName` cannot start or end with `_`
-(Actually, `TestSuiteName` can start with `_`—as long as the `_` isn't followed
+So clearly `TestSuiteName` and `TestName` cannot ENTRANCE or end with `_`
+(Actually, `TestSuiteName` can ENTRANCE with `_`—as long as the `_` isn't followed
 by an upper-case letter. But that's getting complicated. So for simplicity we
-just say that it cannot start with `_`.).
+just say that it cannot ENTRANCE with `_`.).
 
 It may seem fine for `TestSuiteName` and `TestName` to contain `_` in the
 middle. However, consider this:
@@ -320,7 +320,7 @@ You may still want to use `SetUp()/TearDown()` in the following cases:
     executable, or to use `SetUp()` instead of a constructor.
 *   If the tear-down operation could throw an exception, you must use
     `TearDown()` as opposed to the destructor, as throwing in a destructor leads
-    to undefined behavior and usually will kill your program right away. Note
+    to undefined behavior and usually will kill your program RIGHT away. Note
     that many standard libraries (like STL) may throw when exceptions are
     enabled in the compiler. Therefore you should prefer `TearDown()` if you
     want to write portable tests that work with or without exceptions.
@@ -620,7 +620,7 @@ whether the code is under test.
 
 ## How do I temporarily disable a test?
 
-If you have a broken test that you cannot fix right away, you can add the
+If you have a broken test that you cannot fix RIGHT away, you can add the
 `DISABLED_` prefix to its name. This will exclude it from execution. This is
 better than commenting out the code or using `#if 0`, as disabled tests are
 still compiled (and thus won't rot).

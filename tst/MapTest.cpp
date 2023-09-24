@@ -32,6 +32,10 @@ TEST(MapTestSuite, TestMapCopyContructor)
 		EXPECT_EQ(copy.get_dimensions(), Dimension(11, 11));
 		EXPECT_EQ(copy.get_start_point(), Position(-1, -1));
 		EXPECT_EQ(copy.get_finish_point(), Position(-1, -1));
+
+		copy.reset_finish({1, 1});
+		EXPECT_EQ(copy.get_finish_point(), Position(1, 1));
+		EXPECT_EQ(map.get_start_point(), Position(-1, -1));
 	}
 }
 
@@ -49,20 +53,20 @@ TEST(MapTestSuite, TestMapCellInteraction)
 {
 	Map map(11, 11);
 
-	EXPECT_EQ(map.get_cell({1, 1}), Cell(Cell::Type::movable));
+	EXPECT_EQ(map.get_cell({1, 1}), Cell(Cell::Type::MOVABLE));
 
 	map.reset_start({1, 1});
 
-	EXPECT_EQ(map.get_cell({1, 1}), Cell(Cell::Type::start));
+	EXPECT_EQ(map.get_cell({1, 1}), Cell(Cell::Type::ENTRANCE));
 
 	map.build_wall({5, 5});
 
-	EXPECT_EQ(map.get_cell({5, 5}), Cell(Cell::Type::wall));
+	EXPECT_EQ(map.get_cell({5, 5}), Cell(Cell::Type::WALL));
 	EXPECT_EQ(map.get_cell({5, 5}).is_movable(), false);
 
 	map.destroy_wall({5, 5});
 
-	EXPECT_EQ(map.get_cell({5, 5}), Cell(Cell::Type::movable));
+	EXPECT_EQ(map.get_cell({5, 5}), Cell(Cell::Type::MOVABLE));
 	EXPECT_EQ(map.get_cell({5, 5}).is_movable(), true);
 
 	map.reset_finish({12, 12});
@@ -87,19 +91,16 @@ TEST(MapTestSuite, TestIsOnMap)
 
 TEST(MapTestSuite, TestMapCellEvents)
 {
-	auto *player = new Player(Position(4, 4));
-	Map map(11, 11);
-	MapHandler map_handler(&map);
-	PlayerHandler handler(player, map_handler);
+	MapHandler map_handler(new Map(11, 11));
+	PlayerHandler handler(new Player, &map_handler);
+	handler.set_position({4, 4});
 
-	Cell cell;
-	cell.add_event(new Spikes);
-	map.set_cell({5, 5}, cell);
+	map_handler.get_cell({5, 5}).add_event(new Spikes);
 
 	EXPECT_EQ(handler.get_health(), 100);
 
-	handler.move_by_direction(down, 1);
-	handler.move_by_direction(right, 1);
+	handler.move_by_direction(DOWN, 1);
+	handler.move_by_direction(RIGHT, 1);
 
 	EXPECT_EQ(handler.get_health(), 80);
 }

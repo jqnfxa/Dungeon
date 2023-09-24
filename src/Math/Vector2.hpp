@@ -42,7 +42,7 @@ Vector2<T>::Vector2(): Vector2(0, 0)
 {
 }
 template<typename T>
-Vector2<T>::Vector2(const Vector2 &other)
+Vector2<T>::Vector2(const Vector2 &other) : Vector2()
 {
 	*this = other;
 }
