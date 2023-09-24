@@ -1,3 +1,0 @@
-/home/shard/CLionProjects/Dungeon/cmake-build-debug/CMakeFiles/Dungeon.dir
-/home/shard/CLionProjects/Dungeon/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/shard/CLionProjects/Dungeon/cmake-build-debug/CMakeFiles/rebuild_cache.dir
