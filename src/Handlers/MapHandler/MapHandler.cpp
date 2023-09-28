@@ -22,7 +22,7 @@ void MapHandler::set_cell(const Position &point, Cell &&new_cell) const
 bool MapHandler::can_move(const Position &point) const
 {
 	// TODO check for other npc?
-	return map_->is_on_map(point) && map_->get_cell(point).is_movable();
+	return map_->can_move(point);
 }
 MapHandler::~MapHandler()
 {

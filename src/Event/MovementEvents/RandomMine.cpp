@@ -1,5 +1,5 @@
 #include "RandomMine.hpp"
-#include "../Handlers/PlayerHandler/PlayerHandler.hpp"
+#include "Handlers/PlayerHandler/PlayerHandler.hpp"
 #include "Random/Random.hpp"
 #include <cmath>
 #include <random>
@@ -23,4 +23,8 @@ RandomMine *RandomMine::copy() const
 RandomMine *RandomMine::create() const
 {
 	return new RandomMine;
+}
+bool RandomMine::is_temporary() const
+{
+	return false;
 }

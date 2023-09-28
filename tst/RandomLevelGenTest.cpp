@@ -1,6 +1,6 @@
 #include <MapGenerator/RandomLevelGen/Generator.hpp>
 #include "gtest/gtest.h"
-#include "Event/RandomMine.hpp"
+#include "Event/MovementEvents/RandomMine.hpp"
 
 TEST(MapGeneratorSuite, TestSmallMapGeneration) {
 	int m = 10;

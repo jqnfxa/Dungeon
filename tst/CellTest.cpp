@@ -1,7 +1,7 @@
 #include <World/Cell.hpp>
 #include "gtest/gtest.h"
-#include "Event/Spikes.hpp"
-#include "Event/RandomMine.hpp"
+#include "Event/NegativeEvents/Spikes.hpp"
+#include "Event/MovementEvents/RandomMine.hpp"
 
 TEST(CellTestSuite, TestDefaultConstructor)
 {

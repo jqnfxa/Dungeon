@@ -8,15 +8,15 @@ add_executable(${BINARY}_run ${SOURCES})
 
 add_library(${BINARY}_lib STATIC ${SOURCES}
         Event/Interface/EventInterface.hpp
-        Event/Spikes.cpp
-        Event/Spikes.hpp
+        Event/NegativeEvents/Spikes.cpp
+        Event/NegativeEvents/Spikes.hpp
         Handlers/Interface/HandlerInterface.hpp
         Handlers/MapHandler/MapHandler.cpp
         Handlers/MapHandler/MapHandler.hpp
-        Event/Potion.cpp
-        Event/Potion.hpp
-        Event/RandomMine.cpp
-        Event/RandomMine.hpp
+        Event/PositiveEvents/Potion.cpp
+        Event/PositiveEvents/Potion.hpp
+        Event/MovementEvents/RandomMine.cpp
+        Event/MovementEvents/RandomMine.hpp
         Random/Random.cpp
         Random/Random.hpp
         MapGenerator/RandomLevelGen/Generator.cpp
@@ -25,4 +25,8 @@ add_library(${BINARY}_lib STATIC ${SOURCES}
         MapGenerator/MediumMap/MediumMap.hpp
         MapGenerator/SmallMap/SmallMap.cpp
         MapGenerator/SmallMap/SmallMap.hpp
+        Event/PositiveEvents/Star.cpp
+        Event/PositiveEvents/Star.hpp
+        Event/PositiveEvents/ShieldKit.cpp
+        Event/PositiveEvents/ShieldKit.hpp
 )

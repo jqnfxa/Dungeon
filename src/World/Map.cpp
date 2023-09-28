@@ -1,7 +1,7 @@
 #include "Map.hpp"
-#include "Event/Spikes.hpp"
-#include "Event/Potion.hpp"
-#include "Event/RandomMine.hpp"
+#include "Event/NegativeEvents/Spikes.hpp"
+#include "Event/PositiveEvents/Potion.hpp"
+#include "Event/MovementEvents/RandomMine.hpp"
 #include <ostream>
 
 Map::Map(const Dimension &dimensions) : dimensions_(dimensions), start_(-1, -1), finish_(-1, -1), map_(nullptr)
@@ -229,10 +229,14 @@ bool Map::is_adjacent_to_movable(const Position &point) const
 	{
 		Position neighbor(Direction::getInstance().calculate_position(point, static_cast<DIRECTION>(i)));
 
-		if (is_on_map(neighbor) && get_cell(neighbor).is_movable())
+		if (can_move(neighbor))
 		{
 			return true;
 		}
 	}
 	return false;
+}
+bool Map::can_move(const Position &point) const
+{
+	return is_on_map(point) && get_cell(point).is_movable();
 }

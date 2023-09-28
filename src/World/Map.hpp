@@ -36,6 +36,7 @@ class Map {
   void set_cell(const Position &point, Cell &&new_cell);
   void set_cell(const Position &point, const Cell &new_cell);
 
+  [[nodiscard]] bool can_move(const Position &point) const;
   [[nodiscard]] const Position &get_start_point() const;
   [[nodiscard]] const Position &get_finish_point() const;
   [[nodiscard]] Cell &get_cell(const Position &point) const;

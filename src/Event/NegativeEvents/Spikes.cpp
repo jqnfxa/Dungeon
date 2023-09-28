@@ -1,5 +1,5 @@
 #include "Spikes.hpp"
-#include "../Handlers/PlayerHandler/PlayerHandler.hpp"
+#include "Handlers/PlayerHandler/PlayerHandler.hpp"
 #include <cmath>
 
 void Spikes::interaction(HandlerInterface *handler) const
@@ -25,4 +25,8 @@ Spikes *Spikes::copy() const
 Spikes *Spikes::create() const
 {
 	return new Spikes();
+}
+bool Spikes::is_temporary() const
+{
+	return false;
 }

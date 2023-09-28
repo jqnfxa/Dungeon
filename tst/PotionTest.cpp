@@ -1,4 +1,4 @@
-#include <Event/Potion.hpp>
+#include "Event/PositiveEvents/Potion.hpp"
 #include <Entities/Player/Player.hpp>
 #include <Handlers/PlayerHandler/PlayerHandler.hpp>
 #include "gtest/gtest.h"

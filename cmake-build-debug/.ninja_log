@@ -1,7 +1,7 @@
 # ninja log v5
 27051	31236	1695575639559681781	tst/CMakeFiles/DungeonGame_tst.dir/SpikesTest.cpp.o	db642168dcf76ba6
 1	994	1694874203599987884	CMakeFiles/DungeonGame.dir/main.cpp.o	8976a51632919dc5
-5544	6015	1695576124677270912	tst/DungeonGame_tst	37fcd9d0773ab501
+3788	4472	1695576151953360316	tst/DungeonGame_tst	37fcd9d0773ab501
 1	1391	1694874203995991782	CMakeFiles/DungeonGame.dir/src/Handlers/PlayerHandler/PlayerHandler.cpp.o	3ce2050beb37df6e
 1548	1586	1694875935132533412	src/CMakeFiles/DungeonGame_lib.dir/main.cpp.o	ee3683fc3796a7f2
 4807	6707	1695575615031601502	src/CMakeFiles/DungeonGame_lib.dir/Handlers/MapHandler/MapHandler.cpp.o	9badd9cb55141c64
@@ -10,8 +10,8 @@
 5212	9023	1694947094367164791	tst/CMakeFiles/DungeonGame_tst.dir/GenerateLevel1Test.cpp.o	63a74fd4576a18bb
 5	2071	1695576120737257998	src/CMakeFiles/DungeonGame_lib.dir/MapGenerator/SmallMap/SmallMap.cpp.o	45882cce47c114ad
 10209	16146	1695575624467632385	tst/CMakeFiles/DungeonGame_tst.dir/MapTest.cpp.o	4d646f7303045b96
-11115	16396	1695575624719633209	tst/CMakeFiles/DungeonGame_tst.dir/MediumMapTest.cpp.o	7355a29d851dbffa
-0	122	1694947950497483573	build.ninja	f9f20097f5c56ea9
+5	3787	1695576151273358087	tst/CMakeFiles/DungeonGame_tst.dir/MediumMapTest.cpp.o	7355a29d851dbffa
+0	122	1695925172075236088	build.ninja	f9f20097f5c56ea9
 21676	27051	1695575635375668087	tst/CMakeFiles/DungeonGame_tst.dir/RandomMineTest.cpp.o	28bff69839af51d5
 3406	5048	1694941724063491752	src/CMakeFiles/DungeonGame_lib.dir/MapGenerator/Level_1/GenerateLevel1.cpp.o	ff3c9cb2f2cb47ea
 16146	22232	1695575630555652310	tst/CMakeFiles/DungeonGame_tst.dir/PlayerTest.cpp.o	2ba142aa72798ecc
@@ -38,5 +38,3 @@
 4	3580	1695576122245262941	src/CMakeFiles/DungeonGame_lib.dir/MapGenerator/RandomLevelGen/Generator.cpp.o	91cbf0caf3c08889
 1	3647	1694876873899511683	tst/CMakeFiles/DungeonGame_tst.dir/main.cpp.o	9351e08838ddf13d
 2	983	1694874203587987766	CMakeFiles/DungeonGame.dir/src/Movement/Direction.cpp.o	c0d9f5ce83df0576
-5	3787	1695576151273358087	tst/CMakeFiles/DungeonGame_tst.dir/MediumMapTest.cpp.o	7355a29d851dbffa
-3788	4472	1695576151953360316	tst/DungeonGame_tst	37fcd9d0773ab501

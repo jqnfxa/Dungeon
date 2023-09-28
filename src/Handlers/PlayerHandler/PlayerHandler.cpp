@@ -62,6 +62,9 @@ void PlayerHandler::move_by_direction(DIRECTION direction, int32_t multiplier)
 		{
 			throw std::invalid_argument("MapHandler was not initialized");
 		}
+		// TODO delayed events
+		// if map_handler_.is_on_map(new_position) && map_handler.get_cell(new_position).get_active_event().type == door
+		// run it (event should move us if success)
 		if (map_handler_->can_move(new_position))
 		{
 			set_position(new_position);
@@ -70,6 +73,11 @@ void PlayerHandler::move_by_direction(DIRECTION direction, int32_t multiplier)
 			if (active_event != nullptr)
 			{
 				active_event->interaction(this);
+
+				if (active_event->is_temporary())
+				{
+					map_handler_->get_cell(new_position).remove_event();
+				}
 			}
 		}
 	}

@@ -20,3 +20,7 @@ Potion *Potion::create() const
 {
 	return new Potion();
 }
+bool Potion::is_temporary() const
+{
+	return true;
+}

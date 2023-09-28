@@ -1,7 +1,7 @@
 #include "SmallMap.hpp"
-#include "Event/RandomMine.hpp"
-#include "Event/Spikes.hpp"
-#include "Event/Potion.hpp"
+#include "Event/MovementEvents/RandomMine.hpp"
+#include "Event/NegativeEvents/Spikes.hpp"
+#include "Event/PositiveEvents/Potion.hpp"
 #include "MapGenerator/RandomLevelGen/Generator.hpp"
 
 #include <iostream>

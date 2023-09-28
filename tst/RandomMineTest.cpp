@@ -1,4 +1,4 @@
-#include <Event/RandomMine.hpp>
+#include "Event/MovementEvents/RandomMine.hpp"
 #include <Entities/Player/Player.hpp>
 #include <Handlers/PlayerHandler/PlayerHandler.hpp>
 #include "gtest/gtest.h"

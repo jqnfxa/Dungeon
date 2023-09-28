@@ -1,6 +1,6 @@
 #include <World/Map.hpp>
 #include "gtest/gtest.h"
-#include "Event/Spikes.hpp"
+#include "Event/NegativeEvents/Spikes.hpp"
 #include "Entities/Player/Player.hpp"
 #include "Handlers/PlayerHandler/PlayerHandler.hpp"
 
