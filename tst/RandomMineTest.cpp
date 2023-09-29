@@ -2,10 +2,11 @@
 #include <Entities/Player/Player.hpp>
 #include <Handlers/PlayerHandler/PlayerHandler.hpp>
 #include "gtest/gtest.h"
+#include "Event/Factory/EventFactory.hpp"
 
 TEST(TestRandomMineSuite, TestMineInteraction)
 {
-	auto *map = new Map(100, 100);
+	auto *map = new GameField(100, 100);
 	map->build_wall({51, 50});
 	map->build_wall({49, 50});
 	map->build_wall({50, 49});
@@ -17,10 +18,10 @@ TEST(TestRandomMineSuite, TestMineInteraction)
 	EXPECT_EQ(player_handler.get_health(), 100);
 	EXPECT_EQ(player_handler.get_armor(), 20);
 
-	EventInterface *event = new RandomMine;
+	EventInterface *event = EventFactory::instance().create(EVENT_TYPE::RANDOM_MINE);
 	event->interaction(&player_handler);
 
-	EXPECT_EQ(player_handler.get_position(), Position(50, player_handler.get_position().get_y()));
+	EXPECT_EQ(player_handler.get_position(), Position(50, player_handler.get_position().y()));
 	EXPECT_EQ(player_handler.get_health(), 100);
 	EXPECT_EQ(player_handler.get_armor(), 20);
 

@@ -1,19 +1,58 @@
 #include <MapGenerator/RandomLevelGen/Generator.hpp>
 #include "gtest/gtest.h"
-#include "Event/MovementEvents/RandomMine.hpp"
 
 TEST(MapGeneratorSuite, TestSmallMapGeneration)
 {
-	int m = 25;
-	int n = 100;
+	int m = 10;
+	int n = 10;
 
-	Generator generator(m, n, 17, 60, 20, 10);
-	Map *new_map = generator.generate();
+	Generator generator(m, n, 25, 30, 50, 20);
+	GameField *new_map = generator.generate();
 
 	new_map->print(std::cerr);
 
 	delete new_map;
 }
+/*
+
+TEST(MapGeneratorSuite, TestMediumMapGeneration)
+{
+	int m = 80;
+	int n = 150;
+
+	Generator generator(m, n, 25, 30, 50, 20);
+	GameField *new_map = generator.generate();
+
+	new_map->print(std::cerr);
+
+	delete new_map;
+}
+
+TEST(MapGeneratorSuite, TestBigMapGeneration)
+{
+	int m = 100;
+	int n = 250;
+
+	Generator generator(m, n, 25, 30, 50, 20);
+	GameField *new_map = generator.generate();
+
+	new_map->print(std::cerr);
+
+	delete new_map;
+}
+
+TEST(MapGeneratorSuite, TestHugeMapGeneration)
+{
+	int m = 200;
+	int n = 400;
+
+	Generator generator(m, n, 100, 30, 50, 20);
+	GameField *new_map = generator.generate();
+
+	new_map->print(std::cerr);
+
+	delete new_map;
+}*/
 
 /*
 TEST(MapGeneratorSuite, TestMediumMapGeneration) {

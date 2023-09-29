@@ -18,7 +18,7 @@ TEST(PlayerHandlerTestSuite, TestInvalidConstructor)
 TEST(PlayerHandlerTestSuite, TestConstructor)
 {
 	auto *player = new Player;
-	MapHandler map_handler(new Map);
+	MapHandler map_handler(new GameField);
 	PlayerHandler handler(player, &map_handler);
 
 	EXPECT_EQ(player->get_health(), handler.get_health());
@@ -29,7 +29,7 @@ TEST(PlayerHandlerTestSuite, TestConstructor)
 
 TEST(PlayerHandlerTestSuite, TestPlayerMove)
 {
-	Map *map = new Map;
+	GameField *map = new GameField;
 	MapHandler map_handler(map);
 	PlayerHandler handler(new Player, &map_handler);
 

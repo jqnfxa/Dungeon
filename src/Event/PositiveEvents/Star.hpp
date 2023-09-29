@@ -9,5 +9,5 @@ class Star : public EventInterface {
   void interaction(HandlerInterface *handler) const override;
   [[nodiscard]] bool is_temporary() const override;
   [[nodiscard]] Star *copy() const override;
-  [[nodiscard]] Star *create() const override;
+  [[nodiscard]] bool operator==(EventInterface *event) const override;
 };

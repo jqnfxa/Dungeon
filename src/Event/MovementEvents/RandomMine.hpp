@@ -11,5 +11,5 @@ class RandomMine : public EventInterface {
   void interaction(HandlerInterface *handler) const override;
   [[nodiscard]] bool is_temporary() const override;
   [[nodiscard]] RandomMine *copy() const override;
-  [[nodiscard]] RandomMine *create() const override;
+  [[nodiscard]] bool operator==(EventInterface *event) const override;
 };

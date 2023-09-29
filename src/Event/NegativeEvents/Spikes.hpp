@@ -12,5 +12,5 @@ class Spikes : public EventInterface {
   void interaction(HandlerInterface *handler) const override;
   [[nodiscard]] bool is_temporary() const override;
   [[nodiscard]] Spikes *copy() const override;
-  [[nodiscard]] Spikes *create() const override;
+  [[nodiscard]] bool operator==(EventInterface *event) const override;
 };

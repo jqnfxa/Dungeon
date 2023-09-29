@@ -1,7 +1,7 @@
 #pragma once
 #include "../../Entities/Player/Player.hpp"
 #include "../../Movement/Direction.hpp"
-#include "../../World/Map.hpp"
+#include "../../World/GameField.hpp"
 #include "../Interface/HandlerInterface.hpp"
 #include "Handlers/MapHandler/MapHandler.hpp"
 

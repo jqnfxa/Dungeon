@@ -7,7 +7,7 @@
 #define MAP_DIMENSION_UPPER_BOUND 1000
 #define MAP_DIMENSION_LOWER_BOUND 10
 
-class Map {
+class GameField {
  private:
   Dimension dimensions_;
   Position start_;
@@ -17,16 +17,19 @@ class Map {
 
   void clear_map();
   Cell **allocate_map(const Dimension &dimensions);
+
+  void swap_values(GameField &&other);
+  void swap_values(const GameField &other);
  public:
-  Map();
-  Map(int32_t dim_x, int32_t dim_y);
-  explicit Map(const Dimension &dimensions);
+  GameField();
+  GameField(int32_t dim_x, int32_t dim_y);
+  explicit GameField(const Dimension &dimensions);
 
-  Map(const Map &other);
-  Map(Map &&other) noexcept;
+  GameField(const GameField &other);
+  GameField(GameField &&other) noexcept;
 
-  Map &operator=(const Map &other);
-  Map &operator=(Map &&other) noexcept;
+  GameField &operator=(const GameField &other);
+  GameField &operator=(GameField &&other) noexcept;
 
   void reset_start(const Position &point);
   void reset_finish(const Position &point);
@@ -37,13 +40,13 @@ class Map {
   void set_cell(const Position &point, const Cell &new_cell);
 
   [[nodiscard]] bool can_move(const Position &point) const;
-  [[nodiscard]] const Position &get_start_point() const;
-  [[nodiscard]] const Position &get_finish_point() const;
+  [[nodiscard]] const Position &start_point() const;
+  [[nodiscard]] const Position &exit_point() const;
   [[nodiscard]] Cell &get_cell(const Position &point) const;
-  [[nodiscard]] const Dimension &get_dimensions() const;
+  [[nodiscard]] const Dimension &dimensions() const;
   [[nodiscard]] bool is_on_map(const Position &point) const;
-  [[nodiscard]] bool is_adjacent_to_movable(const Position &point) const;
+  [[nodiscard]] bool is_adjacent_to_same_type(const Position &point) const;
 
   std::ostream &print(std::ostream &out) const;
-  ~Map();
+  ~GameField();
 };

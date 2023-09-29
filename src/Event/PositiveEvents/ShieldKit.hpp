@@ -9,5 +9,5 @@ class ShieldKit : public EventInterface {
   void interaction(HandlerInterface *handler) const override;
   [[nodiscard]] bool is_temporary() const override;
   [[nodiscard]] ShieldKit *copy() const override;
-  [[nodiscard]] ShieldKit *create() const override;
+  [[nodiscard]] bool operator==(EventInterface *event) const override;
 };

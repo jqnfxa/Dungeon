@@ -19,8 +19,8 @@ ShieldKit *ShieldKit::copy() const
 {
 	return new ShieldKit(*this);
 }
-ShieldKit *ShieldKit::create() const
+bool ShieldKit::operator==(EventInterface *event) const
 {
-	return new ShieldKit();
+	return dynamic_cast<ShieldKit *>(event) != nullptr;
 }
 

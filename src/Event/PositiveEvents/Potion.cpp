@@ -16,11 +16,11 @@ Potion *Potion::copy() const
 {
 	return new Potion(*this);
 }
-Potion *Potion::create() const
-{
-	return new Potion();
-}
 bool Potion::is_temporary() const
 {
 	return true;
+}
+bool Potion::operator==(EventInterface *event) const
+{
+	return dynamic_cast<Potion *>(event) != nullptr;
 }

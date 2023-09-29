@@ -1,6 +1,6 @@
 #include "MapHandler.hpp"
 
-MapHandler::MapHandler(Map *map) : map_(map)
+MapHandler::MapHandler(GameField *map) : map_(map)
 {
 	if (map_ == nullptr)
 	{

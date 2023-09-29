@@ -14,11 +14,11 @@ Star *Star::copy() const
 {
 	return new Star(*this);
 }
-Star *Star::create() const
-{
-	return new Star();
-}
 bool Star::is_temporary() const
 {
 	return true;
+}
+bool Star::operator==(EventInterface *event) const
+{
+	return dynamic_cast<Star *>(event) != nullptr;
 }

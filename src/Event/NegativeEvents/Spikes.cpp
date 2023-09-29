@@ -22,11 +22,11 @@ Spikes *Spikes::copy() const
 {
 	return new Spikes(*this);
 }
-Spikes *Spikes::create() const
-{
-	return new Spikes();
-}
 bool Spikes::is_temporary() const
 {
 	return false;
+}
+bool Spikes::operator==(EventInterface *event) const
+{
+	return dynamic_cast<Spikes *>(event) != nullptr;
 }
