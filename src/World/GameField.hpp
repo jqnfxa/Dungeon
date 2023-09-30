@@ -1,13 +1,13 @@
 #pragma once
 #include <cstdint>
-#include "../Math/Vector2.hpp"
-#include "../Movement/Aliases.hpp"
+#include "Handlers/Interface/MapObserver.hpp"
+#include "Movement/Aliases.hpp"
 #include "Cell.hpp"
 
 #define MAP_DIMENSION_UPPER_BOUND 1000
 #define MAP_DIMENSION_LOWER_BOUND 10
 
-class GameField {
+class GameField : public MapObserver {
  private:
   Dimension dimensions_;
   Position start_;
@@ -20,6 +20,7 @@ class GameField {
 
   void swap_values(GameField &&other);
   void swap_values(const GameField &other);
+
  public:
   GameField();
   GameField(int32_t dim_x, int32_t dim_y);
@@ -39,14 +40,16 @@ class GameField {
   void set_cell(const Position &point, Cell &&new_cell);
   void set_cell(const Position &point, const Cell &new_cell);
 
-  [[nodiscard]] bool can_move(const Position &point) const;
+  [[nodiscard]] bool can_move(const Position &point) const override;
+  [[nodiscard]] Cell &get_cell(const Position &point) const override;
+  [[nodiscard]] std::vector<Position> find_route(const Position &begin, const Position &end) const override;
+
   [[nodiscard]] const Position &start_point() const;
   [[nodiscard]] const Position &exit_point() const;
-  [[nodiscard]] Cell &get_cell(const Position &point) const;
   [[nodiscard]] const Dimension &dimensions() const;
   [[nodiscard]] bool is_on_map(const Position &point) const;
   [[nodiscard]] bool is_adjacent_to_same_type(const Position &point) const;
 
   std::ostream &print(std::ostream &out) const;
-  ~GameField();
+  ~GameField() override;
 };

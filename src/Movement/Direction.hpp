@@ -9,20 +9,21 @@ enum DIRECTION {
 
 class Direction {
  private:
-  const std::vector<Vector2<int32_t>> possible_moves_ = {{0,  0},
-														 {-1, 0},
-														 {0,  1},
-														 {1,  0},
-														 {0,  -1}};
-  Direction() = default;
+  std::vector<Position> possible_moves_ = {{0, 0}};
+  std::vector<Position> possible_moves_sharable = {{-1, 0},
+												   {0,  1},
+												   {1,  0},
+												   {0,  -1}};
+  Direction();
  public:
   Direction(const Direction &) = delete;
   void operator=(const Direction &) = delete;
 
-  static Direction &getInstance()
+  static Direction &instance()
   {
-	  static Direction instance;
-	  return instance;
+	  static Direction instance_;
+	  return instance_;
   }
+  [[nodiscard]] const std::vector<Position> &get_all_possible_moves() const;
   Position calculate_position(const Position &old, DIRECTION direction);
 };

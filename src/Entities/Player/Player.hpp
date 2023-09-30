@@ -16,6 +16,8 @@ class Player : public EntityInterface {
   int32_t points_;
 
   void adjust(int32_t &value, int32_t limit);
+  void swap_values(Player &&player);
+  void swap_values(const Player &player);
  public:
   Player(const Player &player);
   Player(Player &&player) noexcept;

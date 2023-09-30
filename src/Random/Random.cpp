@@ -1,19 +1,11 @@
 #include "Random.hpp"
-#include "Event/MovementEvents/RandomMine.hpp"
-#include "Event/PositiveEvents/Potion.hpp"
-#include "Event/PositiveEvents/ShieldKit.hpp"
-#include "Event/PositiveEvents/Star.hpp"
-#include "Event/NegativeEvents/Spikes.hpp"
+#include "Event/Factory/EventFactory.hpp"
 #include <random>
 
-Random &Random::get_instance()
-{
-	static Random random;
-	return random;
-}
 DIRECTION Random::pick_direction() const
 {
-	return static_cast<DIRECTION>(pick_num(UP, LEFT));
+	auto &directions = Direction::instance().get_all_possible_moves();
+	return static_cast<DIRECTION>(pick_num(0, directions.size() - 1));
 }
 int32_t Random::pick_num(int32_t from, int32_t to) const
 {
@@ -23,32 +15,20 @@ int32_t Random::pick_num(int32_t from, int32_t to) const
 
 	return distribution(gen);
 }
-EventInterface *Random::pick_event(EVENT_TYPE type)
+EventInterface *Random::pick_event(EVENT_GROUP group)
 {
 	EventInterface *event = nullptr;
-	if (type == NEUTRAL)
+	if (group == NEUTRAL)
 	{
-		event = new RandomMine;
+		event = EventFactory::instance().create(EVENT_TYPE::RANDOM_MINE);
 	}
-	else if (type == POSITIVE)
+	else if (group == POSITIVE)
 	{
-		auto pick = pick_num(0, 2);
-
-		switch (pick)
-		{
-			case 0:
-				event = new Potion;
-				break;
-			case 1:
-				event = new ShieldKit;
-				break;
-			case 2:
-				event = new Star;
-		}
+		event = EventFactory::instance().create(static_cast<EVENT_TYPE>(pick_num(EVENT_TYPE::POTION, EVENT_TYPE::STAR)));
 	}
-	else if (type == NEGATIVE)
+	else if (group == NEGATIVE)
 	{
-		event = new Spikes;
+		event = EventFactory::instance().create(EVENT_TYPE::SPIKES);
 	}
 	return event;
 }

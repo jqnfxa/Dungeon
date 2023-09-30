@@ -1,10 +1,9 @@
 #include "GameField.hpp"
-#include "Event/NegativeEvents/Spikes.hpp"
-#include "Event/PositiveEvents/Potion.hpp"
-#include "Event/MovementEvents/RandomMine.hpp"
-#include "Event/PositiveEvents/ShieldKit.hpp"
-#include "Event/PositiveEvents/Star.hpp"
+#include "Movement/Direction.hpp"
 #include <ostream>
+#include <queue>
+#include <map>
+#include <vector>
 
 GameField::GameField(const Dimension &dimensions) : dimensions_(dimensions),
 													start_(-1, -1),
@@ -164,46 +163,8 @@ std::ostream &GameField::print(std::ostream &out) const
 	{
 		for (int32_t j = 0; j < dimensions_.y(); j++)
 		{
-			auto &cell = get_cell({i, j});
-			if (cell.is_entrance())
-			{
-				out << '0';
-			}
-			else if (cell.is_exit())
-			{
-				out << '1';
-			}
-			else if (!cell.is_movable())
-			{
-				out << '*';
-			}
-			else
-			{
-				if (cell.get_active_event() == nullptr)
-				{
-					out << '.';
-				}
-				else if (const auto *p = dynamic_cast<const Spikes *>(cell.get_active_event()); p != nullptr)
-				{
-					out << '#';
-				}
-				else if (const auto *k = dynamic_cast<const Potion *>(cell.get_active_event()); k != nullptr)
-				{
-					out << '+';
-				}
-				else if (const auto *d = dynamic_cast<const RandomMine *>(cell.get_active_event()); d != nullptr)
-				{
-					out << '?';
-				}
-				else if (const auto *m = dynamic_cast<const ShieldKit *>(cell.get_active_event()); m != nullptr)
-				{
-					out << '&';
-				}
-				else if (const auto *n = dynamic_cast<const Star *>(cell.get_active_event()); n != nullptr)
-				{
-					out << '$';
-				}
-			}
+			out << get_cell({i, j});
+			out << std::flush;
 		}
 		out << std::endl;
 	}
@@ -211,12 +172,7 @@ std::ostream &GameField::print(std::ostream &out) const
 }
 bool GameField::is_adjacent_to_same_type(const Position &point) const
 {
-	const std::vector<Position> directions{{-1, 0},
-										   {1,  0},
-										   {0,  -1},
-										   {0,  1}};
-
-	return std::ranges::any_of(directions.begin(), directions.end(), [&](const Position &direction)
+	return std::ranges::any_of(Direction::instance().get_all_possible_moves().begin(), Direction::instance().get_all_possible_moves().end(), [&](const Position &direction)
 	{
 		const auto &pos = point + direction;
 
@@ -261,4 +217,50 @@ void GameField::swap_values(const GameField &other)
 			map_[i][j] = other.map_[i][j];
 		}
 	}
+}
+std::vector<Position> GameField::find_route(const Position &begin, const Position &end) const
+{
+	int m = dimensions().x();
+	int n = dimensions().y();
+	std::vector<std::vector<bool>> visited(m, std::vector<bool>(n, false));
+	std::map<Position, Position> prev;
+	std::queue<Position> q;
+
+	visited[begin.x()][begin.y()] = true;
+	q.push(begin);
+
+	while (!q.empty())
+	{
+		auto current = q.front();
+		q.pop();
+
+		if (current == end)
+		{
+			break;
+		}
+
+		for (auto &direction: Direction::instance().get_all_possible_moves())
+		{
+			auto new_pos = current + direction;
+
+			if (can_move(new_pos) && !visited[new_pos.x()][new_pos.y()])
+			{
+				q.push(new_pos);
+				visited[new_pos.x()][new_pos.y()] = true;
+				prev[new_pos] = current;
+			}
+		}
+
+	}
+
+	std::vector<Position> path;
+
+	for (Position it = end; it != begin; it = prev[it])
+	{
+		path.push_back(it);
+	}
+	path.push_back(begin);
+	std::reverse(path.begin(), path.end());
+
+	return path;
 }

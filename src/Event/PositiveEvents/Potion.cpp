@@ -1,25 +1,25 @@
 #include "Potion.hpp"
-#include "Handlers/PlayerHandler/PlayerHandler.hpp"
 
-void Potion::interaction(HandlerInterface *handler) const
+Potion::Potion(PlayerHandler &handler) : handler_(handler)
 {
-	auto *ptr = dynamic_cast<PlayerHandler *>(handler);
-	if (ptr == nullptr)
-	{
-		return;
-	}
-
-	ptr->set_health(ptr->get_health() + health_increase);
-	ptr->set_attack(ptr->get_attack() + attack_increase);
 }
+
+void Potion::trigger() const
+{
+	handler_.set_health(handler_.get_health() + health_increase);
+	handler_.set_attack(handler_.get_attack() + attack_increase);
+}
+
+bool Potion::is_temporary() const
+{
+	return temporary_state_;
+}
+
 Potion *Potion::copy() const
 {
 	return new Potion(*this);
 }
-bool Potion::is_temporary() const
-{
-	return true;
-}
+
 bool Potion::operator==(EventInterface *event) const
 {
 	return dynamic_cast<Potion *>(event) != nullptr;

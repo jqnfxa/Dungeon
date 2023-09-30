@@ -2,19 +2,21 @@
 #include "../../Entities/Player/Player.hpp"
 #include "../../Movement/Direction.hpp"
 #include "../../World/GameField.hpp"
-#include "../Interface/HandlerInterface.hpp"
-#include "Handlers/MapHandler/MapHandler.hpp"
+#include "Handlers/Interface/Subject.hpp"
 
-class PlayerHandler : public HandlerInterface {
+class PlayerHandler : public Subject {
  private:
   Player *player_;
   Position position_;
-  MapHandler *map_handler_;
+  MapObserver *map_observer_;
+
  public:
   ~PlayerHandler() override;
   PlayerHandler() = delete;
-  explicit PlayerHandler(Player *player, MapHandler *handler = nullptr);
-  MapHandler *reset_map_handler(MapHandler *handler);
+  explicit PlayerHandler(Player *player);
+
+  void register_observer(MapObserver* observer) override;
+  void remove_observer(MapObserver* observer) override;
 
   [[nodiscard]] const Position &get_position() const;
   [[nodiscard]] int32_t get_health() const;

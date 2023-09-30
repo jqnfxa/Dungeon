@@ -7,8 +7,8 @@ class Vector2 {
   T x_, y_;
  public:
   // getters/setters
-  T get_y() const;
-  T get_x() const;
+  T y() const;
+  T x() const;
 
   void set_y(const T &y);
   void set_x(T x);
@@ -44,7 +44,8 @@ Vector2<T>::Vector2(): Vector2(0, 0)
 template<typename T>
 Vector2<T>::Vector2(const Vector2 &other) : Vector2()
 {
-	*this = other;
+	x_ = other.x_;
+	y_ = other.y_;
 }
 template<typename T>
 Vector2<T> Vector2<T>::operator+(const Vector2<T> &other) const
@@ -106,7 +107,7 @@ Vector2<T> &Vector2<T>::operator/=(const Vector2<T> &other)
 	return *this;
 }
 template<typename T>
-T Vector2<T>::get_y() const
+T Vector2<T>::y() const
 {
 	return y_;
 }
@@ -116,7 +117,7 @@ void Vector2<T>::set_y(const T &y)
 	y_ = y;
 }
 template<typename T>
-T Vector2<T>::get_x() const
+T Vector2<T>::x() const
 {
 	return x_;
 }

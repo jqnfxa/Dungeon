@@ -41,7 +41,7 @@ TEST(PlayerTestSuite, TestCopyConstructor)
 
 TEST(PlayerTestSuite, TestMoveConstructor)
 {
-	Player player(Player(50));
+	Player player(std::move(Player(50)));
 
 	EXPECT_EQ(player.get_health(), 50);
 }

@@ -1,24 +1,19 @@
 #include "Player.hpp"
 
-Player::Player(int32_t health,
-			   int32_t armor,
-			   int32_t attack,
-			   int32_t defence,
-			   int32_t points) :
-			   health_(health),
-			   armor_(armor),
-			   attack_(attack),
-			   defence_(defence),
-			   points_(points)
+Player::Player(int32_t health, int32_t armor, int32_t attack, int32_t defence, int32_t points) : health_(health),
+																								 armor_(armor),
+																								 attack_(attack),
+																								 defence_(defence),
+																								 points_(points)
 {
 }
-Player::Player(const Player &player)
+Player::Player(const Player &player) : Player()
 {
-	*this = player;
+	swap_values(player);
 }
-Player::Player(Player &&player) noexcept
+Player::Player(Player &&player) noexcept: Player()
 {
-	*this = std::move(player);
+	swap_values(std::move(player));
 }
 Player &Player::operator=(const Player &player)
 {
@@ -37,11 +32,11 @@ Player &Player::operator=(Player &&player) noexcept
 {
 	if (this != &player)
 	{
-		health_ = std::move(player.health_);
-		armor_ = std::move(player.armor_);
-		attack_ = std::move(player.attack_);
-		defence_ = std::move(player.defence_);
-		points_ = std::move(player.points_);
+		std::swap(health_, player.health_);
+		std::swap(armor_, player.armor_);
+		std::swap(attack_, player.attack_);
+		std::swap(defence_, player.defence_);
+		std::swap(points_, player.points_);
 	}
 
 	return *this;
@@ -95,4 +90,26 @@ void Player::adjust(int32_t &value, int32_t limit)
 {
 	value = std::max(0, value);
 	value = std::min(value, limit);
+}
+void Player::swap_values(const Player &player)
+{
+	if (this != &player)
+	{
+		health_ = player.health_;
+		armor_ = player.armor_;
+		attack_ = player.attack_;
+		defence_ = player.defence_;
+		points_ = player.points_;
+	}
+}
+void Player::swap_values(Player &&player)
+{
+	if (this != &player)
+	{
+		std::swap(health_, player.health_);
+		std::swap(armor_, player.armor_);
+		std::swap(attack_, player.attack_);
+		std::swap(defence_, player.defence_);
+		std::swap(points_, player.points_);
+	}
 }

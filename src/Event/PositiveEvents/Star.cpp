@@ -1,23 +1,24 @@
 #include "Star.hpp"
-#include "Handlers/PlayerHandler/PlayerHandler.hpp"
 
-void Star::interaction(HandlerInterface *handler) const
+Star::Star(PlayerHandler &handler) : handler_(handler)
 {
-	auto *ptr = dynamic_cast<PlayerHandler *>(handler);
-	if (ptr == nullptr)
-	{
-		return;
-	}
-	ptr->set_points(ptr->get_points() + xp_amount);
 }
-Star *Star::copy() const
+
+void Star::trigger() const
 {
-	return new Star(*this);
+	handler_.set_points(handler_.get_points() + xp_amount);
 }
+
 bool Star::is_temporary() const
 {
 	return true;
 }
+
+Star *Star::copy() const
+{
+	return new Star(*this);
+}
+
 bool Star::operator==(EventInterface *event) const
 {
 	return dynamic_cast<Star *>(event) != nullptr;

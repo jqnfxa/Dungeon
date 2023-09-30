@@ -1,17 +1,33 @@
 #include <MapGenerator/RandomLevelGen/Generator.hpp>
+#include <MapGenerator/DefaultLevels/DefaultLevelGenerator.hpp>
 #include "gtest/gtest.h"
+#include "Entities/Player/Player.hpp"
+#include "Handlers/PlayerHandler/PlayerHandler.hpp"
+#include "Event/Factory/EventFactory.hpp"
 
 TEST(MapGeneratorSuite, TestSmallMapGeneration)
 {
-	int m = 10;
-	int n = 10;
+	PlayerHandler handler(new Player);
+	EventFactory::instance().reset_player_reference(&handler);
+	DefaultLevelGenerator gen(MEDIUM, AVERAGE);
+	auto new_map = gen.generate();
 
-	Generator generator(m, n, 25, 30, 50, 20);
-	GameField *new_map = generator.generate();
+	auto route = new_map->find_route(new_map->start_point(), new_map->exit_point());
+
+	auto *copy = new GameField(*new_map);
+	for (auto &cell : route)
+	{
+		if (cell != copy->start_point() && cell != copy->exit_point())
+		{
+			copy->get_cell(cell).set_type(Cell::TYPE::PATH_PART);
+		}
+	}
 
 	new_map->print(std::cerr);
-
 	delete new_map;
+
+	copy->print(std::cerr);
+	delete copy;
 }
 /*
 

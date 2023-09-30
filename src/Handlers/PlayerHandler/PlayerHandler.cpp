@@ -54,29 +54,29 @@ void PlayerHandler::set_points(int32_t new_value)
 }
 void PlayerHandler::move_by_direction(DIRECTION direction, int32_t multiplier)
 {
+	if (map_observer_ == nullptr)
+	{
+		throw std::invalid_argument("MapHandler was not initialized");
+	}
 	for (int32_t i = 0; i < multiplier; ++i)
 	{
-		auto new_position = Direction::getInstance().calculate_position(position_, direction);
+		auto new_position = Direction::instance().calculate_position(position_, direction);
 
-		if (map_handler_ == nullptr)
-		{
-			throw std::invalid_argument("MapHandler was not initialized");
-		}
 		// TODO delayed events
 		// if map_handler_.is_on_map(new_position) && map_handler.get_cell(new_position).get_active_event().type == door
 		// run it (event should move us if success)
-		if (map_handler_->can_move(new_position))
+		if (map_observer_->can_move(new_position))
 		{
 			set_position(new_position);
 
-			auto active_event = map_handler_->get_cell(new_position).get_active_event();
+			auto active_event = map_observer_->get_cell(new_position).get_active_event();
 			if (active_event != nullptr)
 			{
-				active_event->interaction(this);
+				active_event->trigger();
 
 				if (active_event->is_temporary())
 				{
-					map_handler_->get_cell(new_position).remove_event();
+					map_observer_->get_cell(new_position).remove_event();
 				}
 			}
 		}
@@ -84,16 +84,19 @@ void PlayerHandler::move_by_direction(DIRECTION direction, int32_t multiplier)
 
 	// TODO notify subscribers about player move
 }
-PlayerHandler::PlayerHandler(Player *player, MapHandler *handler) : player_(player), map_handler_(handler)
+PlayerHandler::PlayerHandler(Player *player) : player_(player), map_observer_(nullptr)
 {
 	if (player_ == nullptr)
 	{
 		throw std::invalid_argument("Nullptr passed to PlayerHandler");
 	}
 }
-MapHandler *PlayerHandler::reset_map_handler(MapHandler *handler)
+void PlayerHandler::register_observer(MapObserver *observer)
 {
-	auto *old = map_handler_;
-	map_handler_ = handler;
-	return old;
+	map_observer_ = observer;
 }
+void PlayerHandler::remove_observer(MapObserver *observer)
+{
+	map_observer_ = nullptr;
+}
+
