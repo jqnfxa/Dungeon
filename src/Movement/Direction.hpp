@@ -17,7 +17,7 @@ class Direction {
   Direction();
  public:
   Direction(const Direction &) = delete;
-  void operator=(const Direction &) = delete;
+  Direction &operator=(const Direction &) = delete;
 
   static Direction &instance()
   {
