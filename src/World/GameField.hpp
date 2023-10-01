@@ -4,11 +4,11 @@
 #include "Movement/Aliases.hpp"
 #include "Cell.hpp"
 
+class GameField : public MapSubject {
+ private:
 #define MAP_DIMENSION_UPPER_BOUND 1000
 #define MAP_DIMENSION_LOWER_BOUND 10
 
-class GameField : public MapSubject {
- private:
   Dimension dimensions_;
   Position start_;
   Position finish_;
