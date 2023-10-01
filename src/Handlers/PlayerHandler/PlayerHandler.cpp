@@ -62,9 +62,6 @@ void PlayerHandler::move_by_direction(DIRECTION direction, int32_t multiplier)
 	{
 		auto new_position = Direction::instance().calculate_position(position_, direction);
 
-		// TODO delayed events
-		// if map_handler_.is_on_map(new_position) && map_handler.get_cell(new_position).get_active_event().type == door
-		// run it (event should move us if success)
 		if (map_observer_->can_move(new_position))
 		{
 			set_position(new_position);
@@ -98,5 +95,13 @@ void PlayerHandler::register_observer(MapObserver *observer)
 void PlayerHandler::remove_observer(MapObserver *observer)
 {
 	map_observer_ = nullptr;
+}
+const std::vector<int64_t> &PlayerHandler::keys() const
+{
+	return keys_;
+}
+void PlayerHandler::add_key(int64_t key)
+{
+	keys_.push_back(key);
 }
 

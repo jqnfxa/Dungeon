@@ -1,10 +1,10 @@
-#include <algorithm>
 #include "Cell.hpp"
 #include "Event/PositiveEvents/Potion.hpp"
 #include "Event/PositiveEvents/ShieldKit.hpp"
 #include "Event/PositiveEvents/Star.hpp"
 #include "Event/NegativeEvents/Spikes.hpp"
 #include "Event/MovementEvents/RandomMine.hpp"
+#include "Event/MovementEvents/Door.hpp"
 
 Cell::Cell() : Cell(TYPE::MOVABLE)
 {
@@ -70,10 +70,20 @@ const EventInterface *Cell::get_active_event() const
 void Cell::add_event(EventInterface *event)
 {
 	remove_event();
+
+	if (dynamic_cast<Door *>(event) != nullptr)
+	{
+		type_ = Cell::TYPE::DOOR;
+	}
 	event_ = event;
 }
 void Cell::remove_event()
 {
+	if (is_door())
+	{
+		type_ = Cell::TYPE::MOVABLE;
+	}
+
 	delete event_;
 	event_ = nullptr;
 }
@@ -112,6 +122,10 @@ std::ostream &operator<<(std::ostream &out, const Cell &cell)
 	{
 		out << "[△]";
 	}
+	else if (cell.is_door())
+	{
+		out << "[⥈]";
+	}
 	else
 	{
 		auto *active_event = cell.get_active_event();
@@ -139,6 +153,14 @@ std::ostream &operator<<(std::ostream &out, const Cell &cell)
 		{
 			out << "[⭐]";
 		}
+		else if (const auto *t = dynamic_cast<const Key *>(active_event); t != nullptr)
+		{
+			out << "[⚿]";
+		}
 	}
 	return out;
+}
+bool Cell::is_door() const
+{
+	return type_ == TYPE::DOOR;
 }

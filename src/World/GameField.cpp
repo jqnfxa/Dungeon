@@ -1,5 +1,6 @@
 #include "GameField.hpp"
 #include "Movement/Direction.hpp"
+#include "Event/MovementEvents/Door.hpp"
 #include <ostream>
 #include <queue>
 #include <map>
@@ -188,7 +189,25 @@ bool GameField::is_adjacent_to_same_type(const Position &point) const
 }
 bool GameField::can_move(const Position &point) const
 {
-	return is_on_map(point) && get_cell(point).is_movable();
+	if (is_on_map(point))
+	{
+		if (get_cell(point).is_movable())
+		{
+			return true;
+		}
+		else if (get_cell(point).is_door())
+		{
+			// door cell will only be movable for anyone if player will have key for this door
+			auto *event = dynamic_cast<const Door *>(get_cell(point).get_active_event());
+
+			if (event != nullptr)
+			{
+				event->trigger();
+				return event->is_open();
+			}
+		}
+	}
+	return false;
 }
 void GameField::swap_values(GameField &&other)
 {
@@ -218,46 +237,68 @@ void GameField::swap_values(const GameField &other)
 		}
 	}
 }
-std::vector<Position> GameField::find_route(const Position &begin, const Position &end) const
+
+// A* search algorithm
+// https://en.wikipedia.org/wiki/A*_search_algorithm
+std::vector<Position> GameField::find_route(const Position &begin, const Position &goal) const
 {
-	int m = dimensions().x();
-	int n = dimensions().y();
-	std::vector<std::vector<bool>> visited(m, std::vector<bool>(n, false));
-	std::map<Position, Position> prev;
-	std::queue<Position> q;
-
-	visited[begin.x()][begin.y()] = true;
-	q.push(begin);
-
-	while (!q.empty())
+	// Define the heuristic function
+	auto heuristic = [](const Position &p1, const Position &p2) -> int
 	{
-		auto current = q.front();
-		q.pop();
+		return abs(p1.x() - p2.x()) + abs(p1.y() - p2.y());
+	};
 
-		if (current == end)
+	std::priority_queue<std::pair<int, Position>, std::vector<std::pair<int, Position>>, std::greater<>> frontier;
+	std::map<Position, Position> came_from;
+	std::map<Position, int> cost_so_far;
+
+	// push start point
+	frontier.push(std::move(std::make_pair(0, begin)));
+	cost_so_far[begin] = 0;
+
+	// While there is still places to go
+	while (!frontier.empty())
+	{
+		auto current = frontier.top().second;
+		frontier.pop();
+
+		// If we reached our goal we can stop
+		if (current == goal)
 		{
 			break;
 		}
 
-		for (auto &direction: Direction::instance().get_all_possible_moves())
+		// Check all neighbours
+		for (auto &dir: Direction::instance().get_all_possible_moves())
 		{
-			auto new_pos = current + direction;
+			const auto &next = current + dir;
 
-			if (can_move(new_pos) && !visited[new_pos.x()][new_pos.y()])
+			// Check if the neighbour is in the grid and is not a wall
+			if (!can_move(next))
 			{
-				q.push(new_pos);
-				visited[new_pos.x()][new_pos.y()] = true;
-				prev[new_pos] = current;
+				continue;
+			}
+
+			auto new_cost = cost_so_far[current] + 1;
+
+			// If it's a new node or we found a better way to get to this node
+			if (cost_so_far.find(next) == cost_so_far.end() || new_cost < cost_so_far[next])
+			{
+				cost_so_far[next] = new_cost;
+				auto priority = new_cost + heuristic(next, goal);
+				frontier.push(std::move(std::make_pair(priority, next)));
+				came_from[next] = current;
 			}
 		}
-
 	}
 
+	// Reconstruct the path
 	std::vector<Position> path;
-
-	for (Position it = end; it != begin; it = prev[it])
+	auto current = goal;
+	while (current != begin)
 	{
-		path.push_back(it);
+		path.push_back(current);
+		current = came_from[current];
 	}
 	path.push_back(begin);
 	std::reverse(path.begin(), path.end());

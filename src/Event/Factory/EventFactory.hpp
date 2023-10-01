@@ -2,19 +2,24 @@
 
 #include "../Interface/EventInterface.hpp"
 #include "../../Handlers/PlayerHandler/PlayerHandler.hpp"
+#include <unordered_map>
 
 enum EVENT_TYPE {
-	RANDOM_MINE, SPIKES, POTION, SHIELD_KIT, STAR
+	RANDOM_MINE, SPIKES, POTION, SHIELD_KIT, STAR, KEY, DOOR
 };
 
 class EventFactory {
  private:
   EventFactory();
+  void clear_events();
 
+  std::unordered_map<EVENT_TYPE, EventInterface *> events;
   PlayerHandler *handler_;
  public:
   EventFactory(EventFactory const &) = delete;
   EventFactory &operator=(EventFactory const &) = delete;
+  ~EventFactory();
+
   static EventFactory &instance()
   {
 	  static EventFactory instance_;

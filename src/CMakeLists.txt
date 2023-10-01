@@ -10,4 +10,10 @@ add_library(${BINARY}_lib STATIC ${SOURCES}
         Handlers/Interface/MapObserver.hpp
         Handlers/Interface/Subject.hpp
         MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp
-        MapGenerator/DefaultLevels/DefaultLevelGenerator.hpp)
+        MapGenerator/DefaultLevels/DefaultLevelGenerator.hpp
+        Profiler/Timer.cpp
+        Profiler/Timer.hpp
+        Event/MovementEvents/Key.cpp
+        Event/MovementEvents/Key.hpp
+        Event/MovementEvents/Door.cpp
+        Event/MovementEvents/Door.hpp)

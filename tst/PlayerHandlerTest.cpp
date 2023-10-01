@@ -50,4 +50,6 @@ TEST(PlayerHandlerTestSuite, TestPlayerMove)
 
 	handler.move_by_direction(LEFT, 1);
 	ASSERT_EQ(handler.get_position(), Position(2, 0));
+
+	delete map;
 }

@@ -6,7 +6,7 @@
 class Cell {
  public:
   enum TYPE {
-	  ENTRANCE, EXIT, MOVABLE, WALL, PATH_PART
+	  ENTRANCE, EXIT, MOVABLE, WALL, PATH_PART, DOOR
   };
  public:
   Cell();
@@ -23,6 +23,7 @@ class Cell {
   [[nodiscard]] bool is_entrance() const;
   [[nodiscard]] bool is_exit() const;
   [[nodiscard]] bool is_movable() const;
+  [[nodiscard]] bool is_door() const;
   [[nodiscard]] TYPE type() const;
 
   [[nodiscard]] const EventInterface *get_active_event() const;

@@ -20,12 +20,21 @@ class Random {
 	  return instance_;
   }
   [[nodiscard]] DIRECTION pick_direction() const;
-  [[nodiscard]] int32_t pick_num(int32_t from, int32_t to) const;
   [[nodiscard]] EventInterface *pick_event(EVENT_GROUP group);
+
+  template <typename Int>
+  [[nodiscard]] Int pick_num(Int from, Int to) const
+  {
+	  std::random_device rd;
+	  std::mt19937 gen(rd());
+	  std::uniform_int_distribution<Int> distribution(from, to);
+
+	  return distribution(gen);
+  }
 
   template <class LegacyRandomAccessIterator>
   [[nodiscard]] inline typename LegacyRandomAccessIterator::value_type pick_from_range(LegacyRandomAccessIterator begin, LegacyRandomAccessIterator end) const
   {
-	  return *std::next(begin, pick_num(0, std::distance(begin, end) - 1));
+	  return *std::next(begin, pick_num<int64_t>(0, std::distance(begin, end) - 1));
   }
 };

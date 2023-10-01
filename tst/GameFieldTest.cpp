@@ -107,3 +107,33 @@ TEST(GameFieldSuite, TestMapCellEvents)
 
 	delete map;
 }
+
+TEST(GameFieldSuite, TestDoorEvent)
+{
+	PlayerHandler handler(new Player);
+	EventFactory::instance().reset_player_reference(&handler);
+
+	auto *map = new GameField(10, 10);
+	map->reset_start({0, 0});
+	map->reset_finish({7, 7});
+	map->get_cell({1, 0}).add_event(EventFactory::instance().create(EVENT_TYPE::KEY));
+	map->get_cell({0, 1}).add_event(EventFactory::instance().create(EVENT_TYPE::KEY));
+	map->get_cell({1, 1}).add_event(EventFactory::instance().create(EVENT_TYPE::DOOR));
+
+	handler.register_observer(map);
+	handler.set_position({0, 0});
+
+	map->print(std::cerr);
+
+	EXPECT_EQ(handler.keys().empty(), true);
+	EXPECT_EQ(map->can_move({1, 1}), false);
+
+	handler.move_by_direction(DOWN, 1);
+
+	EXPECT_EQ(handler.keys().size(), 1);
+	EXPECT_EQ(map->can_move({1, 1}), true);
+
+	map->print(std::cerr);
+
+	delete map;
+}
