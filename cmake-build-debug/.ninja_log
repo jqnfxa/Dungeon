@@ -1,9 +1,0 @@
-# ninja log v5
-812	868	1694459295491358644	CMakeFiles/Dungeon.dir/src/Map.cpp.o	402d63f86e368a79
-0	31	1694459557068947496	build.ninja	55aa63e8b6bc418d
-753	812	1694459295435358306	CMakeFiles/Dungeon.dir/src/Entities/Bot.cpp.o	b80a1bfb20341d6f
-2	1177	1694459295799360505	CMakeFiles/Dungeon.dir/src/Entities/Player.cpp.o	e2cd83f49049a221
-1	717	1694459304479412969	CMakeFiles/Dungeon.dir/src/main.cpp.o	31fc6e48186e4861
-3	753	1694459295375357942	CMakeFiles/Dungeon.dir/src/WorldManager.cpp.o	7b020869f103d54
-717	840	1694459304599413695	Dungeon	a07d91a3c1ebd3a9
-1	1198	1694439140376502104	CMakeFiles/Dungeon.dir/src/Player.cpp.o	edf034d24e20d74d
