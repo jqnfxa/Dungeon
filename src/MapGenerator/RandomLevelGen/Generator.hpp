@@ -1,6 +1,7 @@
 #pragma once
 
 #include "World/GameField.hpp"
+#include "Random/Random.hpp"
 #include <cstdint>
 #include <set>
 
@@ -24,14 +25,20 @@ class Generator {
   int32_t num_negative_;
   int32_t num_other_;
 
-  [[nodiscard]] std::vector<EventInterface *> generate_events(int32_t lim, std::vector<int> events_count) const;
+  void add_walls(GameField *map, const Position &position, std::vector<Wall> &walls);
   void generate_maze(GameField *map);
-  Position pick_random_empty_cell(std::set<Position> &movable_cells, std::function<bool(const Position &)> criteria);
-  std::set<Position> get_all_movable_cells(GameField *map);
+
+  [[nodiscard]] std::set<Position> get_all_movable_cells(GameField *map);
+  [[nodiscard]] std::vector<EventInterface *> generate_events(int32_t lim, EVENT_GROUP group) const;
+  [[nodiscard]] Position pick_random_empty_cell(std::set<Position> &movable_cells, std::function<bool(const Position &)> criteria);
+  [[nodiscard]] std::vector<Position> invariant_route(std::set<Position> &movable_cells, GameField *map);
+
   void reset_points(std::set<Position> &movable_cells, GameField *map);
   void calculate_percentages(int32_t total_movable_cells);
-  void place_spikes_on_route(std::set<Position> &movable_cells, GameField *map, int32_t at_most = 4);
-  void add_walls(GameField *map, const Position &position, std::vector<Wall> &walls);
+
+  void add_additional_keys(std::set<Position> &movable_cells, GameField *map);
+  void place_events(std::set<Position> &movable_cells, int32_t count, EVENT_GROUP group, GameField *map);
+  void place_events_special(std::set<Position> &movable_cells, std::vector<Position> &route, int32_t count, EVENT_GROUP group, GameField *map);
  public:
   Generator() = delete;
   Generator &operator=(const Generator &generator) = delete;

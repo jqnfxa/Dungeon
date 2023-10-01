@@ -1,13 +1,13 @@
 #pragma once
 #include <cstdint>
-#include "Handlers/Interface/MapObserver.hpp"
+#include "Handlers/Interface/MapSubject.hpp"
 #include "Movement/Aliases.hpp"
 #include "Cell.hpp"
 
 #define MAP_DIMENSION_UPPER_BOUND 1000
 #define MAP_DIMENSION_LOWER_BOUND 10
 
-class GameField : public MapObserver {
+class GameField : public MapSubject {
  private:
   Dimension dimensions_;
   Position start_;
@@ -21,6 +21,7 @@ class GameField : public MapObserver {
   void swap_values(GameField &&other);
   void swap_values(const GameField &other);
 
+  [[nodiscard]] bool can_move(const Position &point) const;
  public:
   GameField();
   GameField(int32_t dim_x, int32_t dim_y);
@@ -40,9 +41,9 @@ class GameField : public MapObserver {
   void set_cell(const Position &point, Cell &&new_cell);
   void set_cell(const Position &point, const Cell &new_cell);
 
-  [[nodiscard]] bool can_move(const Position &point) const override;
+  [[nodiscard]] bool can_move(EntityHandler *caller, const Position &point) const override;
   [[nodiscard]] Cell &get_cell(const Position &point) const override;
-  [[nodiscard]] std::vector<Position> find_route(const Position &begin, const Position &end) const override;
+  [[nodiscard]] std::vector<Position> find_route(EntityHandler *caller, const Position &begin, const Position &end) const override;
 
   [[nodiscard]] const Position &start_point() const;
   [[nodiscard]] const Position &exit_point() const;

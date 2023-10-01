@@ -1,13 +1,16 @@
 #include "Potion.hpp"
 
-Potion::Potion(PlayerHandler &handler) : handler_(handler)
+void Potion::trigger(EntityHandler *handler) const
 {
-}
+	auto *handler_ = dynamic_cast<PlayerHandler *>(handler);
 
-void Potion::trigger() const
-{
-	handler_.set_health(handler_.get_health() + health_increase);
-	handler_.set_attack(handler_.get_attack() + attack_increase);
+	if (handler_ == nullptr)
+	{
+		return;
+	}
+
+	handler_->set_health(handler_->get_health() + health_increase);
+	handler_->set_attack(handler_->get_attack() + attack_increase);
 }
 
 bool Potion::is_temporary() const

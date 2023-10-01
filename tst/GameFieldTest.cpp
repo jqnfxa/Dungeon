@@ -111,7 +111,6 @@ TEST(GameFieldSuite, TestMapCellEvents)
 TEST(GameFieldSuite, TestDoorEvent)
 {
 	PlayerHandler handler(new Player);
-	EventFactory::instance().reset_player_reference(&handler);
 
 	auto *map = new GameField(10, 10);
 	map->reset_start({0, 0});
@@ -126,12 +125,13 @@ TEST(GameFieldSuite, TestDoorEvent)
 	map->print(std::cerr);
 
 	EXPECT_EQ(handler.keys().empty(), true);
-	EXPECT_EQ(map->can_move({1, 1}), false);
+	EXPECT_EQ(map->can_move(&handler, {1, 1}), false);
+	EXPECT_EQ(map->can_move(nullptr, {1, 1}), true);
 
 	handler.move_by_direction(DOWN, 1);
 
 	EXPECT_EQ(handler.keys().size(), 1);
-	EXPECT_EQ(map->can_move({1, 1}), true);
+	EXPECT_EQ(map->can_move(&handler, {1, 1}), true);
 
 	map->print(std::cerr);
 

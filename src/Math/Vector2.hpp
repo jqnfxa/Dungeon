@@ -1,5 +1,7 @@
 #pragma once
+
 #include <algorithm>
+#include <cmath>
 
 template<typename T>
 class Vector2 {
@@ -18,6 +20,8 @@ class Vector2 {
   Vector2(const Vector2 &other);
   Vector2();
 
+  [[nodiscard]] double distance(const Vector2 &other) const;
+
   // operators
   Vector2 operator+(const Vector2 &other) const;
   Vector2 operator-(const Vector2 &other) const;
@@ -32,6 +36,11 @@ class Vector2 {
   bool operator==(const Vector2 &other) const;
   bool operator<(const Vector2 &other) const;
 };
+template<typename T>
+double Vector2<T>::distance(const Vector2 &other) const
+{
+	return std::sqrt(std::pow(x() - other.x(), 2) + std::pow(y() - other.y(), 2));
+}
 
 template<typename T>
 Vector2<T>::Vector2(const T &ix, const T &iy): x_(ix), y_(iy)

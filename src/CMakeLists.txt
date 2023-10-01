@@ -7,8 +7,8 @@ set(SOURCES ${SOURCES})
 add_executable(${BINARY}_run ${SOURCES})
 
 add_library(${BINARY}_lib STATIC ${SOURCES}
+        Handlers/Interface/MapSubject.hpp
         Handlers/Interface/MapObserver.hpp
-        Handlers/Interface/Subject.hpp
         MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp
         MapGenerator/DefaultLevels/DefaultLevelGenerator.hpp
         Profiler/Timer.cpp
@@ -16,4 +16,5 @@ add_library(${BINARY}_lib STATIC ${SOURCES}
         Event/MovementEvents/Key.cpp
         Event/MovementEvents/Key.hpp
         Event/MovementEvents/Door.cpp
-        Event/MovementEvents/Door.hpp)
+        Event/MovementEvents/Door.hpp
+        Handlers/Interface/EntityHandler.hpp)

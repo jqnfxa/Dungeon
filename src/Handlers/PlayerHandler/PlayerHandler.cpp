@@ -62,14 +62,14 @@ void PlayerHandler::move_by_direction(DIRECTION direction, int32_t multiplier)
 	{
 		auto new_position = Direction::instance().calculate_position(position_, direction);
 
-		if (map_observer_->can_move(new_position))
+		if (map_observer_->can_move(this, new_position))
 		{
 			set_position(new_position);
 
 			auto active_event = map_observer_->get_cell(new_position).get_active_event();
 			if (active_event != nullptr)
 			{
-				active_event->trigger();
+				active_event->trigger(this);
 
 				if (active_event->is_temporary())
 				{
@@ -88,11 +88,11 @@ PlayerHandler::PlayerHandler(Player *player) : player_(player), map_observer_(nu
 		throw std::invalid_argument("Nullptr passed to PlayerHandler");
 	}
 }
-void PlayerHandler::register_observer(MapObserver *observer)
+void PlayerHandler::register_observer(MapSubject *observer)
 {
 	map_observer_ = observer;
 }
-void PlayerHandler::remove_observer(MapObserver *observer)
+void PlayerHandler::remove_observer(MapSubject *observer)
 {
 	map_observer_ = nullptr;
 }

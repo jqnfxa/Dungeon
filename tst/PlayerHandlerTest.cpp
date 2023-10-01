@@ -40,7 +40,7 @@ TEST(PlayerHandlerTestSuite, TestPlayerMove)
 	EXPECT_EQ(map->get_cell({0, 1}).is_movable(), false);
 	EXPECT_EQ(map->is_on_map({0, 1}), true);
 	EXPECT_EQ(map->get_cell({0, 1}).is_movable(), false);
-	EXPECT_EQ(map->can_move({0, 1}), false);
+	EXPECT_EQ(map->can_move(&handler, {0, 1}), false);
 
 	handler.move_by_direction(RIGHT, 1);
 	ASSERT_EQ(handler.get_position(), Position(0, 0));

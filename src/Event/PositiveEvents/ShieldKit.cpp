@@ -1,12 +1,15 @@
 #include "ShieldKit.hpp"
 
-ShieldKit::ShieldKit(PlayerHandler &handler) : handler_(handler)
+void ShieldKit::trigger(EntityHandler *handler) const
 {
-}
+	auto *handler_ = dynamic_cast<PlayerHandler *>(handler);
 
-void ShieldKit::trigger() const
-{
-	handler_.set_armor(handler_.get_armor() + shield_value);
+	if (handler_ == nullptr)
+	{
+		return;
+	}
+
+	handler_->set_armor(handler_->get_armor() + shield_value);
 }
 
 bool ShieldKit::is_temporary() const

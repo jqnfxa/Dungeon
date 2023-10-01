@@ -5,7 +5,7 @@
 #include <unordered_map>
 
 enum EVENT_TYPE {
-	RANDOM_MINE, SPIKES, POTION, SHIELD_KIT, STAR, KEY, DOOR
+	SPIKES, POTION, SHIELD_KIT, STAR, RANDOM_MINE, KEY, DOOR
 };
 
 class EventFactory {
@@ -14,7 +14,6 @@ class EventFactory {
   void clear_events();
 
   std::unordered_map<EVENT_TYPE, EventInterface *> events;
-  PlayerHandler *handler_;
  public:
   EventFactory(EventFactory const &) = delete;
   EventFactory &operator=(EventFactory const &) = delete;
@@ -25,6 +24,5 @@ class EventFactory {
 	  static EventFactory instance_;
 	  return instance_;
   }
-  void reset_player_reference(PlayerHandler *handler);
   EventInterface *create(EVENT_TYPE type);
 };

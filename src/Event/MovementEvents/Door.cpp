@@ -1,6 +1,6 @@
 #include "Door.hpp"
 
-Door::Door(PlayerHandler &handler, Key &key) : handler_(handler), hash_required_(key.hash())
+Door::Door(Key &key) : hash_required_(key.hash())
 {
 }
 
@@ -9,13 +9,20 @@ bool Door::is_open() const
 	return is_open_;
 }
 
-void Door::trigger() const
+void Door::trigger(EntityHandler *handler) const
 {
+	auto *handler_ = dynamic_cast<PlayerHandler *>(handler);
+
+	if (handler_ == nullptr)
+	{
+		return;
+	}
+
 	if (!is_open())
 	{
 		bool has_needle_key = false;
 
-		for (const auto &key: handler_.keys())
+		for (const auto &key: handler_->keys())
 		{
 			if (key == hash_required_)
 			{

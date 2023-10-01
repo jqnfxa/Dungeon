@@ -70,20 +70,10 @@ const EventInterface *Cell::get_active_event() const
 void Cell::add_event(EventInterface *event)
 {
 	remove_event();
-
-	if (dynamic_cast<Door *>(event) != nullptr)
-	{
-		type_ = Cell::TYPE::DOOR;
-	}
 	event_ = event;
 }
 void Cell::remove_event()
 {
-	if (is_door())
-	{
-		type_ = Cell::TYPE::MOVABLE;
-	}
-
 	delete event_;
 	event_ = nullptr;
 }
@@ -95,14 +85,14 @@ void Cell::swap_values(Cell &&other)
 {
 	std::swap(type_, other.type_);
 	remove_event();
-	std::swap(event_, other.event_);
+	add_event(other.event_);
 	other.event_ = nullptr;
 }
 void Cell::swap_values(const Cell &other)
 {
 	type_ = other.type_;
 	remove_event();
-	event_ = other.event_ == nullptr ? nullptr : other.event_->copy();
+	add_event(other.event_ == nullptr ? nullptr : other.event_->copy());
 }
 std::ostream &operator<<(std::ostream &out, const Cell &cell)
 {
@@ -122,7 +112,7 @@ std::ostream &operator<<(std::ostream &out, const Cell &cell)
 	{
 		out << "[△]";
 	}
-	else if (cell.is_door())
+	else if (cell.has_door())
 	{
 		out << "[⥈]";
 	}
@@ -160,7 +150,7 @@ std::ostream &operator<<(std::ostream &out, const Cell &cell)
 	}
 	return out;
 }
-bool Cell::is_door() const
+bool Cell::has_door() const
 {
-	return type_ == TYPE::DOOR;
+	return dynamic_cast<Door *>(event_) != nullptr;
 }

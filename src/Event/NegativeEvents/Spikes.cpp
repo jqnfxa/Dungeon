@@ -1,20 +1,22 @@
 #include "Spikes.hpp"
 #include <cmath>
 
-Spikes::Spikes(PlayerHandler &handler) : handler_(handler)
+void Spikes::trigger(EntityHandler *handler) const
 {
+	auto *handler_ = dynamic_cast<PlayerHandler *>(handler);
 
-}
-
-void Spikes::trigger() const
-{
-	if (handler_.get_armor() > critical_armor_value)
+	if (handler_ == nullptr)
 	{
-		handler_.set_armor(std::floor(armor_decrease_multiplier * handler_.get_armor()));
+		return;
+	}
+
+	if (handler_->get_armor() > critical_armor_value)
+	{
+		handler_->set_armor(std::floor(armor_decrease_multiplier * handler_->get_armor()));
 	}
 	else
 	{
-		handler_.set_health(handler_.get_health() - no_armor_damage);
+		handler_->set_health(handler_->get_health() - no_armor_damage);
 	}
 }
 

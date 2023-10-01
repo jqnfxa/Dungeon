@@ -1,23 +1,24 @@
 #pragma once
 #include "../../Entities/Player/Player.hpp"
+#include "../Interface/EntityHandler.hpp"
 #include "../../Movement/Direction.hpp"
 #include "../../World/GameField.hpp"
-#include "Handlers/Interface/Subject.hpp"
+#include "Handlers/Interface/MapObserver.hpp"
 #include "Event/MovementEvents/Key.hpp"
 
-class PlayerHandler : public Subject {
+class PlayerHandler : public MapObserver, public EntityHandler {
  private:
   Player *player_;
   Position position_;
-  MapObserver *map_observer_;
+  MapSubject *map_observer_;
   std::vector<int64_t> keys_;
  public:
   ~PlayerHandler() override;
   PlayerHandler() = delete;
   explicit PlayerHandler(Player *player);
 
-  void register_observer(MapObserver* observer) override;
-  void remove_observer(MapObserver* observer) override;
+  void register_observer(MapSubject* observer) override;
+  void remove_observer(MapSubject* observer) override;
 
   [[nodiscard]] const Position &get_position() const;
   [[nodiscard]] int32_t get_health() const;

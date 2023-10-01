@@ -2,7 +2,7 @@
 #include "Random/Random.hpp"
 #include "Handlers/PlayerHandler/PlayerHandler.hpp"
 
-Key::Key(PlayerHandler &handler) : handler_(handler), hash_(Random::instance().pick_num<int64_t>(INT32_MAX, INT64_MAX))
+Key::Key() : hash_(Random::instance().pick_num<int64_t>(INT32_MAX, INT64_MAX))
 {
 }
 
@@ -11,9 +11,16 @@ int64_t Key::hash() const
 	return hash_;
 }
 
-void Key::trigger() const
+void Key::trigger(EntityHandler *handler) const
 {
-	handler_.add_key(hash());
+	auto *handler_ = dynamic_cast<PlayerHandler *>(handler);
+
+	if (handler_ == nullptr)
+	{
+		return;
+	}
+
+	handler_->add_key(hash());
 }
 
 bool Key::is_temporary() const

@@ -1,13 +1,12 @@
 #include "Random.hpp"
 #include "Event/Factory/EventFactory.hpp"
-#include <random>
 
 DIRECTION Random::pick_direction() const
 {
 	auto &directions = Direction::instance().get_all_possible_moves();
 	return static_cast<DIRECTION>(pick_num(static_cast<size_t>(0), directions.size() - 1));
 }
-EventInterface *Random::pick_event(EVENT_GROUP group)
+EventInterface *Random::pick_event(EVENT_GROUP group) const
 {
 	EventInterface *event = nullptr;
 	if (group == NEUTRAL)

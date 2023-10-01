@@ -20,7 +20,7 @@ class Random {
 	  return instance_;
   }
   [[nodiscard]] DIRECTION pick_direction() const;
-  [[nodiscard]] EventInterface *pick_event(EVENT_GROUP group);
+  [[nodiscard]] EventInterface *pick_event(EVENT_GROUP group) const;
 
   template <typename Int>
   [[nodiscard]] Int pick_num(Int from, Int to) const

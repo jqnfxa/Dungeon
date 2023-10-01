@@ -187,27 +187,28 @@ bool GameField::is_adjacent_to_same_type(const Position &point) const
 		return false;
 	});
 }
-bool GameField::can_move(const Position &point) const
+bool GameField::can_move(EntityHandler *caller, const Position &point) const
 {
-	if (is_on_map(point))
+	if (!can_move(point))
 	{
-		if (get_cell(point).is_movable())
-		{
-			return true;
-		}
-		else if (get_cell(point).is_door())
-		{
-			// door cell will only be movable for anyone if player will have key for this door
-			auto *event = dynamic_cast<const Door *>(get_cell(point).get_active_event());
+		return false;
+	}
 
-			if (event != nullptr)
-			{
-				event->trigger();
-				return event->is_open();
-			}
+	auto &cell = get_cell(point);
+
+	if (caller != nullptr && cell.has_door())
+	{
+		auto *handler = dynamic_cast<PlayerHandler *>(caller);
+
+		if (handler != nullptr)
+		{
+			cell.get_active_event()->trigger(caller);
+
+			return dynamic_cast<const Door *>(cell.get_active_event())->is_open();
 		}
 	}
-	return false;
+
+	return true;
 }
 void GameField::swap_values(GameField &&other)
 {
@@ -240,7 +241,7 @@ void GameField::swap_values(const GameField &other)
 
 // A* search algorithm
 // https://en.wikipedia.org/wiki/A*_search_algorithm
-std::vector<Position> GameField::find_route(const Position &begin, const Position &goal) const
+std::vector<Position> GameField::find_route(EntityHandler *caller, const Position &begin, const Position &goal) const
 {
 	// Define the heuristic function
 	auto heuristic = [](const Position &p1, const Position &p2) -> int
@@ -251,6 +252,7 @@ std::vector<Position> GameField::find_route(const Position &begin, const Positio
 	std::priority_queue<std::pair<int, Position>, std::vector<std::pair<int, Position>>, std::greater<>> frontier;
 	std::map<Position, Position> came_from;
 	std::map<Position, int> cost_so_far;
+	bool found_path = false;
 
 	// push start point
 	frontier.push(std::move(std::make_pair(0, begin)));
@@ -265,6 +267,7 @@ std::vector<Position> GameField::find_route(const Position &begin, const Positio
 		// If we reached our goal we can stop
 		if (current == goal)
 		{
+			found_path = true;
 			break;
 		}
 
@@ -274,7 +277,7 @@ std::vector<Position> GameField::find_route(const Position &begin, const Positio
 			const auto &next = current + dir;
 
 			// Check if the neighbour is in the grid and is not a wall
-			if (!can_move(next))
+			if (!can_move(caller, next))
 			{
 				continue;
 			}
@@ -294,14 +297,21 @@ std::vector<Position> GameField::find_route(const Position &begin, const Positio
 
 	// Reconstruct the path
 	std::vector<Position> path;
-	auto current = goal;
-	while (current != begin)
-	{
-		path.push_back(current);
-		current = came_from[current];
-	}
-	path.push_back(begin);
-	std::reverse(path.begin(), path.end());
 
+	if (found_path)
+	{
+		auto current = goal;
+		while (current != begin)
+		{
+			path.push_back(current);
+			current = came_from[current];
+		}
+		path.push_back(begin);
+		std::reverse(path.begin(), path.end());
+	}
 	return path;
+}
+bool GameField::can_move(const Position &point) const
+{
+	return is_on_map(point) && get_cell(point).is_movable();
 }

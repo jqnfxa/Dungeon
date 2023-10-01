@@ -10,11 +10,10 @@ class Door : public EventInterface {
   mutable bool is_open_ = false;
 
   const int64_t hash_required_;
-  PlayerHandler &handler_;
  public:
-  explicit Door(PlayerHandler &handler, Key &key);
+  explicit Door(Key &key);
   bool is_open() const;
-  void trigger() const override;
+  void trigger(EntityHandler *handler) const override;
   [[nodiscard]] bool is_temporary() const override;
   [[nodiscard]] Door *copy() const override;
   [[nodiscard]] bool operator==(EventInterface *event) const override;

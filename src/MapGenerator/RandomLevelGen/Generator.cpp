@@ -1,5 +1,6 @@
 #include "Generator.hpp"
 #include "Random/Random.hpp"
+#include "Event/Factory/EventFactory.hpp"
 #include <set>
 #include <random>
 #include <stack>
@@ -7,40 +8,6 @@
 #include <unordered_set>
 #include <queue>
 #include <utility>
-
-GameField *Generator::generate()
-{
-	// generate maze
-	auto *map = new GameField(m_, n_);
-	generate_maze(map);
-
-	std::set<Position> movable_cells = get_all_movable_cells(map);
-
-	// reset start and finish
-	reset_points(movable_cells, map);
-
-	// calculate event distribution
-	calculate_percentages(static_cast<int32_t>(movable_cells.size()));
-
-	place_spikes_on_route(movable_cells, map, 4);
-
-	std::vector<Position> movable_cells_(movable_cells.begin(), movable_cells.end());
-
-	auto num_remained_events = std::min(static_cast<int32_t>(movable_cells_.size()),
-										num_negative_ + num_positive_ + num_other_);
-	auto remained_events = generate_events(num_remained_events, {num_negative_, num_other_, num_positive_});
-	std::shuffle(movable_cells_.begin(), movable_cells_.end(), std::mt19937(std::random_device()()));
-	std::shuffle(remained_events.begin(), remained_events.end(), std::mt19937(std::random_device()()));
-
-	for (size_t j = 0, i = 0; j < movable_cells_.size() && i < remained_events.size(); ++j)
-	{
-		if (!map->is_adjacent_to_same_type(movable_cells_[j]))
-		{
-			map->get_cell(movable_cells_[j]).add_event(remained_events[i++]);
-		}
-	}
-	return map;
-}
 
 Generator::Generator(int32_t m,
 					 int32_t n,
@@ -57,27 +24,47 @@ Generator::Generator(int32_t m,
 {
 }
 
-std::vector<EventInterface *> Generator::generate_events(int32_t lim, std::vector<int> events_count) const
+GameField *Generator::generate()
 {
-	std::vector<EventInterface *> events;
-	events.reserve(lim);
+	// generate maze
+	auto *map = new GameField(m_, n_);
+	generate_maze(map);
 
-	while (events.size() < lim)
+	// calculate movable_cells
+	std::set<Position> movable_cells = get_all_movable_cells(map);
+
+	// reset start and finish
+	reset_points(movable_cells, map);
+
+	// calculate event distribution
+	calculate_percentages(static_cast<int32_t>(movable_cells.size()));
+
+	// find invariant route from start to finish
+	auto route = invariant_route(movable_cells, map);
+
+	// place events
+	place_events(movable_cells, num_positive_, EVENT_GROUP::POSITIVE, map);
+	place_events(movable_cells, num_other_, EVENT_GROUP::NEUTRAL, map);
+	place_events_special(movable_cells, route, std::min(4, num_negative_), EVENT_GROUP::NEGATIVE, map);
+
+	for (auto &cell : route)
 	{
-		for (size_t i = 0; i < events_count.size(); ++i)
-		{
-			if (events.size() < lim && events_count[i] > 0)
-			{
-				events_count[i]--;
-				events.push_back(Random::instance().pick_event(static_cast<EVENT_GROUP>(i - 1)));
-			}
-		}
+		movable_cells.erase(cell);
 	}
-	return events;
+
+	place_events(movable_cells, std::max(0, num_negative_ - 4), EVENT_GROUP::NEGATIVE, map);
+
+	add_additional_keys(movable_cells, map);
+
+	return map;
 }
 
 void Generator::add_walls(GameField *map, const Position &position, std::vector<Wall> &walls)
 {
+	if (map == nullptr)
+	{
+		return;
+	}
 	for (auto &direction: Direction::instance().get_all_possible_moves())
 	{
 		if (auto wall_pos = position + direction, neighbour = wall_pos + direction;
@@ -93,6 +80,11 @@ void Generator::add_walls(GameField *map, const Position &position, std::vector<
 // https://en.wikipedia.org/wiki/Maze_generation_algorithm#Iterative_randomized_Prim's_algorithm_(without_stack,_without_sets)
 void Generator::generate_maze(GameField *map)
 {
+	if (map == nullptr)
+	{
+		return;
+	}
+
 	auto engine = Random::instance();
 
 	// fill map with walls first
@@ -166,12 +158,43 @@ std::set<Position> Generator::get_all_movable_cells(GameField *map)
 	return movable_cells;
 }
 
+std::vector<EventInterface *> Generator::generate_events(int32_t lim, EVENT_GROUP group) const
+{
+	std::vector<EventInterface *> events;
+	events.reserve(lim);
+
+	while (events.size() < lim)
+	{
+		events.push_back(Random::instance().pick_event(group));
+	}
+	return events;
+}
+
 Position Generator::pick_random_empty_cell(std::set<Position> &movable_cells, std::function<bool(const Position &)> criteria)
 {
 	std::vector<Position> possible_cells;
 
 	std::copy_if(movable_cells.begin(), movable_cells.end(), std::back_inserter(possible_cells), std::move(criteria));
 	return Random::instance().pick_from_range(possible_cells.begin(), possible_cells.end());
+}
+
+std::vector<Position> Generator::invariant_route(std::set<Position> &movable_cells, GameField *map)
+{
+	auto route = map->find_route(nullptr, map->start_point(), map->exit_point());
+	auto key_point = Random::instance().pick_from_range(route.begin() + 1, route.end() - 3);
+
+	map->get_cell(route[route.size() - 2]).add_event(EventFactory::instance().create(EVENT_TYPE::DOOR));
+	movable_cells.erase(route[route.size() - 2]);
+
+	map->get_cell(key_point).add_event(EventFactory::instance().create(EVENT_TYPE::KEY));
+	movable_cells.erase(key_point);
+
+	route.erase(route.begin());
+	route.pop_back();
+	route.pop_back();
+	route.erase(std::find(route.begin(), route.end(), key_point));
+
+	return route;
 }
 
 void Generator::reset_points(std::set<Position> &movable_cells, GameField *map)
@@ -210,25 +233,52 @@ void Generator::calculate_percentages(int32_t total_movable_cells)
 	num_other_ = static_cast<int32_t>(total_events * 1.0 * num_other_ / 100.0);
 }
 
-void Generator::place_spikes_on_route(std::set<Position> &movable_cells, GameField *map, int32_t at_most)
+void Generator::add_additional_keys(std::set<Position> &movable_cells, GameField *map)
 {
-	// build route from start to finish
-	auto route = map->find_route(map->start_point(), map->exit_point());
+	if (!movable_cells.empty() && map->dimensions().x() * map->dimensions().y() > 200)
+	{
+		auto new_keys = map->dimensions().x() * map->dimensions().y() / 150;
 
-	// add spikes on route
-	auto spikes_on_route = generate_events(std::min(num_negative_, at_most), {std::min(num_negative_, at_most), 0, 0});
-	num_negative_ = std::max(0, num_negative_ - at_most);
+		std::vector<Position> movable(movable_cells.begin(), movable_cells.end());
+		std::vector<EventInterface *> keys_;
+
+		while (new_keys--)
+		{
+			keys_.push_back(EventFactory::instance().create(EVENT_TYPE::KEY));
+		}
+		std::shuffle(movable.begin(), movable.end(), std::mt19937(std::random_device()()));
+
+		for (size_t j = 0, i = 0; j < movable.size() && i < keys_.size(); ++j)
+		{
+			if (!map->is_adjacent_to_same_type(movable[j]))
+			{
+				map->get_cell(movable[j]).add_event(keys_[i++]);
+				movable_cells.erase(movable[j]);
+			}
+		}
+	}
+}
+
+void Generator::place_events(std::set<Position> &movable_cells, int32_t count, EVENT_GROUP group, GameField *map)
+{
+	std::vector<Position> movable_cells_(movable_cells.begin(), movable_cells.end());
+
+	place_events_special(movable_cells, movable_cells_, count, group, map);
+}
+
+void Generator::place_events_special(std::set<Position> &movable_cells, std::vector<Position> &route, int32_t count, EVENT_GROUP group, GameField *map)
+{
+	auto remained_events = generate_events(count, group);
 
 	std::shuffle(route.begin(), route.end(), std::mt19937(std::random_device()()));
+	std::shuffle(remained_events.begin(), remained_events.end(), std::mt19937(std::random_device()()));
 
-	for (size_t i = 0; i < spikes_on_route.size(); ++i)
+	for (size_t j = 0, i = 0; j < route.size() && i < remained_events.size(); ++j)
 	{
-		map->get_cell(route[i]).add_event(spikes_on_route[i]);
-	}
-
-	// delete route path from movable cells to prevent bad event distribution
-	for (auto &cell: route)
-	{
-		movable_cells.erase(cell);
+		if (!map->is_adjacent_to_same_type(route[j]))
+		{
+			map->get_cell(route[j]).add_event(remained_events[i++]);
+			movable_cells.erase(route[j]);
+		}
 	}
 }

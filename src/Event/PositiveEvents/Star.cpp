@@ -1,12 +1,15 @@
 #include "Star.hpp"
 
-Star::Star(PlayerHandler &handler) : handler_(handler)
+void Star::trigger(EntityHandler *handler) const
 {
-}
+	auto *handler_ = dynamic_cast<PlayerHandler *>(handler);
 
-void Star::trigger() const
-{
-	handler_.set_points(handler_.get_points() + xp_amount);
+	if (handler_ == nullptr)
+	{
+		return;
+	}
+
+	handler_->set_points(handler_->get_points() + xp_amount);
 }
 
 bool Star::is_temporary() const
