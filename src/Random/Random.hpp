@@ -14,8 +14,8 @@ enum EVENT_GROUP
 class Random {
   Random() = default;
  public:
-  Random(const Random &random) = delete;
-  Random &operator=(const Random &random) = delete;
+  Random(const Random &) = delete;
+  Random &operator=(const Random &) = delete;
 
   static Random &instance()
   {

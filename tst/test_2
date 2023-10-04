@@ -1,0 +1,4 @@
+bind l left
+bind r right
+bint u up
+bind d down

@@ -4,17 +4,10 @@ file(GLOB_RECURSE SOURCES LIST_DIRECTORIES true *.hpp *.cpp)
 
 set(SOURCES ${SOURCES})
 
+find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
+
 add_executable(${BINARY}_run ${SOURCES})
 
-add_library(${BINARY}_lib STATIC ${SOURCES}
-        Handlers/Interface/MapSubject.hpp
-        Handlers/Interface/MapObserver.hpp
-        MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp
-        MapGenerator/DefaultLevels/DefaultLevelGenerator.hpp
-        Profiler/Timer.cpp
-        Profiler/Timer.hpp
-        Event/MovementEvents/Key.cpp
-        Event/MovementEvents/Key.hpp
-        Event/MovementEvents/Door.cpp
-        Event/MovementEvents/Door.hpp
-        Handlers/Interface/EntityHandler.hpp)
+target_link_libraries(${BINARY}_run sfml-graphics sfml-system)
+
+add_library(${BINARY}_lib STATIC ${SOURCES})

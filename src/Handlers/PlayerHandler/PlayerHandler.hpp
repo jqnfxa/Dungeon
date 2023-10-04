@@ -26,6 +26,8 @@ class PlayerHandler : public MapObserver, public EntityHandler {
   [[nodiscard]] int32_t get_attack() const;
   [[nodiscard]] int32_t get_defense() const;
   [[nodiscard]] int32_t get_points() const;
+  [[nodiscard]] bool is_alive() const;
+  [[nodiscard]] bool is_dead() const;
   [[nodiscard]] const std::vector<int64_t> &keys() const;
 
   void move_by_direction(DIRECTION direction, int32_t multiplier);

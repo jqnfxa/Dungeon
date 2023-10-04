@@ -85,7 +85,7 @@ void Generator::generate_maze(GameField *map)
 		return;
 	}
 
-	auto engine = Random::instance();
+	auto &engine = Random::instance();
 
 	// fill map with walls first
 	for (int32_t i = 0; i < map->dimensions().x(); ++i)

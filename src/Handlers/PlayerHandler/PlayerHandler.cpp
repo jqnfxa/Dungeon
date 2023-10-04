@@ -28,6 +28,14 @@ int32_t PlayerHandler::get_points() const
 {
 	return player_->get_points();
 }
+bool PlayerHandler::is_alive() const
+{
+	return !is_dead();
+}
+bool PlayerHandler::is_dead() const
+{
+	return player_->get_health() == 0;
+}
 void PlayerHandler::set_position(const Position &new_value)
 {
 	position_ = new_value;
@@ -58,7 +66,7 @@ void PlayerHandler::move_by_direction(DIRECTION direction, int32_t multiplier)
 	{
 		throw std::invalid_argument("MapHandler was not initialized");
 	}
-	for (int32_t i = 0; i < multiplier; ++i)
+	for (int32_t i = 0; i < multiplier && is_alive(); ++i)
 	{
 		auto new_position = Direction::instance().calculate_position(position_, direction);
 

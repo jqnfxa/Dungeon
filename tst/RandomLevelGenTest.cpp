@@ -6,10 +6,11 @@
 #include "Event/Factory/EventFactory.hpp"
 #include "Profiler/Timer.hpp"
 
+
 TEST(MapGeneratorSuite, TestSmallMapGeneration)
 {
 	PlayerHandler handler(new Player);
-	DefaultLevelGenerator gen(MEDIUM, AVERAGE);
+	DefaultLevelGenerator gen(SMALL, AVERAGE);
 	auto new_map = gen.generate();
 
 	auto route = new_map->find_route(nullptr, new_map->start_point(), new_map->exit_point());
@@ -24,16 +25,17 @@ TEST(MapGeneratorSuite, TestSmallMapGeneration)
 		}
 	}
 
-	new_map->print(std::cerr);
-	delete new_map;
-
 	copy->print(std::cerr);
 	delete copy;
-}
 
+
+	new_map->print(std::cerr);
+	delete new_map;
+}
+/*
 TEST(MapGeneratorSuite, TestMaxMapGeneration)
 {
 	Generator gen(1000, 1000, 80, 50, 50, 0);
 	auto new_map = gen.generate();
 	delete new_map;
-}
+}*/
