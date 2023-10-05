@@ -10,4 +10,16 @@ add_executable(${BINARY}_run ${SOURCES})
 
 target_link_libraries(${BINARY}_run sfml-graphics sfml-system)
 
-add_library(${BINARY}_lib STATIC ${SOURCES})
+add_library(${BINARY}_lib STATIC ${SOURCES}
+        Game/GameState.cpp
+        Game/GameState.hpp
+        Command/System/TriggerPlayMenu.cpp
+        Command/System/TriggerPlayMenu.hpp
+        Command/Gameplay/ChangeGameDifficulty.cpp
+        Command/Gameplay/ChangeGameDifficulty.hpp
+        Command/Gameplay/ChangeGameSize.cpp
+        Command/Gameplay/ChangeGameSize.hpp
+        Command/Gameplay/CreateSession.cpp
+        Command/Gameplay/CreateSession.hpp
+        Command/Gameplay/RestartSession.cpp
+        Command/Gameplay/RestartSession.hpp)

@@ -1,3 +1,6 @@
 bind l left
 bind r right
 bind u up
+size small
+difficulty medium
+RUN

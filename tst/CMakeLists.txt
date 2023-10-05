@@ -5,9 +5,7 @@ file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false *.hpp *.cpp)
 set(SOURCES ${TEST_SOURCES})
 #set(CMAKE_BUILD_TYPE Release)
 #set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2")
-add_executable(${BINARY} ${TEST_SOURCES}
-        GameEngineTest.cpp
-        FileInputTest.cpp)
+add_executable(${BINARY} ${TEST_SOURCES})
 
 add_test(NAME ${BINARY} COMMAND ${BINARY})
 

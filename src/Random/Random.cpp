@@ -4,7 +4,7 @@
 DIRECTION Random::pick_direction() const
 {
 	auto &directions = Direction::instance().get_all_possible_moves();
-	return static_cast<DIRECTION>(pick_num(static_cast<size_t>(0), directions.size() - 1));
+	return static_cast<DIRECTION>(pick_num(static_cast<size_t>(0), directions.size() - 1) + 1);
 }
 EventInterface *Random::pick_event(EVENT_GROUP group) const
 {

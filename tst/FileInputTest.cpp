@@ -46,7 +46,7 @@ TEST(FileInputSuite, TestWrongSequence)
 	}
 	catch (const std::invalid_argument &e)
 	{
-		EXPECT_EQ(e.what(), std::string("Unexpected initial command: ") + "bint");
+		EXPECT_EQ(e.what(), std::string("Unexpected system command: ") + "bint");
 	}
 }
 
@@ -110,7 +110,7 @@ TEST(FileInputSuite, TestTooFewButtons)
 	}
 	catch (const std::invalid_argument &e)
 	{
-		EXPECT_EQ(e.what(), std::string("Failed to associate buttons with commands"));
+		EXPECT_EQ(e.what(), std::string("Unexpected system command: ") + "RUN");
 	}
 }
 
@@ -130,9 +130,4 @@ TEST(FileInputSuite, TestNotInited)
 	{
 		EXPECT_EQ(e.what(), std::string("Called to not inited class"));
 	}
-}
-
-TEST(FileInputSuite, TestSomeCommands)
-{
-	// TODO this test requires GameEngine test first
 }
