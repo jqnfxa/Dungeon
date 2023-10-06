@@ -23,6 +23,7 @@ class GameEngine {
   void reset_game();
 
   // private game states changers
+  void increase_difficulty();
   void goto_win_screen();
   void goto_death_screen();
  public:

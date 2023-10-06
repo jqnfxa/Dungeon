@@ -2,7 +2,7 @@
 
 GameEngine::GameEngine() : game_state_(GameState::MAIN_MENU),
 						   size_(SMALL),
-						   difficulty_(AVERAGE),
+						   difficulty_(EASY),
 						   field_(nullptr),
 						   field_initial_(nullptr),
 						   player_initial_(nullptr),
@@ -71,6 +71,11 @@ void GameEngine::goto_settings()
 
 void GameEngine::exit_to_menu()
 {
+	if (state() == GameState::DEATH_SCREEN)
+	{
+		difficulty_ = EASY;
+		size_ = SMALL;
+	}
 	clean_up();
 	set_state(GameState::MAIN_MENU);
 }
@@ -86,6 +91,8 @@ void GameEngine::exit_game()
 void GameEngine::goto_win_screen()
 {
 	set_state(GameState::WIN_SCREEN);
+
+	increase_difficulty();
 }
 
 void GameEngine::goto_death_screen()
@@ -164,7 +171,7 @@ void GameEngine::create_session()
 
 void GameEngine::restart_session()
 {
-	if (state() != GameState::PLAYING && state() != GameState::HOLD_MENU)
+	if (state() != GameState::DEATH_SCREEN && state() != GameState::HOLD_MENU)
 	{
 		throw std::invalid_argument("Wrong state to call method: " + state().to_str());
 	}
@@ -182,11 +189,11 @@ void GameEngine::update(Command *command)
 
 	if (state() == GameState::PLAYING)
 	{
-		if (player_lose())
+		if (player_win())
 		{
 			goto_win_screen();
 		}
-		else if (player_win())
+		else if (player_lose())
 		{
 			goto_death_screen();
 		}
@@ -222,4 +229,37 @@ void GameEngine::reset_game()
 	handler_->set_position(field_->start_point());
 
 	set_state(GameState::PLAYING);
+}
+
+void GameEngine::increase_difficulty()
+{
+	if (state() == GameState::WIN_SCREEN)
+	{
+		if (size_ == BIG && difficulty_ == HARD)
+		{
+			return;
+		}
+
+		if (difficulty_ == EASY)
+		{
+			difficulty_ = AVERAGE;
+		}
+		else if (difficulty_ == AVERAGE)
+		{
+			difficulty_ = HARD;
+		}
+		else
+		{
+			difficulty_ = EASY;
+
+			if (size_ == SMALL)
+			{
+				size_ = MEDIUM;
+			}
+			else if (size_ == MEDIUM)
+			{
+				size_ = BIG;
+			}
+		}
+	}
 }

@@ -32,4 +32,6 @@ add_library(${BINARY}_lib STATIC ${SOURCES}
         Command/Factory/CommandFactory.hpp
         GUI/Menus/Menu.cpp
         GUI/Menus/ActionTextButton.cpp
-        GUI/Menus/ActionTextButton.hpp)
+        GUI/Menus/ActionTextButton.hpp
+        GUI/Menus/Renderer.hpp
+        GUI/Menus/TILE_TYPES.hpp)

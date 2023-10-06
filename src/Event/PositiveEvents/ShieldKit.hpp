@@ -5,7 +5,7 @@
 #include <cstdint>
 
 class ShieldKit : public EventInterface {
-  const int32_t shield_value = 50;
+  const int32_t shield_value = 30;
   const bool temporary_state_ = true;
  public:
   void trigger(EntityHandler *handler) const override;

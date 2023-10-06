@@ -1,20 +1,16 @@
 #include "Menu.hpp"
 #include "Command/Factory/CommandFactory.hpp"
 
-Menu::Menu(sf::RenderWindow &parent,
-		   int32_t buttons_count,
-		   const std::vector<std::string> &buttons_names,
-		   const std::vector<Command *> &buttons_commands,
-		   const sf::Font &font, sf::Texture &background) : selected_(0),
-								 window_(parent),
-								 selected_color_(sf::Color(sf::Color::Red)),
-								 default_color_(sf::Color(sf::Color::White))
+Menu::Menu(sf::RenderWindow &parent, int32_t buttons_count, const std::vector<std::string> &buttons_names, const std::vector<Command *> &buttons_commands, const sf::Font &font, sf::Texture &background) : render_window_(parent),
+																																																			selected_(0),
+																																																			selected_color_(sf::Color(sf::Color::Red)),
+																																																			default_color_(sf::Color(sf::Color::White))
 {
-	auto size = window_.getSize();
+	auto size = render_window_.getSize();
 	auto initial = size.y / 20;
-	auto left_padding = size.x / 5;
-	auto text_size = size.y * 5 / 7 / (buttons_count + (buttons_count - 1) / 5);
-	auto step = text_size / 5;
+	auto left_padding = size.x / 7;
+	auto text_size = size.y * 5 / 7 / (buttons_count + (buttons_count - 1) / 5) * 2 / 3;
+	auto step = text_size / 5 * 3 / 2;
 
 	for (int32_t i = 0, y = initial; i < buttons_count; ++i, y += text_size + step)
 	{
@@ -57,9 +53,9 @@ Command *Menu::on_key_press(const sf::Event &event)
 
 void Menu::draw()
 {
-	window_.clear();
+	render_window_.clear();
 
-	window_.draw(background_);
+	render_window_.draw(background_);
 
 	for (auto &element: buttons_)
 	{
@@ -69,8 +65,11 @@ void Menu::draw()
 
 	for (auto &element: buttons_)
 	{
-		window_.draw(element.button());
+		render_window_.draw(element.button());
 	}
 
-	window_.display();
+	render_window_.display();
+}
+Menu::~Menu()
+{
 }
