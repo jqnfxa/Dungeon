@@ -29,4 +29,7 @@ add_library(${BINARY}_lib STATIC ${SOURCES}
         Command/Gameplay/Resume.hpp
         GUI/Window.cpp
         Command/Factory/CommandFactory.cpp
-        Command/Factory/CommandFactory.hpp)
+        Command/Factory/CommandFactory.hpp
+        GUI/Menus/Menu.cpp
+        GUI/Menus/ActionTextButton.cpp
+        GUI/Menus/ActionTextButton.hpp)

@@ -2,11 +2,16 @@
 
 #include <SFML/Graphics.hpp>
 #include <memory>
-#include "Menus/Interface/Menu.hpp"
 #include "Game/GameEngine.hpp"
 #include "Command/Interface/Interface.hpp"
 
+class Menu;
+
 class Window {
+  sf::Font font_;
+  sf::Texture main_menu_texture_;
+  sf::Texture play_menu_texture_;
+
   GameEngine &game_engine_;
   sf::RenderWindow window_;
 
