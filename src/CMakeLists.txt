@@ -22,4 +22,11 @@ add_library(${BINARY}_lib STATIC ${SOURCES}
         Command/Gameplay/CreateSession.cpp
         Command/Gameplay/CreateSession.hpp
         Command/Gameplay/RestartSession.cpp
-        Command/Gameplay/RestartSession.hpp)
+        Command/Gameplay/RestartSession.hpp
+        Input/SFML/SFMLInput.cpp
+        Input/SFML/SFMLInput.hpp
+        Command/Gameplay/Resume.cpp
+        Command/Gameplay/Resume.hpp
+        GUI/Window.cpp
+        Command/Factory/CommandFactory.cpp
+        Command/Factory/CommandFactory.hpp)

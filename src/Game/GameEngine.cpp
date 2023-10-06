@@ -37,7 +37,26 @@ void GameEngine::set_state(GameState::STATE new_state)
 
 void GameEngine::goto_hold_menu()
 {
-	set_state(GameState::HOLD_MENU);
+	if (state() == GameState::MAIN_MENU)
+	{
+		return;
+	}
+	if (state() == GameState::HOLD_MENU)
+	{
+		resume();
+	}
+	else
+	{
+		set_state(GameState::HOLD_MENU);
+	}
+}
+
+void GameEngine::resume()
+{
+	if (state() == GameState::HOLD_MENU)
+	{
+		set_state(GameState::PLAYING);
+	}
 }
 
 void GameEngine::goto_play_menu()

@@ -36,6 +36,7 @@ class GameEngine {
 
   // game states changers
   void goto_hold_menu();
+  void resume();
   void goto_play_menu();
   void goto_settings();
   void exit_to_menu();

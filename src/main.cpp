@@ -1,11 +1,19 @@
-//#include <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp>
+#include "GUI/Window.hpp"
+#include "Game/GameEngine.hpp"
+#include "Input/SFML/SFMLInput.hpp"
 
 int main()
 {
-	// TODO input classes (for reading from file)
-	// TODO input classes (for reading from sf::event)
-	// TODO input class relations
-	// TODO game state update ?
-	// TODO TEST everything
+	GameEngine game;
+	Window window(game, sf::VideoMode(1366, 768), "Dungeon");
+	SFMLInput input(window);
+
+	while (game.state() != GameState::TERMINATE)
+	{
+		input.update();
+		game.update(input.command());
+		window.draw();
+	}
 	return 0;
 }
