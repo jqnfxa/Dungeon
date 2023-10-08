@@ -7,7 +7,7 @@ ChangeGameDifficulty::ChangeGameDifficulty(DIFFICULTY difficulty) : difficulty_(
 
 void ChangeGameDifficulty::execute(GameEngine &game)
 {
-	game.goto_play_menu();
+	game.open_settings();
 	game.set_game_difficulty(difficulty_);
 }
 

@@ -1,4 +1,5 @@
 #include "GameEngine.hpp"
+#include <sstream>
 
 GameEngine::GameEngine() : game_state_(GameState::MAIN_MENU),
 						   size_(SMALL),
@@ -35,19 +36,27 @@ void GameEngine::set_state(GameState::STATE new_state)
 	game_state_.update(new_state);
 }
 
-void GameEngine::goto_hold_menu()
+void GameEngine::open_hold_menu()
 {
 	set_state(GameState::HOLD_MENU);
 }
 
-void GameEngine::goto_play_menu()
+void GameEngine::open_play_menu()
 {
 	set_state(GameState::PLAY_MENU);
 }
 
-void GameEngine::goto_settings()
+void GameEngine::open_settings()
 {
 	set_state(GameState::SETTINGS);
+}
+
+void GameEngine::resume()
+{
+	if (state() == GameState::HOLD_MENU)
+	{
+		set_state(GameState::PLAYING);
+	}
 }
 
 void GameEngine::exit_to_menu()
@@ -60,8 +69,6 @@ void GameEngine::exit_game()
 {
 	clean_up();
 	set_state(GameState::TERMINATE);
-
-	// TODO completely terminate program?
 }
 
 void GameEngine::goto_win_screen()
@@ -76,15 +83,13 @@ void GameEngine::goto_death_screen()
 
 void GameEngine::set_game_difficulty(DIFFICULTY difficulty)
 {
-	play_menu_requirements();
-
+	requirements(GameState(GameState::SETTINGS));
 	difficulty_ = difficulty;
 }
 
 void GameEngine::set_game_size(MAP_SIZE size)
 {
-	play_menu_requirements();
-
+	requirements(GameState(GameState::SETTINGS));
 	size_ = size;
 }
 
@@ -99,12 +104,6 @@ void GameEngine::clean_up()
 	player_initial_ = nullptr;
 	delete handler_;
 	handler_ = nullptr;
-
-	// which game_state should be?
-	if (state() == GameState::PLAYING)
-	{
-		set_state(GameState::DEATH_SCREEN);
-	}
 }
 
 bool GameEngine::player_win()
@@ -118,6 +117,7 @@ bool GameEngine::player_win()
 	}
 	return state() == GameState::WIN_SCREEN;
 }
+
 bool GameEngine::player_lose()
 {
 	if (state() != GameState::DEATH_SCREEN)
@@ -132,8 +132,9 @@ bool GameEngine::player_lose()
 
 void GameEngine::create_session()
 {
-	play_menu_requirements();
-
+	// requirements will be settings
+	// (because game should be created after init game size and difficulty)
+	// requirements(GameState(GameState::SETTINGS));
 	clean_up();
 
 	DefaultLevelGenerator generator(size_, difficulty_);
@@ -145,45 +146,33 @@ void GameEngine::create_session()
 
 void GameEngine::restart_session()
 {
-	if (state() != GameState::PLAYING && state() != GameState::HOLD_MENU)
-	{
-		throw std::invalid_argument("Wrong state to call method: " + state().to_str());
-	}
-
+	// requirements later
+	// requirements(GameState(GameState::HOLD_MENU));
 	reset_game();
 }
 
 void GameEngine::update(Command *command)
 {
-	if (command == nullptr)
+	if (command != nullptr)
 	{
-		return;
-	}
-	command->execute(*this);
+		command->execute(*this);
 
-	if (state() == GameState::PLAYING)
-	{
-		if (player_lose())
+		if (state() == GameState::PLAYING)
 		{
-			goto_win_screen();
+			if (player_win())
+			{
+				goto_win_screen();
+			}
+			else if (player_lose())
+			{
+				goto_death_screen();
+			}
+			else
+			{
+				// game continue
+				// move bots section
+			}
 		}
-		else if (player_win())
-		{
-			goto_death_screen();
-		}
-		else
-		{
-			// game continue
-			// move bots section
-		}
-	}
-}
-
-void GameEngine::play_menu_requirements() const
-{
-	if (state() != GameState::PLAY_MENU)
-	{
-		throw std::invalid_argument("Impossible to call method\nPLAY_MENU required instead of " + state().to_str());
 	}
 }
 
@@ -203,4 +192,13 @@ void GameEngine::reset_game()
 	handler_->set_position(field_->start_point());
 
 	set_state(GameState::PLAYING);
+}
+void GameEngine::requirements(GameState needle) const
+{
+	if (state() != needle.active())
+	{
+		std::stringstream ss;
+		ss << "Unexpected state: " << state().to_str() << " expected: " << needle.to_str();
+		throw std::invalid_argument(ss.str());
+	}
 }

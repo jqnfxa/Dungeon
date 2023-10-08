@@ -3,7 +3,7 @@
 
 void CreateSession::execute(GameEngine &game)
 {
-	game.goto_play_menu();
+	game.open_play_menu();
 	game.create_session();
 }
 

@@ -1,6 +1,6 @@
-bind l left
-bind r right
-bind u up
+key l left
+key r right
+key u up
+key d down
 size small
 difficulty medium
-RUN

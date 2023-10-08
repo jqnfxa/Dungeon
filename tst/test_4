@@ -1,4 +1,4 @@
-bind l left
-bind r right
-bind u up
-bind l down
+key l left
+key r right
+key u up
+key l down

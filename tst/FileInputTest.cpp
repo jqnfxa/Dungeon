@@ -20,13 +20,12 @@ TEST(FileInputSuite, TestNoFile)
 TEST(FileInputSuite, TestValidCreation)
 {
 	const std::string directory_path = "/home/shard/CLionProjects/DungeonGame/tst/";
-	const std::string test = "test_1";
+	const std::string test = "binds";
 
 	try
 	{
 		FileInput input(directory_path + test);
-		input.init();
-		EXPECT_EQ(dynamic_cast<NOP *>(input.command()) != nullptr, true);
+		EXPECT_TRUE(dynamic_cast<NOP *>(input.command()) != nullptr);
 	}
 	catch (...)
 	{
@@ -42,11 +41,10 @@ TEST(FileInputSuite, TestWrongSequence)
 	try
 	{
 		FileInput input(directory_path + test);
-		input.init();
 	}
 	catch (const std::invalid_argument &e)
 	{
-		EXPECT_EQ(e.what(), std::string("Unexpected system command: ") + "bint");
+		EXPECT_EQ(e.what(), std::string("Too few keys for movement"));
 	}
 }
 
@@ -58,7 +56,6 @@ TEST(FileInputSuite, TestWrongDirection)
 	try
 	{
 		FileInput input(directory_path + test);
-		input.init();
 	}
 	catch (const std::invalid_argument &e)
 	{
@@ -74,7 +71,6 @@ TEST(FileInputSuite, TestButtonRedefinition)
 	try
 	{
 		FileInput input(directory_path + test);
-		input.init();
 	}
 	catch (const std::invalid_argument &e)
 	{
@@ -90,11 +86,10 @@ TEST(FileInputSuite, TestButtonCommandsRedefinition)
 	try
 	{
 		FileInput input(directory_path + test);
-		input.init();
 	}
 	catch (const std::invalid_argument &e)
 	{
-		EXPECT_EQ(e.what(), std::string("Multiply buttons for command: ") + "left");
+		EXPECT_EQ(e.what(), std::string("Multiple buttons for command: ") + "left");
 	}
 }
 
@@ -106,28 +101,9 @@ TEST(FileInputSuite, TestTooFewButtons)
 	try
 	{
 		FileInput input(directory_path + test);
-		input.init();
 	}
 	catch (const std::invalid_argument &e)
 	{
-		EXPECT_EQ(e.what(), std::string("Unexpected system command: ") + "RUN");
-	}
-}
-
-TEST(FileInputSuite, TestNotInited)
-{
-	const std::string directory_path = "/home/shard/CLionProjects/DungeonGame/tst/";
-	const std::string test = "test_1";
-
-	try
-	{
-		FileInput input(directory_path + test);
-
-		input.command();
-		input.update();
-	}
-	catch (const std::invalid_argument &e)
-	{
-		EXPECT_EQ(e.what(), std::string("Called to not inited class"));
+		EXPECT_EQ(e.what(), std::string("Too few buttons passed"));
 	}
 }

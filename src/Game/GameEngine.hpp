@@ -18,9 +18,10 @@ class GameEngine {
   PlayerHandler *handler_;
 
   void clean_up();
-  void set_state(GameState::STATE new_state);
-  void play_menu_requirements() const;
   void reset_game();
+
+  void set_state(GameState::STATE new_state);
+  void requirements(GameState needle) const;
 
   // private game states changers
   void goto_win_screen();
@@ -35,9 +36,10 @@ class GameEngine {
   [[nodiscard]] GameState state() const;
 
   // game states changers
-  void goto_hold_menu();
-  void goto_play_menu();
-  void goto_settings();
+  void open_hold_menu();
+  void open_play_menu();
+  void open_settings();
+  void resume();
   void exit_to_menu();
   void exit_game();
 
@@ -46,11 +48,10 @@ class GameEngine {
   void set_game_size(MAP_SIZE size);
   void create_session();
 
-  // available when playing (PLAYING | HOLD_MENU)
-  // prefer HOLD_MENU only
+  // available only in HOLD_MENU
   void restart_session();
 
-  // should be private methods
+  // should be private methods ?
   bool player_win();
   bool player_lose();
 

@@ -1,145 +1,45 @@
 #include "FileInput.hpp"
-#include "Command/System/TerminateProgram.hpp"
-#include "Command/System/NOP.hpp"
-#include "Command/Gameplay/MovePlayer.hpp"
-#include "Command/System/TriggerHoldMenu.hpp"
-#include "Command/System/GoToSettings.hpp"
-#include "Command/System/ReturnToMenu.hpp"
-#include "Command/Gameplay/ChangeGameSize.hpp"
-#include "Command/Gameplay/ChangeGameDifficulty.hpp"
-#include "Command/Gameplay/CreateSession.hpp"
-#include "Command/Gameplay/RestartSession.hpp"
+#include "Command/Include/Defines.hpp"
 #include <sstream>
 
-FileInput::FileInput(const std::string &file) : file_(file), last_command_(nullptr), inited_(false)
+FileInput::FileInput(const std::string &binds) : last_command_(nullptr)
 {
-	if (!file_.is_open())
+	std::ifstream file(binds);
+
+	if (!file.is_open())
 	{
-		throw std::invalid_argument("Failed to open: " + file);
+		clean_up();
+		throw std::invalid_argument("Failed to open: " + binds);
 	}
 
-	file_.seekg(0);
-}
-
-Command *FileInput::convert_command(const std::string &command)
-{
-	if (available_commands_.find(command) == available_commands_.end())
-	{
-		return available_commands_["NOP"];
-	}
-
-	return available_commands_[command];
+	parse_system_commands(file);
+	last_command_ = available_commands_["NOP"];
 }
 
 Command *FileInput::command()
 {
-	if (!inited_)
-	{
-		throw std::invalid_argument("Called to not inited class");
-	}
-	if (last_command_ == nullptr)
-	{
-		last_command_ = available_commands_["NOP"];
-	}
 	return last_command_;
 }
 
 void FileInput::update()
 {
-	if (!inited_)
-	{
-		throw std::invalid_argument("Called to not inited class");
-	}
-	std::string command;
-	std::getline(file_, command);
-	last_command_ = convert_command(command);
-}
+	last_command_ = available_commands_["NOP"];
 
-void FileInput::init()
-{
-	if (inited_)
+	if (file_.is_open())
 	{
-		return;
-	}
-	// data format
-	// bind <button> (left | right | up | down)
-	// size (small | medium | big)
-	// difficulty (easy | medium | hard)
+		std::string command;
+		std::getline(file_, command);
 
-	for (int i = 0; i < 6; ++i)
-	{
-		std::string argument;
-		std::getline(file_, argument);
-		parse_as_system_command(argument);
-	}
-
-	if (available_commands_.find("SIZE") == available_commands_.end()
-		|| available_commands_.find("DIFFICULTY") == available_commands_.end())
-	{
-		throw std::invalid_argument("Failed to associate map characteristics");
-	}
-
-	int check_sum = 0;
-	for (auto &[key, value] : available_commands_)
-	{
-		if (value == MovePlayer(LEFT)
-			|| value == MovePlayer(RIGHT)
-			|| value == MovePlayer(UP)
-			|| value == MovePlayer(DOWN))
+		if (available_commands_.find(command) != available_commands_.end())
 		{
-			check_sum++;
+			last_command_ = available_commands_[command];
 		}
 	}
-	if (available_commands_.find("left") == available_commands_.end()
-		|| available_commands_.find("right") == available_commands_.end()
-		|| available_commands_.find("up") == available_commands_.end()
-		|| available_commands_.find("down") == available_commands_.end()
-		|| available_commands_.find("SIZE") == available_commands_.end()
-		|| available_commands_.find("DIFFICULTY") == available_commands_.end())
-	{
-		throw std::invalid_argument("Failed to associate buttons with commands");
-	}
-
-	available_commands_["NOP"] = new NOP;
-	available_commands_["TERMINATE"] = new TerminateProgram;
-	available_commands_["HOLD"] = new TriggerHoldMenu;
-	available_commands_["SETTINGS"] = new GoToSettings;
-	available_commands_["MENU"] = new ReturnToMenu;
-	available_commands_["RUN"] = new CreateSession;
-	available_commands_["RESTART"] = new RestartSession;
-
-	inited_ = true;
 }
+
 FileInput::~FileInput()
 {
-	for (auto &[key, value]: available_commands_)
-	{
-		delete value;
-	}
-}
-void FileInput::parse_as_system_command(const std::string &input_command)
-{
-	std::stringstream ss(input_command);
-
-	std::string check_sum;
-	ss >> check_sum;
-
-	if (check_sum == "bind")
-	{
-		bind_keys(input_command);
-	}
-	else if (check_sum == "size")
-	{
-		update_size(input_command);
-	}
-	else if (check_sum == "difficulty")
-	{
-		update_difficulty(input_command);
-	}
-	else
-	{
-		throw std::invalid_argument("Unexpected system command: " + check_sum);
-	}
+	clean_up();
 }
 
 void FileInput::bind_keys(const std::string &input_command)
@@ -149,7 +49,7 @@ void FileInput::bind_keys(const std::string &input_command)
 	std::string check_sum;
 	ss >> check_sum;
 
-	if (check_sum != "bind")
+	if (check_sum != "key")
 	{
 		return;
 	}
@@ -182,11 +82,13 @@ void FileInput::bind_keys(const std::string &input_command)
 	}
 	else
 	{
+		clean_up();
 		throw std::invalid_argument("Invalid command passed: " + command);
 	}
 
 	if (available_commands_.find(button_key) != available_commands_.end())
 	{
+		clean_up();
 		throw std::invalid_argument("Button already was bind");
 	}
 
@@ -196,96 +98,138 @@ void FileInput::bind_keys(const std::string &input_command)
 	{
 		if (key != button_key && available_commands_[button_key]->operator==(value))
 		{
-			throw std::invalid_argument("Multiply buttons for command: " + command);
+			clean_up();
+			throw std::invalid_argument("Multiple buttons for command: " + command);
 		}
 	}
-
-	available_commands_[command] = new MovePlayer(direction);
 }
 
-void FileInput::update_size(const std::string &input_command)
+void FileInput::read_simple_command(const std::string &string)
 {
-	std::stringstream ss(input_command);
+	std::stringstream ss(string);
 
-	std::string check_sum;
-	ss >> check_sum;
+	std::string check_sum, key;
+	ss >> check_sum >> key;
 
-	if (check_sum != "size")
+	if (available_commands_.find(check_sum) != available_commands_.end())
 	{
-		return;
+		clean_up();
+		throw std::invalid_argument(check_sum + " already was bind");
 	}
 
-	std::string size;
-
-	ss >> size;
-
-	if (size != "small" && size != "medium" && size != "big")
+	if (check_sum == "create")
 	{
-		throw std::invalid_argument("Bad size: " + size);
+		available_commands_[key] = new CreateSession;
 	}
-	if (available_commands_.find("SIZE") != available_commands_.end())
+	else if (check_sum == "restart")
 	{
-		delete available_commands_["SIZE"];
+		available_commands_[key] = new RestartSession;
 	}
-
-	MAP_SIZE real_size;
-
-	if (size == "small")
+	else if (check_sum == "resume")
 	{
-		real_size = MAP_SIZE::SMALL;
+		available_commands_[key] = new ResumeGame;
 	}
-	else if (size == "medium")
+	else if (check_sum == "hold")
 	{
-		real_size = MAP_SIZE::MEDIUM;
+		available_commands_[key] = new OpenHoldMenu;
 	}
-	else if (size == "big")
+	else if (check_sum == "main")
 	{
-		real_size = MAP_SIZE::BIG;
+		available_commands_[key] = new ReturnToMenu;
 	}
-
-	available_commands_["SIZE"] = new ChangeGameSize(real_size);
+	else if (check_sum == "terminate")
+	{
+		available_commands_[key] = new TerminateProgram;
+	}
+	else if (check_sum == "play")
+	{
+		available_commands_[key] = new OpenPlayMenu;
+	}
+	else if (check_sum == "size")
+	{
+		available_commands_["size"] = new ChangeFieldSize(parse_size(key));
+	}
+	else if (check_sum == "difficulty")
+	{
+		available_commands_["difficulty"] = new ChangeGameDifficulty(parse_difficulty(key));
+	}
 }
 
-void FileInput::update_difficulty(const std::string &input_command)
+MAP_SIZE FileInput::parse_size(const std::string &string)
 {
-	std::stringstream ss(input_command);
-
-	std::string check_sum;
-	ss >> check_sum;
-
-	if (check_sum != "difficulty")
+	if (string == "medium")
 	{
-		return;
+		return MEDIUM;
+	}
+	else if (string == "big")
+	{
+		return BIG;
+	}
+	return SMALL;
+}
+
+DIFFICULTY FileInput::parse_difficulty(const std::string &string)
+{
+	if (string == "medium")
+	{
+		return AVERAGE;
+	}
+	else if (string == "hard")
+	{
+		return HARD;
+	}
+	return EASY;
+}
+
+void FileInput::parse_system_commands(std::ifstream &stream)
+{
+	std::string line;
+
+	int keys = 0, other = 0;
+	while (std::getline(stream, line))
+	{
+		if (line.find("key") != std::string::npos)
+		{
+			keys++;
+			bind_keys(line);
+		}
+		else
+		{
+			other++;
+			read_simple_command(line);
+		}
+	}
+	if (keys < 4)
+	{
+		clean_up();
+		throw std::invalid_argument("Too few keys for movement");
+	}
+	if (other < 9)
+	{
+		clean_up();
+		throw std::invalid_argument("Too few buttons passed");
 	}
 
-	std::string difficulty;
+	available_commands_["NOP"] = new NOP;
+}
 
-	ss >> difficulty;
+void FileInput::process_file(const std::string &input)
+{
+	file_.open(input);
 
-	if (difficulty != "easy" && difficulty != "medium" && difficulty != "hard")
+	if (!file_.is_open())
 	{
-		throw std::invalid_argument("Bad difficulty: " + difficulty);
+		clean_up();
+		throw std::invalid_argument("Failed to open " + input);
 	}
+}
 
-	if (available_commands_.find("DIFFICULTY") != available_commands_.end())
+void FileInput::clean_up()
+{
+	for (auto &[key, value]: available_commands_)
 	{
-		delete available_commands_["DIFFICULTY"];
+		delete value;
+		value = nullptr;
 	}
-
-	DIFFICULTY real_difficulty;
-
-	if (difficulty == "easy")
-	{
-		real_difficulty = DIFFICULTY::EASY;
-	}
-	else if (difficulty == "medium")
-	{
-		real_difficulty = DIFFICULTY::AVERAGE;
-	}
-	else if (difficulty == "hard")
-	{
-		real_difficulty = DIFFICULTY::HARD;
-	}
-
-	available_commands_["DIFFICULTY"] = new ChangeGameDifficulty(real_difficulty);
+	available_commands_.clear();
 }

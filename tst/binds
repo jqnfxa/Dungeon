@@ -1,0 +1,13 @@
+key w up
+key a left
+key s down
+key d right
+create c
+restart r
+resume l
+hold h
+main m
+terminate t
+play p
+difficulty easy
+size small

@@ -1,15 +1,13 @@
-bind l left
-bind r right
-bind u up
-bind d down
-size small
-difficulty easy
-RUN
+p
+difficulty
+size
+c
+w
+w
+a
 d
-r
-u
+h
 l
-RESTART
 r
-r
-TERMINATE
+m
+t
