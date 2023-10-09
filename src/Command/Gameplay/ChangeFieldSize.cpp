@@ -1,5 +1,9 @@
 #include "ChangeFieldSize.hpp"
-#include "Game/GameEngine.hpp"
+#include "Game/Engine/GameEngine.hpp"
+
+ChangeFieldSize::ChangeFieldSize() : ChangeFieldSize(SMALL)
+{
+}
 
 ChangeFieldSize::ChangeFieldSize(MAP_SIZE size) : size_(size)
 {
@@ -7,8 +11,7 @@ ChangeFieldSize::ChangeFieldSize(MAP_SIZE size) : size_(size)
 
 void ChangeFieldSize::execute(GameEngine &game)
 {
-	game.open_settings();
-	game.set_game_size(size_);
+	game.resize_filed(size_);
 }
 
 bool ChangeFieldSize::operator==(Command *other)

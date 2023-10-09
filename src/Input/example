@@ -1,13 +1,14 @@
-key w up
-key a left
-key s down
-key d right
-create c
-restart r
-resume l
-hold h
-main m
-terminate t
-play p
-difficulty easy
-size small
+left 0
+right 3
+down 18
+up 22
+play 58
+create 2
+restart 17
+pause 15
+menu 12
+options 14
+resume 10
+terminate 36
+size (small | medium | big)
+difficulty (easy | average | hard)

@@ -2,7 +2,7 @@
 
 #include "Command/Interface/Interface.hpp"
 
-class ReturnToMenu : public Command{
+class OpenMainMenu : public Command{
  public:
   void execute(GameEngine &game) override;
   bool operator==(Command *other) override;

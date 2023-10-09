@@ -1,5 +1,9 @@
 #include "ChangeGameDifficulty.hpp"
-#include "Game/GameEngine.hpp"
+#include "Game/Engine/GameEngine.hpp"
+
+ChangeGameDifficulty::ChangeGameDifficulty() : ChangeGameDifficulty(EASY)
+{
+}
 
 ChangeGameDifficulty::ChangeGameDifficulty(DIFFICULTY difficulty) : difficulty_(difficulty)
 {
@@ -7,8 +11,7 @@ ChangeGameDifficulty::ChangeGameDifficulty(DIFFICULTY difficulty) : difficulty_(
 
 void ChangeGameDifficulty::execute(GameEngine &game)
 {
-	game.open_settings();
-	game.set_game_difficulty(difficulty_);
+	game.change_difficulty(difficulty_);
 }
 
 bool ChangeGameDifficulty::operator==(Command *other)

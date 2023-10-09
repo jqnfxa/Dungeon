@@ -6,7 +6,8 @@
 class ChangeFieldSize : public Command {
   MAP_SIZE size_;
  public:
-  explicit ChangeFieldSize(MAP_SIZE difficulty);
+  ChangeFieldSize();
+  explicit ChangeFieldSize(MAP_SIZE size);
   void execute(GameEngine &game) override;
   bool operator==(Command *other) override;
 };

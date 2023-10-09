@@ -1,5 +1,5 @@
 #include "GameOptions.hpp"
-#include "Game/GameEngine.hpp"
+#include "Game/Engine/GameEngine.hpp"
 
 void GameOptions::execute(GameEngine &game)
 {

@@ -6,7 +6,9 @@
 class MovePlayer : public Command {
   const DIRECTION direction_;
  public:
+  MovePlayer();
   explicit MovePlayer(DIRECTION direction);
   void execute(GameEngine &game) override;
   bool operator==(Command *other) override;
+  bool compare(Command *other) const;
 };

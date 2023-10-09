@@ -1,4 +1,12 @@
-key l left
-key r right
-key u up
-key d upside
+left 0
+right 3
+down 0
+up 22
+play 58
+create 2
+restart 17
+pause 15
+menu 12
+options 14
+resume 10
+terminate 36

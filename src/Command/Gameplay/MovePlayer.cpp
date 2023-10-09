@@ -1,5 +1,9 @@
 #include "MovePlayer.hpp"
-#include "Game/GameEngine.hpp"
+#include "Game/Engine/GameEngine.hpp"
+
+MovePlayer::MovePlayer() : MovePlayer(NONE)
+{
+}
 
 MovePlayer::MovePlayer(DIRECTION direction) : direction_(direction)
 {
@@ -7,11 +11,16 @@ MovePlayer::MovePlayer(DIRECTION direction) : direction_(direction)
 
 void MovePlayer::execute(GameEngine &game)
 {
-	game.player()->move_by_direction(direction_, 1);
+	game.move_player(direction_, 1);
 }
 
 bool MovePlayer::operator==(Command *other)
 {
 	auto *ptr = dynamic_cast<MovePlayer *>(other);
-	return ptr != nullptr && ptr->direction_ == this->direction_;
+	return compare(other) && ptr->direction_ == this->direction_;
+}
+
+bool MovePlayer::compare(Command *other) const
+{
+	return dynamic_cast<MovePlayer *>(other) != nullptr;
 }

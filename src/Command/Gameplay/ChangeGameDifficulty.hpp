@@ -6,6 +6,7 @@
 class ChangeGameDifficulty : public Command {
   DIFFICULTY difficulty_;
  public:
+  ChangeGameDifficulty();
   explicit ChangeGameDifficulty(DIFFICULTY difficulty);
   void execute(GameEngine &game) override;
   bool operator==(Command *other) override;

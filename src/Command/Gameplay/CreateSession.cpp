@@ -1,9 +1,8 @@
 #include "CreateSession.hpp"
-#include "Game/GameEngine.hpp"
+#include "Game/Engine/GameEngine.hpp"
 
 void CreateSession::execute(GameEngine &game)
 {
-	game.open_play_menu();
 	game.create_session();
 }
 

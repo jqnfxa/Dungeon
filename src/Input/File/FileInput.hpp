@@ -12,17 +12,17 @@ class FileInput : public Input {
   Command *last_command_;
   std::ifstream file_;
 
-  std::unordered_map<std::string, Command *> available_commands_;
+  std::unordered_map<std::string, std::pair<bool, Command *>> available_commands_;
+  std::unordered_map<int32_t, std::string> user_mapper_;
 
   void clean_up();
-  void bind_keys(const std::string &string);
-  void read_simple_command(const std::string &string);
-  MAP_SIZE parse_size(const std::string &string);
-  DIFFICULTY parse_difficulty(const std::string &string);
+  void init_available_commands();
+  void parse_system_command(const std::string &command);
   void parse_system_commands(std::ifstream &stream);
  public:
-  explicit FileInput(const std::string &binds);
+  explicit FileInput(const std::string &config);
   ~FileInput() override;
+
   void process_file(const std::string &input);
   Command* command() override;
   void update() override;

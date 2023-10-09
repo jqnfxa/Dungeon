@@ -2,39 +2,18 @@
 #include "Command/Include/Defines.hpp"
 #include <sstream>
 
-FileInput::FileInput(const std::string &binds) : last_command_(nullptr)
+FileInput::FileInput(const std::string &config) : last_command_(nullptr)
 {
-	std::ifstream file(binds);
+	std::ifstream file(config);
 
 	if (!file.is_open())
 	{
 		clean_up();
-		throw std::invalid_argument("Failed to open: " + binds);
+		throw std::invalid_argument("Failed to open: " + config);
 	}
 
+	init_available_commands();
 	parse_system_commands(file);
-	last_command_ = available_commands_["NOP"];
-}
-
-Command *FileInput::command()
-{
-	return last_command_;
-}
-
-void FileInput::update()
-{
-	last_command_ = available_commands_["NOP"];
-
-	if (file_.is_open())
-	{
-		std::string command;
-		std::getline(file_, command);
-
-		if (available_commands_.find(command) != available_commands_.end())
-		{
-			last_command_ = available_commands_[command];
-		}
-	}
 }
 
 FileInput::~FileInput()
@@ -42,175 +21,85 @@ FileInput::~FileInput()
 	clean_up();
 }
 
-void FileInput::bind_keys(const std::string &input_command)
+void FileInput::clean_up()
 {
-	std::stringstream ss(input_command);
-
-	std::string check_sum;
-	ss >> check_sum;
-
-	if (check_sum != "key")
-	{
-		return;
-	}
-
-	char button;
-	std::string command;
-
-	ss.ignore(static_cast<int>(input_command.size()), ' ');
-	ss >> button;
-	ss >> command;
-	std::string button_key = std::string(1, button);
-
-	DIRECTION direction;
-
-	if (command == "left")
-	{
-		direction = DIRECTION::LEFT;
-	}
-	else if (command == "right")
-	{
-		direction = DIRECTION::RIGHT;
-	}
-	else if (command == "up")
-	{
-		direction = DIRECTION::UP;
-	}
-	else if (command == "down")
-	{
-		direction = DIRECTION::DOWN;
-	}
-	else
-	{
-		clean_up();
-		throw std::invalid_argument("Invalid command passed: " + command);
-	}
-
-	if (available_commands_.find(button_key) != available_commands_.end())
-	{
-		clean_up();
-		throw std::invalid_argument("Button already was bind");
-	}
-
-	available_commands_[button_key] = new MovePlayer(direction);
-
+	user_mapper_.clear();
 	for (auto &[key, value]: available_commands_)
 	{
-		if (key != button_key && available_commands_[button_key]->operator==(value))
-		{
-			clean_up();
-			throw std::invalid_argument("Multiple buttons for command: " + command);
-		}
+		delete value.second;
+		value.second = nullptr;
 	}
+	available_commands_.clear();
 }
 
-void FileInput::read_simple_command(const std::string &string)
+void FileInput::init_available_commands()
 {
-	std::stringstream ss(string);
+	// movement
+	available_commands_["left"] = {false, new MovePlayer(LEFT)};
+	available_commands_["right"] = {false, new MovePlayer(RIGHT)};
+	available_commands_["up"] = {false, new MovePlayer(UP)};
+	available_commands_["down"] = {false, new MovePlayer(DOWN)};
 
-	std::string check_sum, key;
-	ss >> check_sum >> key;
+	// game states
+	available_commands_["play"] = {false, new OpenPlayMenu};
+	available_commands_["create"] = {false, new CreateSession};
+	available_commands_["restart"] = {false, new RestartSession};
+	available_commands_["pause"] = {false, new OpenHoldMenu};
+	available_commands_["menu"] = {false, new OpenMainMenu};
+	available_commands_["options"] = {false, new GameOptions};
+	available_commands_["resume"] = {false, new ResumeGame};
+	available_commands_["terminate"] = {false, new TerminateProgram};
 
-	if (available_commands_.find(check_sum) != available_commands_.end())
-	{
-		clean_up();
-		throw std::invalid_argument(check_sum + " already was bind");
-	}
-
-	if (check_sum == "create")
-	{
-		available_commands_[key] = new CreateSession;
-	}
-	else if (check_sum == "restart")
-	{
-		available_commands_[key] = new RestartSession;
-	}
-	else if (check_sum == "resume")
-	{
-		available_commands_[key] = new ResumeGame;
-	}
-	else if (check_sum == "hold")
-	{
-		available_commands_[key] = new OpenHoldMenu;
-	}
-	else if (check_sum == "main")
-	{
-		available_commands_[key] = new ReturnToMenu;
-	}
-	else if (check_sum == "terminate")
-	{
-		available_commands_[key] = new TerminateProgram;
-	}
-	else if (check_sum == "play")
-	{
-		available_commands_[key] = new OpenPlayMenu;
-	}
-	else if (check_sum == "size")
-	{
-		available_commands_["size"] = new ChangeFieldSize(parse_size(key));
-	}
-	else if (check_sum == "difficulty")
-	{
-		available_commands_["difficulty"] = new ChangeGameDifficulty(parse_difficulty(key));
-	}
-}
-
-MAP_SIZE FileInput::parse_size(const std::string &string)
-{
-	if (string == "medium")
-	{
-		return MEDIUM;
-	}
-	else if (string == "big")
-	{
-		return BIG;
-	}
-	return SMALL;
-}
-
-DIFFICULTY FileInput::parse_difficulty(const std::string &string)
-{
-	if (string == "medium")
-	{
-		return AVERAGE;
-	}
-	else if (string == "hard")
-	{
-		return HARD;
-	}
-	return EASY;
+	// difficulty
+	available_commands_["size_small"] = {false, new ChangeFieldSize(SMALL)};
+	available_commands_["size_medium"] = {false, new ChangeFieldSize(MEDIUM)};
+	available_commands_["size_big"] = {false, new ChangeFieldSize(BIG)};
+	available_commands_["difficulty_easy"] = {false, new ChangeGameDifficulty(EASY)};
+	available_commands_["difficulty_average"] = {false, new ChangeGameDifficulty(AVERAGE)};
+	available_commands_["difficulty_hard"] = {false, new ChangeGameDifficulty(HARD)};
 }
 
 void FileInput::parse_system_commands(std::ifstream &stream)
 {
 	std::string line;
 
-	int keys = 0, other = 0;
 	while (std::getline(stream, line))
 	{
-		if (line.find("key") != std::string::npos)
-		{
-			keys++;
-			bind_keys(line);
-		}
-		else
-		{
-			other++;
-			read_simple_command(line);
-		}
-	}
-	if (keys < 4)
-	{
-		clean_up();
-		throw std::invalid_argument("Too few keys for movement");
-	}
-	if (other < 9)
-	{
-		clean_up();
-		throw std::invalid_argument("Too few buttons passed");
+		parse_system_command(line);
 	}
 
-	available_commands_["NOP"] = new NOP;
+	if (user_mapper_.size() < 12)
+	{
+		clean_up();
+		throw std::invalid_argument("Not enough keys to init");
+	}
+}
+
+void FileInput::parse_system_command(const std::string &command)
+{
+	std::istringstream iss(command);
+	std::string check_sum;
+	int32_t key;
+
+	iss >> check_sum >> key;
+
+	if (available_commands_.find(check_sum) == available_commands_.end())
+	{
+		clean_up();
+		throw std::invalid_argument("Invalid system command passed");
+	}
+	if (available_commands_.at(check_sum).first)
+	{
+		clean_up();
+		throw std::invalid_argument("Key for command " + check_sum + " already exists");
+	}
+	if (user_mapper_.find(key) != user_mapper_.end())
+	{
+		const auto message = std::to_string(key) + " already bind on " + user_mapper_.at(key);
+		clean_up();
+		throw std::invalid_argument(message);
+	}
+	user_mapper_[key] = check_sum;
 }
 
 void FileInput::process_file(const std::string &input)
@@ -224,12 +113,23 @@ void FileInput::process_file(const std::string &input)
 	}
 }
 
-void FileInput::clean_up()
+Command *FileInput::command()
 {
-	for (auto &[key, value]: available_commands_)
+	return last_command_;
+}
+
+void FileInput::update()
+{
+	last_command_ = nullptr;
+
+	if (file_.is_open())
 	{
-		delete value;
-		value = nullptr;
+		int32_t key;
+		file_ >> key;
+
+		if (user_mapper_.find(key) != user_mapper_.end())
+		{
+			last_command_ = available_commands_.at(user_mapper_.at(key)).second;
+		}
 	}
-	available_commands_.clear();
 }

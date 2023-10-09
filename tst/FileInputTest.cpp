@@ -1,6 +1,5 @@
 #include <Input/File/FileInput.hpp>
 #include "gtest/gtest.h"
-#include "Command/System/NOP.hpp"
 
 TEST(FileInputSuite, TestNoFile)
 {
@@ -25,7 +24,7 @@ TEST(FileInputSuite, TestValidCreation)
 	try
 	{
 		FileInput input(directory_path + test);
-		EXPECT_TRUE(dynamic_cast<NOP *>(input.command()) != nullptr);
+		EXPECT_TRUE(input.command() == nullptr);
 	}
 	catch (...)
 	{
@@ -44,11 +43,11 @@ TEST(FileInputSuite, TestWrongSequence)
 	}
 	catch (const std::invalid_argument &e)
 	{
-		EXPECT_EQ(e.what(), std::string("Too few keys for movement"));
+		EXPECT_EQ(e.what(), std::string("Invalid system command passed"));
 	}
 }
 
-TEST(FileInputSuite, TestWrongDirection)
+TEST(FileInputSuite, TestButtonRedefinition)
 {
 	const std::string directory_path = "/home/shard/CLionProjects/DungeonGame/tst/";
 	const std::string test = "test_3";
@@ -59,11 +58,11 @@ TEST(FileInputSuite, TestWrongDirection)
 	}
 	catch (const std::invalid_argument &e)
 	{
-		EXPECT_EQ(e.what(), std::string("Invalid command passed: ") + "upside");
+		EXPECT_EQ(e.what(), std::string("0 already bind on left"));
 	}
 }
 
-TEST(FileInputSuite, TestButtonRedefinition)
+TEST(FileInputSuite, TestButtonCommandsRedefinition)
 {
 	const std::string directory_path = "/home/shard/CLionProjects/DungeonGame/tst/";
 	const std::string test = "test_4";
@@ -74,11 +73,11 @@ TEST(FileInputSuite, TestButtonRedefinition)
 	}
 	catch (const std::invalid_argument &e)
 	{
-		EXPECT_EQ(e.what(), std::string("Button already was bind"));
+		EXPECT_EQ(e.what(), std::string("Key for command left already exists"));
 	}
 }
 
-TEST(FileInputSuite, TestButtonCommandsRedefinition)
+TEST(FileInputSuite, TestTooFewButtons)
 {
 	const std::string directory_path = "/home/shard/CLionProjects/DungeonGame/tst/";
 	const std::string test = "test_5";
@@ -89,21 +88,6 @@ TEST(FileInputSuite, TestButtonCommandsRedefinition)
 	}
 	catch (const std::invalid_argument &e)
 	{
-		EXPECT_EQ(e.what(), std::string("Multiple buttons for command: ") + "left");
-	}
-}
-
-TEST(FileInputSuite, TestTooFewButtons)
-{
-	const std::string directory_path = "/home/shard/CLionProjects/DungeonGame/tst/";
-	const std::string test = "test_6";
-
-	try
-	{
-		FileInput input(directory_path + test);
-	}
-	catch (const std::invalid_argument &e)
-	{
-		EXPECT_EQ(e.what(), std::string("Too few buttons passed"));
+		EXPECT_EQ(e.what(), std::string("Not enough keys to init"));
 	}
 }

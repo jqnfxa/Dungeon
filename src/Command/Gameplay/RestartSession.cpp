@@ -1,5 +1,5 @@
 #include "RestartSession.hpp"
-#include "Game/GameEngine.hpp"
+#include "Game/Engine/GameEngine.hpp"
 
 void RestartSession::execute(GameEngine &game)
 {
