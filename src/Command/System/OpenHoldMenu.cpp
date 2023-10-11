@@ -10,3 +10,8 @@ bool OpenHoldMenu::operator==(Command *other)
 {
 	return dynamic_cast<OpenHoldMenu *>(other) != nullptr;
 }
+
+std::string OpenHoldMenu::to_str() const
+{
+	return "OpenHoldMenu";
+}

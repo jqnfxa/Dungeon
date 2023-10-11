@@ -11,4 +11,5 @@ class MovePlayer : public Command {
   void execute(GameEngine &game) override;
   bool operator==(Command *other) override;
   bool compare(Command *other) const;
+  [[nodiscard]] std::string to_str() const override;
 };

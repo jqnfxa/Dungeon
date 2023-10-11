@@ -24,3 +24,8 @@ bool MovePlayer::compare(Command *other) const
 {
 	return dynamic_cast<MovePlayer *>(other) != nullptr;
 }
+
+std::string MovePlayer::to_str() const
+{
+	return "Move player in " + std::to_string(direction_);
+}

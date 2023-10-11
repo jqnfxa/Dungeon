@@ -7,14 +7,15 @@
 bool PlayingState::handle_command(GameEngine &game, Command *command)
 {
 	bool is_handled = false;
-	if (TerminateProgram().operator==(command) || MovePlayer().compare(command)
-		|| OpenHoldMenu().operator==(command))
+	if (typeid(*command) == typeid(TerminateProgram) || typeid(*command) == typeid(MovePlayer)
+		|| typeid(*command) == typeid(OpenHoldMenu))
 	{
 		command->execute(game);
 		is_handled = true;
 	}
 	return is_handled;
 }
+
 std::string PlayingState::to_str() const
 {
 	return "PlayingState";

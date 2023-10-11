@@ -10,3 +10,8 @@ bool GameOptions::operator==(Command *other)
 {
 	return dynamic_cast<GameOptions *>(other) != nullptr;
 }
+
+std::string GameOptions::to_str() const
+{
+	return "GameOptions";
+}

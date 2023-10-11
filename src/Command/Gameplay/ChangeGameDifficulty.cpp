@@ -18,3 +18,8 @@ bool ChangeGameDifficulty::operator==(Command *other)
 {
 	return dynamic_cast<ChangeGameDifficulty *>(other) != nullptr;
 }
+
+std::string ChangeGameDifficulty::to_str() const
+{
+	return "Change game difficulty to: " + std::to_string(difficulty_);
+}

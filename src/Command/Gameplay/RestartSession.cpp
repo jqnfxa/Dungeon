@@ -11,4 +11,9 @@ bool RestartSession::operator==(Command *other)
 	return dynamic_cast<RestartSession *>(other) != nullptr;
 }
 
+std::string RestartSession::to_str() const
+{
+	return "RestartSession";
+}
+
 

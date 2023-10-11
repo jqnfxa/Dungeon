@@ -10,3 +10,8 @@ bool TerminateProgram::operator==(Command *other)
 {
 	return dynamic_cast<TerminateProgram *>(other) != nullptr;
 }
+
+std::string TerminateProgram::to_str() const
+{
+	return "TerminateProgram";
+}

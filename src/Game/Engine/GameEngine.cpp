@@ -5,7 +5,7 @@
 #include "Game/State/PlayMenuState.hpp"
 #include "Game/State/PlayingState.hpp"
 #include "Game/State/HoldState.hpp"
-#include <sstream>
+#include <iostream>
 
 GameEngine::GameEngine() : current_state_(new MainMenuState),
 						   size_(SMALL),
@@ -49,9 +49,11 @@ void GameEngine::update(Command *command)
 	// handle command execution
 	if (result)
 	{
+		std::cerr << "Successfully executed: " << command->to_str() << '\n';
 	}
 	else
 	{
+		std::cerr << "Command not handled: " << command->to_str() << '\n';
 	}
 }
 

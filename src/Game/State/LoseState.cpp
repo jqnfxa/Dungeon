@@ -6,14 +6,16 @@
 bool LoseState::handle_command(GameEngine &game, Command *command)
 {
 	bool is_handled = false;
-	if (TerminateProgram().operator==(command) || RestartSession().operator==(command)
-		|| OpenMainMenu().operator==(command))
+	if (typeid(*command) == typeid(TerminateProgram)
+		|| typeid(*command) == typeid(RestartSession)
+		|| typeid(*command) == typeid(OpenMainMenu))
 	{
 		command->execute(game);
 		is_handled = true;
 	}
 	return is_handled;
 }
+
 std::string LoseState::to_str() const
 {
 	return "LoseState";

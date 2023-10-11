@@ -10,3 +10,8 @@ bool ResumeGame::operator==(Command *other)
 {
 	return dynamic_cast<ResumeGame *>(other) != nullptr;
 }
+
+std::string ResumeGame::to_str() const
+{
+	return "ResumeGame";
+}

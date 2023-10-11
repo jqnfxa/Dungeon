@@ -7,8 +7,8 @@ bool MainMenuState::handle_command(GameEngine &game, Command *command)
 {
 	bool is_handled = false;
 
-	if (TerminateProgram().operator==(command) || GameOptions().operator==(command)
-		|| OpenPlayMenu().operator==(command))
+	if (typeid(*command) == typeid(TerminateProgram)
+		|| typeid(*command) == typeid(OpenPlayMenu))
 	{
 		command->execute(game);
 		is_handled = true;
@@ -16,6 +16,7 @@ bool MainMenuState::handle_command(GameEngine &game, Command *command)
 
 	return is_handled;
 }
+
 std::string MainMenuState::to_str() const
 {
 	return "MainMenuState";

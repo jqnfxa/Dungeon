@@ -124,12 +124,23 @@ void FileInput::update()
 
 	if (file_.is_open())
 	{
-		int32_t key;
-		file_ >> key;
+		std::string command;
+		file_ >> command;
 
-		if (user_mapper_.find(key) != user_mapper_.end())
+		if (command == "difficulty" || command == "size")
 		{
-			last_command_ = available_commands_.at(user_mapper_.at(key)).second;
+			std::string arg;
+			file_ >> arg;
+			last_command_ = available_commands_.at(command + "_" + arg).second;
+		}
+		else
+		{
+			int32_t key = std::stoi(command);
+
+			if (user_mapper_.find(key) != user_mapper_.end())
+			{
+				last_command_ = available_commands_.at(user_mapper_.at(key)).second;
+			}
 		}
 	}
 }

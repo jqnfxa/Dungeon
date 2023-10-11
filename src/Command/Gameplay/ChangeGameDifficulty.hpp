@@ -10,4 +10,5 @@ class ChangeGameDifficulty : public Command {
   explicit ChangeGameDifficulty(DIFFICULTY difficulty);
   void execute(GameEngine &game) override;
   bool operator==(Command *other) override;
+  [[nodiscard]] std::string to_str() const override;
 };

@@ -18,3 +18,8 @@ bool ChangeFieldSize::operator==(Command *other)
 {
 	return dynamic_cast<ChangeFieldSize *>(other) != nullptr;
 }
+
+std::string ChangeFieldSize::to_str() const
+{
+	return "Change field size to " + std::to_string(size_);
+}

@@ -10,3 +10,8 @@ bool CreateSession::operator==(Command *other)
 {
 	return dynamic_cast<CreateSession *>(other) != nullptr;
 }
+
+std::string CreateSession::to_str() const
+{
+	return "CreateSession";
+}

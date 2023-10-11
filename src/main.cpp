@@ -2,7 +2,6 @@
 
 int main()
 {
-	sf::Keyboard::Escape;
 	// TODO rework all interaction classes
 	// TODO input classes (for reading from file)
 	// TODO input classes (for reading from sf::event)

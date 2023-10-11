@@ -2,6 +2,7 @@
 
 #include "Command/Interface/Interface.hpp"
 #include <string>
+#include <typeinfo>
 
 class GameState {
  public:
