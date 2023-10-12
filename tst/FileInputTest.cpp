@@ -24,7 +24,7 @@ TEST(FileInputSuite, TestValidCreation)
 	try
 	{
 		FileInput input(directory_path + test);
-		EXPECT_TRUE(input.command() == nullptr);
+		EXPECT_TRUE(input.last_command() == nullptr);
 	}
 	catch (...)
 	{

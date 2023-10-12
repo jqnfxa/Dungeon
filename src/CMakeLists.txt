@@ -13,8 +13,8 @@ target_link_libraries(${BINARY}_run sfml-graphics sfml-system)
 add_library(${BINARY}_lib STATIC ${SOURCES}
         Game/State/PlayingState.cpp
         Game/State/PlayingState.hpp
-        Game/State/TerinateState.cpp
-        Game/State/TerinateState.hpp
+        Game/State/TerminateState.cpp
+        Game/State/TerminateState.hpp
         Game/State/MainMenuState.cpp
         Game/State/MainMenuState.hpp
         Game/State/SettingsState.cpp
@@ -27,4 +27,18 @@ add_library(${BINARY}_lib STATIC ${SOURCES}
         Game/State/WinState.hpp
         Game/State/LoseState.cpp
         Game/State/LoseState.hpp
+        Draw/Interface/Interface.hpp
+        Game/GameObserver.hpp
+        Draw/Tracker.cpp
+        Draw/Tracker.hpp
+        Draw/SFML/SfmlRenderer.cpp
+        Draw/SFML/SfmlRenderer.hpp
+        Input/SFML/SfmlInput.cpp
+        Input/SFML/SfmlInput.hpp
+        Input/Base/InputClass.cpp
+        Draw/SFML/SimpleMenu.cpp
+        Draw/SFML/SimpleMenu.hpp
+        Draw/SFML/Button.cpp
+        Draw/SFML/Button.hpp
+        Draw/SFML/RenderSlave.hpp
 )

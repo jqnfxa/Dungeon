@@ -4,6 +4,7 @@
 #include "Handlers/PlayerHandler/PlayerHandler.hpp"
 #include "MapGenerator/DefaultLevels/DefaultLevelGenerator.hpp"
 #include "Game/State/GameState.hpp"
+#include "Game/GameObserver.hpp"
 
 class GameEngine {
   GameState *current_state_;
@@ -18,6 +19,8 @@ class GameEngine {
   Player *player_initial_;
   PlayerHandler *handler_;
 
+  std::vector<GameObserver *> observers_;
+
   void release_resources();
  public:
   GameEngine();
@@ -27,7 +30,7 @@ class GameEngine {
 
   // game state changers
   void set_state(GameState *state);
-  GameState *state();
+  [[nodiscard]] GameState *state() const;
 
   void exit_game();
   void move_player(DIRECTION direction, int32_t power);
@@ -43,4 +46,8 @@ class GameEngine {
 
   [[nodiscard]] PlayerHandler *player() const;
   [[nodiscard]] GameField *field() const;
+
+  void add_observer(GameObserver *observer);
+  void remove_observer(GameObserver *observer);
+  void notify_observers();
 };

@@ -14,6 +14,7 @@ bool PlayMenuState::handle_command(GameEngine &game, Command *command)
 	}
 	return is_handled;
 }
+
 std::string PlayMenuState::to_str() const
 {
 	return "PlayMenuState";

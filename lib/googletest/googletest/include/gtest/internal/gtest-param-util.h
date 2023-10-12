@@ -92,7 +92,7 @@ class ParamGeneratorInterface;
 template <typename>
 class ParamGenerator;
 
-// Interface for iterating over elements provided by an implementation
+// Base for iterating over elements provided by an implementation
 // of ParamGeneratorInterface<T>.
 template <typename T>
 class ParamIteratorInterface {

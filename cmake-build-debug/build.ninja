@@ -196,6 +196,34 @@ build src/CMakeFiles/DungeonGame_run.dir/Command/System/TerminateProgram.cpp.o: 
   OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/Command/System
 
+build src/CMakeFiles/DungeonGame_run.dir/Draw/SFML/Button.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Draw/SFML/Button.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/Draw/SFML/Button.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/Draw/SFML
+
+build src/CMakeFiles/DungeonGame_run.dir/Draw/SFML/SfmlRenderer.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Draw/SFML/SfmlRenderer.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/Draw/SFML/SfmlRenderer.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/Draw/SFML
+
+build src/CMakeFiles/DungeonGame_run.dir/Draw/SFML/SimpleMenu.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Draw/SFML/SimpleMenu.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/Draw/SFML/SimpleMenu.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/Draw/SFML
+
+build src/CMakeFiles/DungeonGame_run.dir/Draw/Tracker.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Draw/Tracker.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/Draw/Tracker.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/Draw
+
 build src/CMakeFiles/DungeonGame_run.dir/Entities/Player/Player.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Entities/Player/Player.cpp || cmake_object_order_depends_target_DungeonGame_run
   DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/Entities/Player/Player.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
@@ -308,8 +336,8 @@ build src/CMakeFiles/DungeonGame_run.dir/Game/State/SettingsState.cpp.o: CXX_COM
   OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/Game/State
 
-build src/CMakeFiles/DungeonGame_run.dir/Game/State/TerinateState.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Game/State/TerinateState.cpp || cmake_object_order_depends_target_DungeonGame_run
-  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/Game/State/TerinateState.cpp.o.d
+build src/CMakeFiles/DungeonGame_run.dir/Game/State/TerminateState.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Game/State/TerminateState.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/Game/State/TerminateState.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
   OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
@@ -329,12 +357,26 @@ build src/CMakeFiles/DungeonGame_run.dir/Handlers/PlayerHandler/PlayerHandler.cp
   OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/Handlers/PlayerHandler
 
+build src/CMakeFiles/DungeonGame_run.dir/Input/Base/InputClass.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Input/Base/InputClass.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/Input/Base/InputClass.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/Input/Base
+
 build src/CMakeFiles/DungeonGame_run.dir/Input/File/FileInput.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Input/File/FileInput.cpp || cmake_object_order_depends_target_DungeonGame_run
   DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/Input/File/FileInput.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
   OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/Input/File
+
+build src/CMakeFiles/DungeonGame_run.dir/Input/SFML/SfmlInput.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Input/SFML/SfmlInput.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/Input/SFML/SfmlInput.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/Input/SFML
 
 build src/CMakeFiles/DungeonGame_run.dir/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp || cmake_object_order_depends_target_DungeonGame_run
   DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o.d
@@ -400,7 +442,7 @@ build src/CMakeFiles/DungeonGame_run.dir/main.cpp.o: CXX_COMPILER__DungeonGame_r
 #############################################
 # Link the executable src/DungeonGame_run
 
-build src/DungeonGame_run: CXX_EXECUTABLE_LINKER__DungeonGame_run_Debug src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/ChangeFieldSize.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/ChangeGameDifficulty.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/CreateSession.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/MovePlayer.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/RestartSession.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/ResumeGame.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/System/GameOptions.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/System/OpenHoldMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/System/OpenMainMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/System/OpenPlayMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/System/TerminateProgram.cpp.o src/CMakeFiles/DungeonGame_run.dir/Entities/Player/Player.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/Factory/EventFactory.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/MovementEvents/Door.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/MovementEvents/Key.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/MovementEvents/RandomMine.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/NegativeEvents/Spikes.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/PositiveEvents/Potion.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/PositiveEvents/ShieldKit.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/PositiveEvents/Star.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/Engine/GameEngine.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/HoldState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/LoseState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/MainMenuState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/PlayMenuState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/PlayingState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/SettingsState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/TerinateState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/WinState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Handlers/PlayerHandler/PlayerHandler.cpp.o src/CMakeFiles/DungeonGame_run.dir/Input/File/FileInput.cpp.o src/CMakeFiles/DungeonGame_run.dir/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o src/CMakeFiles/DungeonGame_run.dir/MapGenerator/RandomLevelGen/Generator.cpp.o src/CMakeFiles/DungeonGame_run.dir/Movement/Direction.cpp.o src/CMakeFiles/DungeonGame_run.dir/Profiler/Timer.cpp.o src/CMakeFiles/DungeonGame_run.dir/Random/Random.cpp.o src/CMakeFiles/DungeonGame_run.dir/World/Cell.cpp.o src/CMakeFiles/DungeonGame_run.dir/World/GameField.cpp.o src/CMakeFiles/DungeonGame_run.dir/main.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
+build src/DungeonGame_run: CXX_EXECUTABLE_LINKER__DungeonGame_run_Debug src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/ChangeFieldSize.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/ChangeGameDifficulty.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/CreateSession.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/MovePlayer.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/RestartSession.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/Gameplay/ResumeGame.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/System/GameOptions.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/System/OpenHoldMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/System/OpenMainMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/System/OpenPlayMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/Command/System/TerminateProgram.cpp.o src/CMakeFiles/DungeonGame_run.dir/Draw/SFML/Button.cpp.o src/CMakeFiles/DungeonGame_run.dir/Draw/SFML/SfmlRenderer.cpp.o src/CMakeFiles/DungeonGame_run.dir/Draw/SFML/SimpleMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/Draw/Tracker.cpp.o src/CMakeFiles/DungeonGame_run.dir/Entities/Player/Player.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/Factory/EventFactory.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/MovementEvents/Door.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/MovementEvents/Key.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/MovementEvents/RandomMine.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/NegativeEvents/Spikes.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/PositiveEvents/Potion.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/PositiveEvents/ShieldKit.cpp.o src/CMakeFiles/DungeonGame_run.dir/Event/PositiveEvents/Star.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/Engine/GameEngine.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/HoldState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/LoseState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/MainMenuState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/PlayMenuState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/PlayingState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/SettingsState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/TerminateState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Game/State/WinState.cpp.o src/CMakeFiles/DungeonGame_run.dir/Handlers/PlayerHandler/PlayerHandler.cpp.o src/CMakeFiles/DungeonGame_run.dir/Input/Base/InputClass.cpp.o src/CMakeFiles/DungeonGame_run.dir/Input/File/FileInput.cpp.o src/CMakeFiles/DungeonGame_run.dir/Input/SFML/SfmlInput.cpp.o src/CMakeFiles/DungeonGame_run.dir/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o src/CMakeFiles/DungeonGame_run.dir/MapGenerator/RandomLevelGen/Generator.cpp.o src/CMakeFiles/DungeonGame_run.dir/Movement/Direction.cpp.o src/CMakeFiles/DungeonGame_run.dir/Profiler/Timer.cpp.o src/CMakeFiles/DungeonGame_run.dir/Random/Random.cpp.o src/CMakeFiles/DungeonGame_run.dir/World/Cell.cpp.o src/CMakeFiles/DungeonGame_run.dir/World/GameField.cpp.o src/CMakeFiles/DungeonGame_run.dir/main.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
@@ -494,6 +536,34 @@ build src/CMakeFiles/DungeonGame_lib.dir/Command/System/TerminateProgram.cpp.o: 
   INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
   OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/Command/System
+
+build src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML/Button.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Draw/SFML/Button.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML/Button.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML
+
+build src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML/SfmlRenderer.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Draw/SFML/SfmlRenderer.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML/SfmlRenderer.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML
+
+build src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML/SimpleMenu.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Draw/SFML/SimpleMenu.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML/SimpleMenu.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML
+
+build src/CMakeFiles/DungeonGame_lib.dir/Draw/Tracker.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Draw/Tracker.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/Draw/Tracker.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/Draw
 
 build src/CMakeFiles/DungeonGame_lib.dir/Entities/Player/Player.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Entities/Player/Player.cpp || cmake_object_order_depends_target_DungeonGame_lib
   DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/Entities/Player/Player.cpp.o.d
@@ -607,8 +677,8 @@ build src/CMakeFiles/DungeonGame_lib.dir/Game/State/SettingsState.cpp.o: CXX_COM
   OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/Game/State
 
-build src/CMakeFiles/DungeonGame_lib.dir/Game/State/TerinateState.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Game/State/TerinateState.cpp || cmake_object_order_depends_target_DungeonGame_lib
-  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/Game/State/TerinateState.cpp.o.d
+build src/CMakeFiles/DungeonGame_lib.dir/Game/State/TerminateState.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Game/State/TerminateState.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/Game/State/TerminateState.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
   OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
@@ -628,12 +698,26 @@ build src/CMakeFiles/DungeonGame_lib.dir/Handlers/PlayerHandler/PlayerHandler.cp
   OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/Handlers/PlayerHandler
 
+build src/CMakeFiles/DungeonGame_lib.dir/Input/Base/InputClass.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Input/Base/InputClass.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/Input/Base/InputClass.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/Input/Base
+
 build src/CMakeFiles/DungeonGame_lib.dir/Input/File/FileInput.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Input/File/FileInput.cpp || cmake_object_order_depends_target_DungeonGame_lib
   DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/Input/File/FileInput.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
   OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/Input/File
+
+build src/CMakeFiles/DungeonGame_lib.dir/Input/SFML/SfmlInput.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/Input/SFML/SfmlInput.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/Input/SFML/SfmlInput.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/home/shard/CLionProjects/DungeonGame/src
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/Input/SFML
 
 build src/CMakeFiles/DungeonGame_lib.dir/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/CLionProjects/DungeonGame/src/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp || cmake_object_order_depends_target_DungeonGame_lib
   DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o.d
@@ -699,7 +783,7 @@ build src/CMakeFiles/DungeonGame_lib.dir/main.cpp.o: CXX_COMPILER__DungeonGame_l
 #############################################
 # Link the static library src/libDungeonGame_lib.a
 
-build src/libDungeonGame_lib.a: CXX_STATIC_LIBRARY_LINKER__DungeonGame_lib_Debug src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/ChangeFieldSize.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/ChangeGameDifficulty.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/CreateSession.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/MovePlayer.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/RestartSession.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/ResumeGame.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/System/GameOptions.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/System/OpenHoldMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/System/OpenMainMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/System/OpenPlayMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/System/TerminateProgram.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Entities/Player/Player.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/Factory/EventFactory.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/MovementEvents/Door.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/MovementEvents/Key.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/MovementEvents/RandomMine.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/NegativeEvents/Spikes.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/PositiveEvents/Potion.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/PositiveEvents/ShieldKit.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/PositiveEvents/Star.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/Engine/GameEngine.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/HoldState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/LoseState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/MainMenuState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/PlayMenuState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/PlayingState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/SettingsState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/TerinateState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/WinState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Handlers/PlayerHandler/PlayerHandler.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Input/File/FileInput.cpp.o src/CMakeFiles/DungeonGame_lib.dir/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o src/CMakeFiles/DungeonGame_lib.dir/MapGenerator/RandomLevelGen/Generator.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Movement/Direction.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Profiler/Timer.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Random/Random.cpp.o src/CMakeFiles/DungeonGame_lib.dir/World/Cell.cpp.o src/CMakeFiles/DungeonGame_lib.dir/World/GameField.cpp.o src/CMakeFiles/DungeonGame_lib.dir/main.cpp.o
+build src/libDungeonGame_lib.a: CXX_STATIC_LIBRARY_LINKER__DungeonGame_lib_Debug src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/ChangeFieldSize.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/ChangeGameDifficulty.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/CreateSession.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/MovePlayer.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/RestartSession.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/Gameplay/ResumeGame.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/System/GameOptions.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/System/OpenHoldMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/System/OpenMainMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/System/OpenPlayMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Command/System/TerminateProgram.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML/Button.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML/SfmlRenderer.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Draw/SFML/SimpleMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Draw/Tracker.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Entities/Player/Player.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/Factory/EventFactory.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/MovementEvents/Door.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/MovementEvents/Key.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/MovementEvents/RandomMine.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/NegativeEvents/Spikes.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/PositiveEvents/Potion.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/PositiveEvents/ShieldKit.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Event/PositiveEvents/Star.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/Engine/GameEngine.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/HoldState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/LoseState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/MainMenuState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/PlayMenuState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/PlayingState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/SettingsState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/TerminateState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Game/State/WinState.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Handlers/PlayerHandler/PlayerHandler.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Input/Base/InputClass.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Input/File/FileInput.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Input/SFML/SfmlInput.cpp.o src/CMakeFiles/DungeonGame_lib.dir/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o src/CMakeFiles/DungeonGame_lib.dir/MapGenerator/RandomLevelGen/Generator.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Movement/Direction.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Profiler/Timer.cpp.o src/CMakeFiles/DungeonGame_lib.dir/Random/Random.cpp.o src/CMakeFiles/DungeonGame_lib.dir/World/Cell.cpp.o src/CMakeFiles/DungeonGame_lib.dir/World/GameField.cpp.o src/CMakeFiles/DungeonGame_lib.dir/main.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
   POST_BUILD = :

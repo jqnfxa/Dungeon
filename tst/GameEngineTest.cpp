@@ -3,7 +3,7 @@
 #include "Input/File/FileInput.hpp"
 #include "Game/State/MainMenuState.hpp"
 #include "Game/State/PlayingState.hpp"
-#include "Game/State/TerinateState.hpp"
+#include "Game/State/TerminateState.hpp"
 
 TEST(GameEngineSuite, TestSimpleInteracting)
 {
@@ -20,8 +20,8 @@ TEST(GameEngineSuite, TestSimpleInteracting)
 
 	do
 	{
-		input.update();
-		game.update(input.command());
+		input.update(game.state());
+		game.update(input.last_command());
 
 		if (dynamic_cast<PlayingState *>(game.state()))
 		{

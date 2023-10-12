@@ -11,6 +11,7 @@ class PlayerHandler : public MapObserver, public EntityHandler {
   Player *player_;
   Position position_;
   MapSubject *map_observer_;
+
   std::vector<int64_t> keys_;
  public:
   ~PlayerHandler() override;

@@ -1,5 +1,5 @@
 #include "GameEngine.hpp"
-#include "Game/State/TerinateState.hpp"
+#include "Game/State/TerminateState.hpp"
 #include "Game/State/SettingsState.hpp"
 #include "Game/State/MainMenuState.hpp"
 #include "Game/State/PlayMenuState.hpp"
@@ -22,6 +22,7 @@ GameEngine::~GameEngine()
 	release_resources();
 	delete current_state_;
 	current_state_ = nullptr;
+	observers_.clear();
 }
 
 void GameEngine::release_resources()
@@ -39,6 +40,8 @@ void GameEngine::release_resources()
 
 void GameEngine::update(Command *command)
 {
+	notify_observers();
+
 	if (command == nullptr)
 	{
 		return;
@@ -55,6 +58,8 @@ void GameEngine::update(Command *command)
 	{
 		std::cerr << "Command not handled: " << command->to_str() << '\n';
 	}
+
+	notify_observers();
 }
 
 void GameEngine::set_state(GameState *state)
@@ -65,7 +70,7 @@ void GameEngine::set_state(GameState *state)
 	// notify subscribers
 }
 
-GameState *GameEngine::state()
+GameState *GameEngine::state() const
 {
 	return current_state_;
 }
@@ -150,7 +155,41 @@ PlayerHandler *GameEngine::player() const
 {
 	return handler_;
 }
+
 GameField *GameEngine::field() const
 {
 	return field_;
+}
+
+void GameEngine::add_observer(GameObserver *observer)
+{
+	if (observer == nullptr)
+	{
+		return;
+	}
+
+	observers_.push_back(observer);
+}
+
+void GameEngine::remove_observer(GameObserver *observer)
+{
+	if (observer == nullptr)
+	{
+		return;
+	}
+
+	auto it = std::find(observers_.begin(), observers_.end(), observer);
+
+	if (it != observers_.end())
+	{
+		observers_.erase(it);
+	}
+}
+
+void GameEngine::notify_observers()
+{
+	for (auto &observer : observers_)
+	{
+		observer->update(*this);
+	}
 }
