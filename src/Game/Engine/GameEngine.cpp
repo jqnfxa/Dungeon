@@ -5,11 +5,15 @@
 #include "Game/State/PlayMenuState.hpp"
 #include "Game/State/PlayingState.hpp"
 #include "Game/State/HoldState.hpp"
+#include "Game/State/WinState.hpp"
+#include "Game/State/LoseState.hpp"
+#include "Game/State/SizeChangeState.hpp"
+#include "Game/State/DifficultyChangeState.hpp"
 #include <iostream>
 
 GameEngine::GameEngine() : current_state_(new MainMenuState),
 						   size_(SMALL),
-						   difficulty_(EASY),
+						   difficulty_(HARD),
 						   field_(nullptr),
 						   field_initial_(nullptr),
 						   player_initial_(nullptr),
@@ -52,11 +56,20 @@ void GameEngine::update(Command *command)
 	// handle command execution
 	if (result)
 	{
-		std::cerr << "Successfully executed: " << command->to_str() << '\n';
+		// std::cerr << "Successfully executed: " << command->to_str() << '\n';
 	}
 	else
 	{
 		std::cerr << "Command not handled: " << command->to_str() << '\n';
+	}
+
+	if (is_win())
+	{
+		set_state(new WinState);
+	}
+	if (is_lose())
+	{
+		set_state(new LoseState);
 	}
 
 	notify_observers();
@@ -88,11 +101,13 @@ void GameEngine::exit_game()
 
 void GameEngine::open_settings()
 {
+	release_resources();
 	set_state(new SettingsState);
 }
 
 void GameEngine::open_main_menu()
 {
+	release_resources();
 	set_state(new MainMenuState);
 }
 
@@ -104,6 +119,16 @@ void GameEngine::open_play_menu()
 void GameEngine::open_hold_menu()
 {
 	set_state(new HoldState);
+}
+
+void GameEngine::open_size_options()
+{
+	set_state(new SizeChangeState);
+}
+
+void GameEngine::open_difficulty_options()
+{
+	set_state(new DifficultyChangeState);
 }
 
 void GameEngine::create_session()
@@ -132,11 +157,13 @@ void GameEngine::restart_session()
 void GameEngine::resize_filed(MAP_SIZE new_size)
 {
 	size_ = new_size;
+	open_settings();
 }
 
 void GameEngine::change_difficulty(DIFFICULTY new_difficulty)
 {
 	difficulty_ = new_difficulty;
+	open_settings();
 }
 
 void GameEngine::resume()
@@ -192,4 +219,22 @@ void GameEngine::notify_observers()
 	{
 		observer->update(*this);
 	}
+}
+
+bool GameEngine::is_win()
+{
+	if (player() == nullptr || field_ == nullptr)
+	{
+		return false;
+	}
+	return player()->get_health() > 0 && player()->get_position() == field_->exit_point();
+}
+
+bool GameEngine::is_lose()
+{
+	if (player() == nullptr)
+	{
+		return false;
+	}
+	return player()->get_health() == 0;
 }

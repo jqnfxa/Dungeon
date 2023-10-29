@@ -3,6 +3,15 @@
 #include <SFML/Window/Event.hpp>
 #include "Command/Interface/Interface.hpp"
 
+enum MENU_TEXTURE
+{
+	MAIN_MENU,
+	PLAY_MENU,
+	SETTINGS_MENU,
+	WIN,
+	LOSE
+};
+
 class RenderSlave {
  public:
   virtual ~RenderSlave() = default;

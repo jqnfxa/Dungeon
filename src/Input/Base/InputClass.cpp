@@ -1,5 +1,7 @@
 #include "InputClass.hpp"
 #include "Command/Include/Defines.hpp"
+#include "Command/System/OpenSizeOptions.hpp"
+#include "Command/System/OpenDifficultyOptions.hpp"
 #include <sstream>
 #include <fstream>
 
@@ -50,6 +52,8 @@ void Input::init_available_commands()
 	available_commands_["options"] = {false, new GameOptions};
 	available_commands_["resume"] = {false, new ResumeGame};
 	available_commands_["terminate"] = {false, new TerminateProgram};
+	available_commands_["size_state"] = {false, new OpenSizeOptions};
+	available_commands_["difficulty_state"] = {false, new OpenDifficultyOptions};
 
 	// difficulty
 	available_commands_["size_small"] = {false, new ChangeFieldSize(SMALL)};

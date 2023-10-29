@@ -1,79 +1,62 @@
 #include <iostream>
+#include <vector>
+#include <string>
 #include "SfmlRenderer.hpp"
 #include "SimpleMenu.hpp"
 #include "Game/State/MainMenuState.hpp"
 #include "Game/State/PlayMenuState.hpp"
 #include "Game/State/TerminateState.hpp"
+#include "Game/State/PlayingState.hpp"
+#include "Game/State/HoldState.hpp"
+#include "Game/State/WinState.hpp"
+#include "Game/State/LoseState.hpp"
+#include "Game/State/SettingsState.hpp"
+#include "Game/State/SizeChangeState.hpp"
+#include "Game/State/DifficultyChangeState.hpp"
+#include "GameRenderer.hpp"
+
+static constexpr int32_t screen_width_ = 1366;
+static constexpr int32_t screen_height_ = 768;
+static const std::string root = "../../resources/";
+
+static const std::vector<std::string> paths = {
+	"menus/main_theme.png",
+	"menus/play_menu.png",
+	"menus/settings.png",
+	"menus/win.png",
+	"menus/lose.png"
+};
 
 SfmlRenderer::SfmlRenderer(SfmlInput &input) : window_(sf::VideoMode(screen_width_, screen_height_), "DungeonGame"), input_(input)
 {
+	// load textures
 	load_data();
+	// set up icon
 	window_.setIcon(icon_.getSize().x, icon_.getSize().y, icon_.getPixelsPtr());
-
-	slaves_.push_back(new SimpleMenu(window_,
-									 font_,
-									 {{"Play", input.command("play")},
-									  {"Settings", input.command("options")},
-									  {"Exit", input.command("terminate")}},
-									  textures_[0]));
-
-	slaves_.push_back(new SimpleMenu(window_,
-									 font_,
-									 {{"New Game", input.command("create")},
-									  {"Load", nullptr},
-									  {"Back", input.command("menu")}},
-									  textures_[1]));
-
-	suitable_for_state_[std::type_index(typeid(MainMenuState))] = 0;
-	suitable_for_state_[std::type_index(typeid(PlayMenuState))] = 1;
-}
-
-sf::Image SfmlRenderer::load_image(const std::string &path)
-{
-	sf::Image image;
-	if (!image.loadFromFile(path))
-	{
-		destroy();
-		throw std::invalid_argument(std::string("Could not find: ") + path);
-	}
-	return image;
-}
-
-sf::Font SfmlRenderer::load_font(const std::string &path)
-{
-	sf::Font font;
-	if (!font.loadFromFile(path))
-	{
-		destroy();
-		throw std::invalid_argument(std::string("Could not find: ") + path);
-	}
-	return font;
-}
-
-sf::Texture SfmlRenderer::load_texture(const std::string &path)
-{
-	sf::Texture texture;
-	if (!texture.loadFromFile(path))
-	{
-		destroy();
-		throw std::invalid_argument(std::string("Could not find: ") + path);
-	}
-	return texture;
+	// init sub renders
+	init_slaves();
+	// init input
+	input.init_renderer(this);
 }
 
 void SfmlRenderer::load_data()
 {
-	// TODO load all data related to textures/fonts/etc
-	//icon_ = std::move(load_image(icon_path));
-	//font_ = std::move(load_font(font_path));
-	font_.loadFromFile(std::string("../../resources/") + "arial.ttf");
+	if (!icon_.loadFromFile(root + "icon.png") || !font_.loadFromFile(root + "arial.ttf"))
+	{
+		destroy();
+		throw std::invalid_argument(std::string("Failed to initialize resources"));
+	}
 
-	textures_.push_back(sf::Texture());
-	textures_.push_back(sf::Texture());
-	textures_[0].loadFromFile(std::string("../../resources/") + "assets/main_theme.png");
-	textures_[1].loadFromFile(std::string("../../resources/") + "assets/play_menu.png");
-	//textures_.push_back(std::move(load_texture(main_menu_path)));
-	//textures_.push_back(std::move(load_texture(play_menu_path)));
+	textures_.resize(paths.size());
+
+	for (size_t i = 0; i < paths.size(); ++i)
+	{
+		if (!textures_[i].loadFromFile(root + paths[i]))
+		{
+			destroy();
+			throw std::invalid_argument(std::string("Failed to initialize menu textures"));
+		}
+	}
 }
 
 SfmlRenderer::~SfmlRenderer()
@@ -120,7 +103,6 @@ Command *SfmlRenderer::retrieve_input(GameState *game_state)
 		switch (event.type)
 		{
 			case sf::Event::Closed:
-				destroy();
 				return input_.command("terminate");
 			case sf::Event::KeyPressed:
 				return slaves_[suitable_for_state_[state]]->on_key_press(event);
@@ -146,4 +128,73 @@ void SfmlRenderer::destroy()
 	}
 	slaves_.clear();
 	suitable_for_state_.clear();
+}
+
+void SfmlRenderer::init_slaves()
+{
+	slaves_.push_back(new SimpleMenu(window_,
+									 font_,
+									 {{"Play", input_.command("play")},
+									  {"Settings", input_.command("options")},
+									  {"Exit", input_.command("terminate")}},
+									 textures_[MENU_TEXTURE::MAIN_MENU]));
+
+	slaves_.push_back(new SimpleMenu(window_,
+									 font_,
+									 {{"New Game", input_.command("create")},
+									  {"Back", input_.command("menu")}},
+									 textures_[MENU_TEXTURE::PLAY_MENU]));
+
+	slaves_.push_back(new SimpleMenu(window_,
+									 font_,
+									 {{"Resume", input_.command("resume")},
+									  {"Back", input_.command("menu")}},
+									 textures_[MENU_TEXTURE::MAIN_MENU]));
+
+	slaves_.push_back(new SimpleMenu(window_,
+									 font_,
+									 {{"Restart", input_.command("restart")},
+									  {"Menu", input_.command("menu")}},
+									 textures_[MENU_TEXTURE::LOSE]));
+
+	slaves_.push_back(new SimpleMenu(window_,
+									 font_,
+									 {{"Next level", input_.command("create")},
+									  {"Menu", input_.command("menu")}},
+									 textures_[MENU_TEXTURE::WIN]));
+
+	slaves_.push_back(new GameRenderer(window_,
+									   font_,
+									   input_));
+
+	slaves_.push_back(new SimpleMenu(window_,
+									 font_,
+									 {{"Size", input_.command("size_state")},
+									  {"Difficulty", input_.command("difficulty_state")},
+									  {"Back", input_.command("menu")}},
+									 textures_[MENU_TEXTURE::SETTINGS_MENU]));
+
+	slaves_.push_back(new SimpleMenu(window_,
+									 font_,
+									 {{"Small", input_.command("size_small")},
+									  {"Medium", input_.command("size_medium")},
+									  {"Big", input_.command("size_big")}},
+									 textures_[MENU_TEXTURE::SETTINGS_MENU]));
+
+	slaves_.push_back(new SimpleMenu(window_,
+									 font_,
+									 {{"Easy", input_.command("difficulty_easy")},
+									  {"Medium", input_.command("difficulty_average")},
+									  {"Hard", input_.command("difficulty_hard")}},
+									 textures_[MENU_TEXTURE::SETTINGS_MENU]));
+
+	suitable_for_state_[std::type_index(typeid(MainMenuState))] = 0;
+	suitable_for_state_[std::type_index(typeid(PlayMenuState))] = 1;
+	suitable_for_state_[std::type_index(typeid(HoldState))] = 2;
+	suitable_for_state_[std::type_index(typeid(LoseState))] = 3;
+	suitable_for_state_[std::type_index(typeid(WinState))] = 4;
+	suitable_for_state_[std::type_index(typeid(PlayingState))] = 5;
+	suitable_for_state_[std::type_index(typeid(SettingsState))] = 6;
+	suitable_for_state_[std::type_index(typeid(SizeChangeState))] = 7;
+	suitable_for_state_[std::type_index(typeid(DifficultyChangeState))] = 8;
 }

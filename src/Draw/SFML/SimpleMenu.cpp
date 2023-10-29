@@ -3,7 +3,8 @@
 SimpleMenu::SimpleMenu(sf::RenderWindow &parent,
 					   sf::Font &font,
 					   const std::vector<std::pair<std::string, Command *>> &buttons,
-					   sf::Texture &texture) :
+					   sf::Texture &texture,
+					   ALIGNMENT alignment) :
 					   parent_(parent),
 					   selected_(0),
 					   font_(font)
@@ -20,13 +21,15 @@ SimpleMenu::SimpleMenu(sf::RenderWindow &parent,
 	auto button_y = static_cast<int32_t>(possible_size.y / (buttons.size() + coefficient * (buttons.size() - 1)));
 	auto step = static_cast<int32_t>(button_y * coefficient);
 	auto button_x = std::min(button_y * 4, static_cast<int32_t>(possible_size.x));
-
 	sf::Vector2f button_size(static_cast<float>(button_x), static_cast<float>(button_y));
+	const float alignment_x = alignment == CENTER ?
+		window_size.x / 2 - button_size.x / 2 :
+		(alignment == LEFT_SIDE ? 0 : window_size.x - button_size.x);
 
 	for (size_t i = 0, dest = 0; i < buttons.size(); ++i, dest += step + button_y)
 	{
 		Button button(buttons[i].first, buttons[i].second, font_, button_size);
-		button.setPosition(window_size.x / 2 - button_size.x / 2, dest);
+		button.setPosition(alignment_x, dest);
 		buttons_.push_back(std::move(button));
 	}
 

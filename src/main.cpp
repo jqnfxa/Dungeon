@@ -8,11 +8,9 @@ int main()
 {
 	try
 	{
-
 		GameEngine engine;
 		SfmlInput input("/home/shard/.dungeon/settings.cfg");
 		SfmlRenderer renderer(input);
-		input.init_renderer(&renderer);
 
 		Tracker tracker(&renderer);
 		engine.add_observer(&tracker);

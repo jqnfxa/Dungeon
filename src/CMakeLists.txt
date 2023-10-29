@@ -41,4 +41,18 @@ add_library(${BINARY}_lib STATIC ${SOURCES}
         Draw/SFML/Button.cpp
         Draw/SFML/Button.hpp
         Draw/SFML/RenderSlave.hpp
+        Draw/SFML/GameRenderer.cpp
+        Draw/SFML/GameRenderer.hpp
+        Draw/SFML/PlayerStatistic.cpp
+        Draw/SFML/PlayerStatistic.hpp
+        Draw/SFML/Settings.cpp
+        Draw/SFML/Settings.hpp
+        Game/State/SizeChangeState.cpp
+        Game/State/SizeChangeState.hpp
+        Game/State/DifficultyChangeState.cpp
+        Game/State/DifficultyChangeState.hpp
+        Command/System/OpenSizeOptions.cpp
+        Command/System/OpenSizeOptions.hpp
+        Command/System/OpenDifficultyOptions.cpp
+        Command/System/OpenDifficultyOptions.hpp
 )

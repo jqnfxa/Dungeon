@@ -4,6 +4,13 @@
 #include "Button.hpp"
 #include "RenderSlave.hpp"
 
+enum ALIGNMENT
+{
+	LEFT_SIDE,
+	CENTER,
+	RIGHT_SIDE
+};
+
 class SimpleMenu : public RenderSlave {
   int32_t selected_ = 0;
   sf::RenderWindow &parent_;
@@ -11,7 +18,7 @@ class SimpleMenu : public RenderSlave {
   sf::RectangleShape background_;
   std::vector<Button> buttons_;
  public:
-  SimpleMenu(sf::RenderWindow &parent, sf::Font &font, const std::vector<std::pair<std::string, Command *>> &buttons, sf::Texture &texture);
+  SimpleMenu(sf::RenderWindow &parent, sf::Font &font, const std::vector<std::pair<std::string, Command *>> &buttons, sf::Texture &texture, ALIGNMENT alignment = CENTER);
   Command *on_key_press(const sf::Event &event) override;
   void on_exit() override;
   void render(const GameEngine &game) override;

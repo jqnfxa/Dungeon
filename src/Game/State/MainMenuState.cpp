@@ -7,7 +7,7 @@ bool MainMenuState::handle_command(GameEngine &game, Command *command)
 {
 	bool is_handled = false;
 
-	if (typeid(*command) == typeid(TerminateProgram)
+	if (typeid(*command) == typeid(TerminateProgram) || typeid(*command) == typeid(GameOptions)
 		|| typeid(*command) == typeid(OpenPlayMenu))
 	{
 		command->execute(game);

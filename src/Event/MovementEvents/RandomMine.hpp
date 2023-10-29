@@ -6,8 +6,8 @@
 
 class RandomMine : public EventInterface {
  private:
-  const int32_t power_lower_bound_ = 1;
-  const int32_t power_upper_bound_ = 3;
+  const int32_t power_lower_bound_ = 0;
+  const int32_t power_upper_bound_ = 2;
   const bool temporary_state_ = false;
  public:
   void trigger(EntityHandler *handler) const override;

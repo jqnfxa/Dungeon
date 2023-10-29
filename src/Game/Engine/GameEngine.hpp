@@ -22,6 +22,8 @@ class GameEngine {
   std::vector<GameObserver *> observers_;
 
   void release_resources();
+  bool is_win();
+  bool is_lose();
  public:
   GameEngine();
   ~GameEngine();
@@ -38,6 +40,8 @@ class GameEngine {
   void open_main_menu();
   void open_play_menu();
   void open_hold_menu();
+  void open_size_options();
+  void open_difficulty_options();
   void create_session();
   void restart_session();
   void resize_filed(MAP_SIZE new_size);
