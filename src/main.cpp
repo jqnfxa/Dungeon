@@ -1,37 +1,29 @@
 #include <iostream>
-#include "Game/State/TerminateState.hpp"
-#include "Input/SFML/SfmlInput.hpp"
-#include "Draw/Tracker.hpp"
-#include "Draw/SFML/SfmlRenderer.hpp"
+#include <SFML/Graphics.hpp>
 
+#include "Input/Implementation/SFML/SFMLInput.hpp"
+#include "Engine/GameEngine.hpp"
+#include "Render/SFML/SFMLRender.hpp"
+#include "Render/Tracker.hpp"
+#include "Command/Defines.hpp"
+
+// TODO: add try/catch
 int main()
 {
-	try
-	{
-		GameEngine engine;
-		SfmlInput input("/home/shard/.dungeon/settings.cfg");
-		SfmlRenderer renderer(input);
+	sf::RenderWindow window(sf::VideoMode(1366, 768), "Dungeon");
+	SFMLInput input("/home/shard/.dungeon/settings.cfg", window);
+	SFMLRender render(window);
+	Tracker tracker(&render);
+	GameEngine engine;
 
-		Tracker tracker(&renderer);
-		engine.add_observer(&tracker);
+	input.add_subscriber(&engine);
+	engine.add_observer(&tracker);
 
-		while (typeid(*engine.state()) != typeid(TerminateState))
-		{
-			input.update(engine.state());
-			engine.update(input.last_command());
-		}
-	}
-	catch (const std::invalid_argument &ia)
+	while (engine.is_running())
 	{
-		std::cerr << ia.what() << std::endl;
+		input.update();
+		engine.update();
 	}
-	catch (const std::logic_error &le)
-	{
-		std::cerr << le.what() << std::endl;
-	}
-	catch (const std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+
 	return 0;
 }
