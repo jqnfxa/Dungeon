@@ -5,7 +5,7 @@
 #include <unordered_map>
 
 enum EVENT_TYPE {
-	SPIKES, POTION, SHIELD_KIT, STAR, RANDOM_MINE, KEY, DOOR
+	SPIKES, POTION, SHIELD_KIT, STAR, RANDOM_MINE
 };
 
 class EventFactory {

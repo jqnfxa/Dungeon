@@ -1,6 +1,5 @@
 #include "GameField.hpp"
 #include "Movement/Direction.hpp"
-#include "Event/MovementEvents/Door.hpp"
 #include <ostream>
 #include <queue>
 #include <map>
@@ -158,19 +157,6 @@ const Position &GameField::exit_point() const
 {
 	return finish_;
 }
-std::ostream &GameField::print(std::ostream &out) const
-{
-	for (int32_t i = 0; i < dimensions_.x(); i++)
-	{
-		for (int32_t j = 0; j < dimensions_.y(); j++)
-		{
-			out << get_cell({i, j});
-			out << std::flush;
-		}
-		out << std::endl;
-	}
-	return out << std::endl;
-}
 bool GameField::is_adjacent_to_same_type(const Position &point) const
 {
 	return std::ranges::any_of(Direction::instance().get_all_possible_moves().begin(), Direction::instance().get_all_possible_moves().end(), [&](const Position &direction)
@@ -189,26 +175,7 @@ bool GameField::is_adjacent_to_same_type(const Position &point) const
 }
 bool GameField::can_move(EntityHandler *caller, const Position &point) const
 {
-	if (!can_move(point))
-	{
-		return false;
-	}
-
-	auto &cell = get_cell(point);
-
-	if (caller != nullptr && cell.has_door())
-	{
-		auto *handler = dynamic_cast<PlayerHandler *>(caller);
-
-		if (handler != nullptr)
-		{
-			cell.get_active_event()->trigger(caller);
-
-			return dynamic_cast<const Door *>(cell.get_active_event())->is_open();
-		}
-	}
-
-	return true;
+	return can_move(point);
 }
 void GameField::swap_values(GameField &&other)
 {

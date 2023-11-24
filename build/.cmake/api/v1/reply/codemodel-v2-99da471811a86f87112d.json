@@ -177,14 +177,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "DungeonGame_lib::@145eef247bfb46b6828c",
-					"jsonFile" : "target-DungeonGame_lib-Release-2edd5f2171af0bb5a740.json",
+					"jsonFile" : "target-DungeonGame_lib-Release-57fa94293d7846c31313.json",
 					"name" : "DungeonGame_lib",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "DungeonGame_run::@145eef247bfb46b6828c",
-					"jsonFile" : "target-DungeonGame_run-Release-e0a7cc24423448664c32.json",
+					"jsonFile" : "target-DungeonGame_run-Release-6d60d868a6324519d320.json",
 					"name" : "DungeonGame_run",
 					"projectIndex" : 0
 				},

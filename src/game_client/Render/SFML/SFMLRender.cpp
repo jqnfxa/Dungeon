@@ -7,6 +7,7 @@
 
 const std::string &root = "/home/shard/.dungeon/fonts/";
 const std::string &root_textures = "/home/shard/.dungeon/resources/entities/";
+const std::string &root_menues = "/home/shard/.dungeon/resources/menues/";
 
 static const std::vector<std::string> paths = {
 	"hero.png",
@@ -14,8 +15,6 @@ static const std::vector<std::string> paths = {
 	"finish.png",
 	"floor_tile.png",
 	"wall.png",
-	"door.png",
-	"key.png",
 	"random_mine.png",
 	"spikes.png",
 	"potion.png",
@@ -35,8 +34,6 @@ std::unordered_map<Cell::TYPE, sf::Texture> cell_textures_ = {
 };
 
 std::unordered_map<std::type_index, sf::Texture> event_textures_ = {
-	{typeid(Door), {}},
-	{typeid(Key), {}},
 	{typeid(RandomMine), {}},
 	{typeid(Spikes), {}},
 	{typeid(Potion), {}},
@@ -44,7 +41,20 @@ std::unordered_map<std::type_index, sf::Texture> event_textures_ = {
 	{typeid(Star), {}}
 };
 
-SFMLRender::SFMLRender(sf::RenderWindow &window) : window_(window), font_()
+std::unordered_map<std::type_index, sf::Texture> menu_textures_ = {
+	{typeid(MainMenuState), {}},
+	{typeid(PlayMenu), {}},
+	{typeid(Options), {}},
+	{typeid(HoldState), {}},
+	{typeid(Win), {}},
+	{typeid(Lose), {}}
+};
+
+SFMLRender::SFMLRender(sf::RenderWindow &window)
+	: window_(window)
+	, font_()
+	, tile_size_(sf::Vector2f(window_.getSize().x * 1.0 / window_width, window_.getSize().y * 1.0 / window_height))
+	, stats()
 {
 	if (!font_.loadFromFile(root + "arial.ttf"))
 	{
@@ -52,7 +62,7 @@ SFMLRender::SFMLRender(sf::RenderWindow &window) : window_(window), font_()
 	}
 
 	load_textures();
-	tile_size_ = sf::Vector2f(window_.getSize().x * 1.0 / 11, window_.getSize().y * 1.0 / 7);
+	stats.initialize(window.getSize(), sf::Vector2u(window.getSize().x / 5, window.getSize().y / 5), font_);
 }
 
 sf::Texture SFMLRender::load_texture(const std::string &full_path)
@@ -69,21 +79,25 @@ sf::Texture SFMLRender::load_texture(const std::string &full_path)
 
 void SFMLRender::load_textures()
 {
-	entity_textures_[typeid(PlayerHandler)].loadFromFile(root_textures + "hero.png");
+	entity_textures_.at(typeid(PlayerHandler)).loadFromFile(root_textures + "hero.png");
 
-	// TODO: remove key/door/lock
 	cell_textures_.at(Cell::TYPE::ENTRANCE).loadFromFile(root_textures + "start.png");
 	cell_textures_.at(Cell::TYPE::EXIT).loadFromFile(root_textures + "finish.png");
 	cell_textures_.at(Cell::TYPE::MOVABLE).loadFromFile(root_textures + "floor_tile.png");
 	cell_textures_.at(Cell::TYPE::WALL).loadFromFile(root_textures + "wall.png");
 
-	event_textures_[typeid(Door)].loadFromFile(root_textures + "door.png");
-	event_textures_[typeid(Key)].loadFromFile(root_textures + "key.png");
-	event_textures_[typeid(RandomMine)].loadFromFile(root_textures + "random_mine.png");
-	event_textures_[typeid(Spikes)].loadFromFile(root_textures + "spikes.png");
-	event_textures_[typeid(Potion)].loadFromFile(root_textures + "potion.png");
-	event_textures_[typeid(ShieldKit)].loadFromFile(root_textures + "shield.png");
-	event_textures_[typeid(Star)].loadFromFile(root_textures + "star.png");
+	event_textures_.at(typeid(RandomMine)).loadFromFile(root_textures + "random_mine.png");
+	event_textures_.at(typeid(Spikes)).loadFromFile(root_textures + "spikes.png");
+	event_textures_.at(typeid(Potion)).loadFromFile(root_textures + "potion.png");
+	event_textures_.at(typeid(ShieldKit)).loadFromFile(root_textures + "shield.png");
+	event_textures_.at(typeid(Star)).loadFromFile(root_textures + "star.png");
+
+	menu_textures_.at(typeid(MainMenuState)).loadFromFile(root_menues + "main_menu.png");
+	menu_textures_.at(typeid(PlayMenu)).loadFromFile(root_menues + "play_menu.png");
+	menu_textures_.at(typeid(Options)).loadFromFile(root_menues + "settings.png");
+	menu_textures_.at(typeid(HoldState)).loadFromFile(root_menues + "trash.png");
+	menu_textures_.at(typeid(Win)).loadFromFile(root_menues + "win.png");
+	menu_textures_.at(typeid(Lose)).loadFromFile(root_menues + "lose.png");
 }
 
 void SFMLRender::render_game(const GameEngine &game)
@@ -94,7 +108,7 @@ void SFMLRender::render_game(const GameEngine &game)
 
 	std::vector<std::queue<sf::Sprite>> field_;
 
-	const sf::Vector2<int32_t> max_tiles(11, 7);
+	const sf::Vector2<int32_t> max_tiles(window_width, window_height);
 	const sf::Vector2<int32_t> mapping_offset(player->get_position().y() - max_tiles.x / 2, player->get_position().x() - max_tiles.y / 2);
 
 	const int32_t max_cells = max_tiles.x * max_tiles.y;
@@ -123,7 +137,7 @@ void SFMLRender::render_game(const GameEngine &game)
 		}
 	}
 
-	//statistic_.update(*player);
+	render_player_statistics(*player);
 
 	window_.display();
 }
@@ -158,37 +172,74 @@ void SFMLRender::add_sprite(std::queue<sf::Sprite> &tile, const sf::Vector2f &po
 	tile.emplace(sprite);
 }
 
+void SFMLRender::render_background(IState *game_state)
+{
+	if (game_state == nullptr)
+	{
+		return;
+	}
+
+	sf::RectangleShape background;
+
+	background.setSize(sf::Vector2f(window_.getSize().x, window_.getSize().y));
+	background.setTexture(&menu_textures_.at(typeid(*game_state)));
+	background.setPosition(0, 0);
+
+	window_.draw(background);
+}
+
+void SFMLRender::render_player_statistics(PlayerHandler &player)
+{
+	stats.update(player);
+	window_.draw(stats);
+}
+
 void SFMLRender::render_menu(const GameEngine &engine)
 {
 	window_.clear();
 
+	// render background
+	render_background(engine.get_state());
+
 	sf::Vector2u available_space = window_.getSize();
 	auto &labels = engine.get_state()->menu()->labels_;
-	sf::FloatRect bounds;
 
 	for (size_t i = 0; i < labels.size(); ++i)
 	{
-		sf::Text text(labels[i].label, font_);
+		sf::Text label(labels[i].label, font_);
+		label.setOutlineColor(sf::Color::Black);
+		label.setOutlineThickness(3);
+		label.setCharacterSize(available_space.x / labels.size() / 3);
+
+		auto label_bounds = label.getLocalBounds();
 
 		if(i == engine.get_state()->menu()->selected_)
 		{
-			text.setFillColor(sf::Color::Red);
+			label.setFillColor(sf::Color::Red);
 		}
 
-		bounds = text.getLocalBounds();
-
-		for (size_t j = 0; j < labels[i].selected; ++j)
+		if (labels[i].options.size() > 1)
 		{
-			sf::Text text1("*", font_);
-			text1.setOrigin(bounds.left + bounds.width / 2.0f + (j + 2) * (text1.getLocalBounds().width), bounds.top + bounds.height / 2.0f);
-			text1.setPosition(sf::Vector2f(available_space.x / 2.0f, (i + 1) * (available_space.y / (labels.size() + 1))));
-			window_.draw(text1);
+			for (size_t j = 0; j < labels[i].options.size(); ++j)
+			{
+				sf::Text choosen("*", font_);
+
+				if (j == labels[i].selected)
+				{
+					choosen.setFillColor(sf::Color::Red);
+				}
+
+				auto cur_bound = choosen.getLocalBounds();
+				sf::Vector2f position(available_space.x / 2.0f + label_bounds.width + (j + 1) * cur_bound.width, (i + 1) * (available_space.y / (labels.size() + 1)) - cur_bound.height);
+
+				choosen.setPosition(position);
+				window_.draw(choosen);
+			}
 		}
 
-		text.setOrigin(bounds.left + bounds.width / 2.0f, bounds.top + bounds.height / 2.0f);
-		text.setPosition(sf::Vector2f(available_space.x / 2.0f, (i + 1)*(available_space.y / (labels.size() + 1))));
-
-		window_.draw(text);
+		label.setOrigin(label_bounds.left + label_bounds.width / 2.0f, label_bounds.top + label_bounds.height / 2.0f);
+		label.setPosition(sf::Vector2f(available_space.x / 2.0f, (i + 1) * (available_space.y / (labels.size() + 1))));
+		window_.draw(label);
 	}
 
 	window_.display();

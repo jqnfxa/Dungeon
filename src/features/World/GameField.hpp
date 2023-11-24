@@ -51,6 +51,5 @@ class GameField : public MapSubject {
   [[nodiscard]] bool is_on_map(const Position &point) const;
   [[nodiscard]] bool is_adjacent_to_same_type(const Position &point) const;
 
-  std::ostream &print(std::ostream &out) const;
   ~GameField() override;
 };

@@ -104,12 +104,3 @@ void PlayerHandler::remove_observer(MapSubject *observer)
 {
 	map_observer_ = nullptr;
 }
-const std::vector<int64_t> &PlayerHandler::keys() const
-{
-	return keys_;
-}
-void PlayerHandler::add_key(int64_t key)
-{
-	keys_.push_back(key);
-}
-

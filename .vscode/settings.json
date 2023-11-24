@@ -68,6 +68,8 @@
         "regex": "cpp",
         "bitset": "cpp",
         "buffer": "cpp",
-        "socket": "cpp"
+        "socket": "cpp",
+        "*.x": "cpp",
+        "charconv": "cpp"
     }
 }

@@ -13,18 +13,6 @@
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/Door.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/Door.cpp",
-  "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/Door.cpp",
-  "output": "src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/Door.cpp.o"
-},
-{
-  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/Key.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/Key.cpp",
-  "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/Key.cpp",
-  "output": "src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/Key.cpp.o"
-},
-{
-  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
   "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/RandomMine.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/RandomMine.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/RandomMine.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/RandomMine.cpp.o"
@@ -247,6 +235,12 @@
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/PlayerStatistics.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/PlayerStatistics.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/PlayerStatistics.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/PlayerStatistics.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
   "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/SFMLRender.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/SFMLRender.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/SFMLRender.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/SFMLRender.cpp.o"
@@ -322,18 +316,6 @@
   "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/Factory/EventFactory.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/Factory/EventFactory.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/Factory/EventFactory.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Event/Factory/EventFactory.cpp.o"
-},
-{
-  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/MovementEvents/Door.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/Door.cpp",
-  "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/Door.cpp",
-  "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Event/MovementEvents/Door.cpp.o"
-},
-{
-  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/MovementEvents/Key.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/Key.cpp",
-  "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/Key.cpp",
-  "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Event/MovementEvents/Key.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
@@ -556,6 +538,12 @@
   "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/MenuEntry.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/MenuEntry.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/MenuEntry.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/MenuEntry.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/PlayerStatistics.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/PlayerStatistics.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/PlayerStatistics.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/PlayerStatistics.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",

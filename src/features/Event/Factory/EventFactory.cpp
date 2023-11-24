@@ -4,7 +4,6 @@
 #include "../PositiveEvents/Star.hpp"
 #include "../NegativeEvents/Spikes.hpp"
 #include "../MovementEvents/RandomMine.hpp"
-#include "../MovementEvents/Door.hpp"
 
 EventFactory::EventFactory()
 {
@@ -15,8 +14,6 @@ EventFactory::EventFactory()
 	events[POTION] = new Potion;
 	events[SHIELD_KIT] = new ShieldKit;
 	events[STAR] = new Star;
-	events[KEY] = new Key;
-	events[DOOR] = new Door(*dynamic_cast<Key *>(events[KEY]));
 }
 
 EventFactory::~EventFactory()

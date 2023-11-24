@@ -54,8 +54,6 @@ GameField *Generator::generate()
 
 	place_events(movable_cells, std::max(0, num_negative_ - 4), EVENT_GROUP::NEGATIVE, map);
 
-	add_additional_keys(movable_cells, map);
-
 	return map;
 }
 
@@ -181,18 +179,9 @@ Position Generator::pick_random_empty_cell(std::set<Position> &movable_cells, st
 std::vector<Position> Generator::invariant_route(std::set<Position> &movable_cells, GameField *map)
 {
 	auto route = map->find_route(nullptr, map->start_point(), map->exit_point());
-	auto key_point = Random::instance().pick_from_range(route.begin() + 1, route.end() - 3);
 
-	map->get_cell(route[route.size() - 2]).add_event(EventFactory::instance().create(EVENT_TYPE::DOOR));
-	movable_cells.erase(route[route.size() - 2]);
-
-	map->get_cell(key_point).add_event(EventFactory::instance().create(EVENT_TYPE::KEY));
-	movable_cells.erase(key_point);
-
+	route.pop_back();
 	route.erase(route.begin());
-	route.pop_back();
-	route.pop_back();
-	route.erase(std::find(route.begin(), route.end(), key_point));
 
 	return route;
 }
@@ -231,32 +220,6 @@ void Generator::calculate_percentages(int32_t total_movable_cells)
 	num_positive_ = static_cast<int32_t>(total_events * 1.0 * num_positive_ / 100.0);
 	num_negative_ = static_cast<int32_t>(total_events * 1.0 * num_negative_ / 100.0);
 	num_other_ = static_cast<int32_t>(total_events * 1.0 * num_other_ / 100.0);
-}
-
-void Generator::add_additional_keys(std::set<Position> &movable_cells, GameField *map)
-{
-	if (!movable_cells.empty() && map->dimensions().x() * map->dimensions().y() > 200)
-	{
-		auto new_keys = map->dimensions().x() * map->dimensions().y() / 150;
-
-		std::vector<Position> movable(movable_cells.begin(), movable_cells.end());
-		std::vector<EventInterface *> keys_;
-
-		while (new_keys--)
-		{
-			keys_.push_back(EventFactory::instance().create(EVENT_TYPE::KEY));
-		}
-		std::shuffle(movable.begin(), movable.end(), std::mt19937(std::random_device()()));
-
-		for (size_t j = 0, i = 0; j < movable.size() && i < keys_.size(); ++j)
-		{
-			if (!map->is_adjacent_to_same_type(movable[j]))
-			{
-				map->get_cell(movable[j]).add_event(keys_[i++]);
-				movable_cells.erase(movable[j]);
-			}
-		}
-	}
 }
 
 void Generator::place_events(std::set<Position> &movable_cells, int32_t count, EVENT_GROUP group, GameField *map)
