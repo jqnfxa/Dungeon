@@ -1,53 +1,42 @@
 #include "SFMLRender.hpp"
 #include "State/Defines.hpp"
 #include "Event/Defines.hpp"
+#include "Path.hpp"
 
 #include <iostream>
 #include <typeindex>
 
-const std::string &root = "/home/shard/.dungeon/fonts/";
-const std::string &root_textures = "/home/shard/.dungeon/resources/entities/";
-const std::string &root_menues = "/home/shard/.dungeon/resources/menues/";
 
-static const std::vector<std::string> paths = {
-	"hero.png",
-	"start.png",
-	"finish.png",
-	"floor_tile.png",
-	"wall.png",
-	"random_mine.png",
-	"spikes.png",
-	"potion.png",
-	"shield.png",
-	"star.png"
+const std::string &fonts_path = game_dir + "/fonts/";
+const std::string &textures_path = game_dir + "/resources/entities/";
+const std::string &menues_path = game_dir + "/resources/menues/";
+
+std::unordered_map<std::type_index, std::pair<sf::Texture, std::string>> entity_textures_ = {
+	{typeid(PlayerHandler), {{}, textures_path + "hero.png"}}
 };
 
-std::unordered_map<std::type_index, sf::Texture> entity_textures_ = {
-	{typeid(PlayerHandler), {}}
+std::unordered_map<Cell::TYPE, std::pair<sf::Texture, std::string>> cell_textures_ = {
+	{Cell::TYPE::ENTRANCE, {{}, textures_path + "start.png"}},
+	{Cell::TYPE::EXIT, {{}, textures_path + "finish.png"}},
+	{Cell::TYPE::MOVABLE, {{}, textures_path + "floor_tile.png"}},
+	{Cell::TYPE::WALL, {{}, textures_path + "wall.png"}}
 };
 
-std::unordered_map<Cell::TYPE, sf::Texture> cell_textures_ = {
-	{Cell::TYPE::ENTRANCE, {}},
-	{Cell::TYPE::EXIT, {}},
-	{Cell::TYPE::MOVABLE, {}},
-	{Cell::TYPE::WALL, {}}
+std::unordered_map<std::type_index, std::pair<sf::Texture, std::string>> event_textures_ = {
+	{typeid(RandomMine), {{}, textures_path + "random_mine.png"}},
+	{typeid(Spikes), {{}, textures_path + "spikes.png"}},
+	{typeid(Potion), {{}, textures_path + "potion.png"}},
+	{typeid(ShieldKit), {{}, textures_path + "shield.png"}},
+	{typeid(Star), {{}, textures_path + "star.png"}}
 };
 
-std::unordered_map<std::type_index, sf::Texture> event_textures_ = {
-	{typeid(RandomMine), {}},
-	{typeid(Spikes), {}},
-	{typeid(Potion), {}},
-	{typeid(ShieldKit), {}},
-	{typeid(Star), {}}
-};
-
-std::unordered_map<std::type_index, sf::Texture> menu_textures_ = {
-	{typeid(MainMenuState), {}},
-	{typeid(PlayMenu), {}},
-	{typeid(Options), {}},
-	{typeid(HoldState), {}},
-	{typeid(Win), {}},
-	{typeid(Lose), {}}
+std::unordered_map<std::type_index, std::pair<sf::Texture, std::string>> menu_textures_ = {
+	{typeid(MainMenuState), {{}, menues_path + "main_menu.png"}},
+	{typeid(PlayMenu), {{}, menues_path + "play_menu.png"}},
+	{typeid(Options), {{}, menues_path + "settings.png"}},
+	{typeid(HoldState), {{}, menues_path + "trash.png"}},
+	{typeid(Win), {{}, menues_path + "win.png"}},
+	{typeid(Lose), {{}, menues_path + "lose.png"}}
 };
 
 SFMLRender::SFMLRender(sf::RenderWindow &window)
@@ -56,7 +45,7 @@ SFMLRender::SFMLRender(sf::RenderWindow &window)
 	, tile_size_(sf::Vector2f(window_.getSize().x * 1.0 / window_width, window_.getSize().y * 1.0 / window_height))
 	, stats()
 {
-	if (!font_.loadFromFile(root + "arial.ttf"))
+	if (!font_.loadFromFile(fonts_path + "arial.ttf"))
 	{
 		throw std::runtime_error("Failed to load font");
 	}
@@ -79,25 +68,22 @@ sf::Texture SFMLRender::load_texture(const std::string &full_path)
 
 void SFMLRender::load_textures()
 {
-	entity_textures_.at(typeid(PlayerHandler)).loadFromFile(root_textures + "hero.png");
+	entity_textures_.at(typeid(PlayerHandler)).first.loadFromFile(entity_textures_.at(typeid(PlayerHandler)).second);
 
-	cell_textures_.at(Cell::TYPE::ENTRANCE).loadFromFile(root_textures + "start.png");
-	cell_textures_.at(Cell::TYPE::EXIT).loadFromFile(root_textures + "finish.png");
-	cell_textures_.at(Cell::TYPE::MOVABLE).loadFromFile(root_textures + "floor_tile.png");
-	cell_textures_.at(Cell::TYPE::WALL).loadFromFile(root_textures + "wall.png");
+	for (auto &[key, value] : cell_textures_)
+	{
+		value.first.loadFromFile(value.second);
+	}
 
-	event_textures_.at(typeid(RandomMine)).loadFromFile(root_textures + "random_mine.png");
-	event_textures_.at(typeid(Spikes)).loadFromFile(root_textures + "spikes.png");
-	event_textures_.at(typeid(Potion)).loadFromFile(root_textures + "potion.png");
-	event_textures_.at(typeid(ShieldKit)).loadFromFile(root_textures + "shield.png");
-	event_textures_.at(typeid(Star)).loadFromFile(root_textures + "star.png");
+	for (auto &[key, value] : event_textures_)
+	{
+		value.first.loadFromFile(value.second);
+	}
 
-	menu_textures_.at(typeid(MainMenuState)).loadFromFile(root_menues + "main_menu.png");
-	menu_textures_.at(typeid(PlayMenu)).loadFromFile(root_menues + "play_menu.png");
-	menu_textures_.at(typeid(Options)).loadFromFile(root_menues + "settings.png");
-	menu_textures_.at(typeid(HoldState)).loadFromFile(root_menues + "trash.png");
-	menu_textures_.at(typeid(Win)).loadFromFile(root_menues + "win.png");
-	menu_textures_.at(typeid(Lose)).loadFromFile(root_menues + "lose.png");
+	for (auto &[key, value] : menu_textures_)
+	{
+		value.first.loadFromFile(value.second);
+	}
 }
 
 void SFMLRender::render_game(const GameEngine &game)
@@ -123,7 +109,7 @@ void SFMLRender::render_game(const GameEngine &game)
 
 			if (field_.size() == (max_cells + 1) / 2)
 			{
-				add_sprite(field_.back(), sf::Vector2f(x, y), entity_textures_.at(typeid(*player)));
+				add_sprite(field_.back(), sf::Vector2f(x, y), entity_textures_.at(typeid(*player)).first);
 			}
 		}
 	}
@@ -148,14 +134,14 @@ std::queue<sf::Sprite> SFMLRender::build_tile(const Cell &cell, const sf::Vector
 
 	if (cell.is_entrance() || cell.is_exit())
 	{
-		add_sprite(tile, position, cell_textures_.at(Cell::TYPE::MOVABLE));
+		add_sprite(tile, position, cell_textures_.at(Cell::TYPE::MOVABLE).first);
 	}
 
-	add_sprite(tile, position, cell_textures_.at(cell.type()));
+	add_sprite(tile, position, cell_textures_.at(cell.type()).first);
 
 	if (const auto *active_event = cell.get_active_event(); active_event != nullptr)
 	{
-		add_sprite(tile, position, event_textures_.at(typeid(*active_event)));
+		add_sprite(tile, position, event_textures_.at(typeid(*active_event)).first);
 	}
 
 	return tile;
@@ -182,7 +168,7 @@ void SFMLRender::render_background(IState *game_state)
 	sf::RectangleShape background;
 
 	background.setSize(sf::Vector2f(window_.getSize().x, window_.getSize().y));
-	background.setTexture(&menu_textures_.at(typeid(*game_state)));
+	background.setTexture(&menu_textures_.at(typeid(*game_state)).first);
 	background.setPosition(0, 0);
 
 	window_.draw(background);
@@ -247,7 +233,7 @@ void SFMLRender::render_menu(const GameEngine &engine)
 
 void SFMLRender::render(const GameEngine &engine)
 {
-	if (!engine.is_running())
+	if (!engine.is_running() || engine.get_state() == nullptr)
 	{
 		return;
 	}

@@ -70,6 +70,9 @@
         "buffer": "cpp",
         "socket": "cpp",
         "*.x": "cpp",
-        "charconv": "cpp"
+        "charconv": "cpp",
+        "executor": "cpp",
+        "expected": "cpp",
+        "*.md": "cpp"
     }
 }

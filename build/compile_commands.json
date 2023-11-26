@@ -1,691 +1,703 @@
 [
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Entities/Player/Player.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Entities/Player/Player.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Entities/Player/Player.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Entities/Player/Player.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Entities/Player/Player.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Entities/Player/Player.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/Factory/EventFactory.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/Factory/EventFactory.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/Factory/EventFactory.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/Factory/EventFactory.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/Factory/EventFactory.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Event/Factory/EventFactory.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/RandomMine.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/RandomMine.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/RandomMine.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/RandomMine.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/RandomMine.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/RandomMine.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/NegativeEvents/Spikes.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/NegativeEvents/Spikes.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/NegativeEvents/Spikes.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/NegativeEvents/Spikes.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/NegativeEvents/Spikes.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Event/NegativeEvents/Spikes.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/Potion.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Potion.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/Potion.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Potion.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Potion.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/Potion.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/ShieldKit.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/ShieldKit.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/ShieldKit.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/ShieldKit.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/ShieldKit.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/ShieldKit.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/Star.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Star.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/Star.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Star.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Star.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/Star.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Handlers/PlayerHandler/PlayerHandler.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Handlers/PlayerHandler/PlayerHandler.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Handlers/PlayerHandler/PlayerHandler.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Handlers/PlayerHandler/PlayerHandler.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Handlers/PlayerHandler/PlayerHandler.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Handlers/PlayerHandler/PlayerHandler.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/MapGenerator/RandomLevelGen/Generator.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/RandomLevelGen/Generator.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/MapGenerator/RandomLevelGen/Generator.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/RandomLevelGen/Generator.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/RandomLevelGen/Generator.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/MapGenerator/RandomLevelGen/Generator.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Movement/Direction.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Movement/Direction.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Movement/Direction.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Movement/Direction.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Movement/Direction.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Movement/Direction.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Profiler/Timer.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Profiler/Timer.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Profiler/Timer.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Profiler/Timer.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Profiler/Timer.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Profiler/Timer.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Random/Random.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Random/Random.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/Random/Random.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Random/Random.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Random/Random.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/Random/Random.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/World/Cell.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/World/Cell.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/World/Cell.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/World/Cell.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/World/Cell.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/World/Cell.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/World/GameField.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/World/GameField.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/features/World/GameField.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/World/GameField.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/World/GameField.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/features/World/GameField.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ChangeDifficulty.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeDifficulty.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ChangeDifficulty.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeDifficulty.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeDifficulty.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ChangeDifficulty.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ChangeSize.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeSize.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ChangeSize.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeSize.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeSize.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ChangeSize.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/CreateSession.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/CreateSession.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/CreateSession.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/CreateSession.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/CreateSession.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/CreateSession.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/MovePlayer.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/MovePlayer.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/MovePlayer.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/MovePlayer.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/MovePlayer.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/MovePlayer.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/Pause.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/Pause.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/Pause.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/Pause.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/Pause.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/Pause.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/RestartSession.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/RestartSession.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/RestartSession.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/RestartSession.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/RestartSession.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/RestartSession.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ResumeGame.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ResumeGame.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ResumeGame.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ResumeGame.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ResumeGame.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ResumeGame.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollDown.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollDown.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollDown.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollDown.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollDown.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollDown.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollLeft.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollLeft.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollLeft.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollLeft.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollLeft.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollLeft.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollRight.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollRight.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollRight.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollRight.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollRight.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollRight.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollUp.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollUp.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollUp.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollUp.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollUp.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollUp.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/Select.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/Select.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/Select.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/Select.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/Select.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/Select.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenGameOptions.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenGameOptions.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenGameOptions.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenGameOptions.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenGameOptions.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenGameOptions.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenMainMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenMainMenu.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenMainMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenMainMenu.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenMainMenu.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenMainMenu.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenPlayMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenPlayMenu.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenPlayMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenPlayMenu.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenPlayMenu.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenPlayMenu.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToLose.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToLose.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToLose.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToWin.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToWin.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToWin.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToWin.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToWin.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToWin.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/Terminate.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/Terminate.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/Terminate.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/Terminate.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/Terminate.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/Terminate.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Engine/GameEngine.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Engine/GameEngine.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Engine/GameEngine.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Engine/GameEngine.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Engine/GameEngine.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Engine/GameEngine.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Base/InputModel.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Base/InputModel.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Base/InputModel.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Base/InputModel.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Base/InputModel.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Base/InputModel.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/File/File.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/File/File.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/File/File.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/File/File.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/File/File.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/File/File.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/SFML/SFMLInput.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/SFML/SFMLInput.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/SFML/SFMLInput.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/Menu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/Menu.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/Menu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/Menu.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/Menu.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/Menu.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/MenuEntry.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/MenuEntry.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/MenuEntry.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/MenuEntry.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/MenuEntry.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/MenuEntry.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/PlayerStatistics.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/PlayerStatistics.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Path.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Path.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Path.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Path.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/PlayerStatistics.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/PlayerStatistics.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/PlayerStatistics.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/PlayerStatistics.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/SFMLRender.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/SFMLRender.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/SFMLRender.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/SFMLRender.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/SFMLRender.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/SFMLRender.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/Tracker.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/Tracker.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/Tracker.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/Tracker.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Render/Tracker.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Render/Tracker.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Lose.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Lose.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Lose.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Lose.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Lose.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/State/Lose.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/MainMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/MainMenu.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/MainMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/MainMenu.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/MainMenu.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/State/MainMenu.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Options.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Options.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Options.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Options.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Options.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/State/Options.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Pause.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Pause.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Pause.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Pause.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Pause.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/State/Pause.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Play.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Play.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Play.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Play.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Play.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/State/Play.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/PlayMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/PlayMenu.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/PlayMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/PlayMenu.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/PlayMenu.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/State/PlayMenu.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Terminate.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Terminate.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Terminate.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Terminate.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Terminate.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/State/Terminate.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Win.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Win.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Win.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Win.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Win.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/State/Win.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/main.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/main.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/main.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/main.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/main.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/main.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Entities/Player/Player.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Entities/Player/Player.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Entities/Player/Player.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Entities/Player/Player.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Entities/Player/Player.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Entities/Player/Player.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/Factory/EventFactory.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/Factory/EventFactory.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/Factory/EventFactory.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/Factory/EventFactory.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/Factory/EventFactory.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Event/Factory/EventFactory.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/MovementEvents/RandomMine.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/RandomMine.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/MovementEvents/RandomMine.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/RandomMine.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/MovementEvents/RandomMine.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Event/MovementEvents/RandomMine.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/NegativeEvents/Spikes.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/NegativeEvents/Spikes.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/NegativeEvents/Spikes.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/NegativeEvents/Spikes.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/NegativeEvents/Spikes.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Event/NegativeEvents/Spikes.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/Potion.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Potion.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/Potion.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Potion.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Potion.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/Potion.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/ShieldKit.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/ShieldKit.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/ShieldKit.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/ShieldKit.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/ShieldKit.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/ShieldKit.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/Star.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Star.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/Star.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Star.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Event/PositiveEvents/Star.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/Star.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Handlers/PlayerHandler/PlayerHandler.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Handlers/PlayerHandler/PlayerHandler.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Handlers/PlayerHandler/PlayerHandler.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Handlers/PlayerHandler/PlayerHandler.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Handlers/PlayerHandler/PlayerHandler.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Handlers/PlayerHandler/PlayerHandler.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/MapGenerator/RandomLevelGen/Generator.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/RandomLevelGen/Generator.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/MapGenerator/RandomLevelGen/Generator.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/RandomLevelGen/Generator.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/MapGenerator/RandomLevelGen/Generator.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/MapGenerator/RandomLevelGen/Generator.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Movement/Direction.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Movement/Direction.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Movement/Direction.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Movement/Direction.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Movement/Direction.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Movement/Direction.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Profiler/Timer.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Profiler/Timer.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Profiler/Timer.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Profiler/Timer.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Profiler/Timer.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Profiler/Timer.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Random/Random.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Random/Random.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/Random/Random.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/Random/Random.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/Random/Random.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/Random/Random.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/World/Cell.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/World/Cell.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/World/Cell.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/World/Cell.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/World/Cell.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/World/Cell.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/World/GameField.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/World/GameField.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/features/World/GameField.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/features/World/GameField.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/features/World/GameField.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/features/World/GameField.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ChangeDifficulty.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeDifficulty.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ChangeDifficulty.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeDifficulty.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeDifficulty.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ChangeDifficulty.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ChangeSize.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeSize.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ChangeSize.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeSize.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ChangeSize.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ChangeSize.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/CreateSession.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/CreateSession.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/CreateSession.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/CreateSession.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/CreateSession.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/CreateSession.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/MovePlayer.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/MovePlayer.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/MovePlayer.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/MovePlayer.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/MovePlayer.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/MovePlayer.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/Pause.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/Pause.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/Pause.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/Pause.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/Pause.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/Pause.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/RestartSession.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/RestartSession.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/RestartSession.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/RestartSession.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/RestartSession.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/RestartSession.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ResumeGame.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ResumeGame.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ResumeGame.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ResumeGame.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Gameplay/ResumeGame.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ResumeGame.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollDown.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollDown.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollDown.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollDown.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollDown.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollDown.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollLeft.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollLeft.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollLeft.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollLeft.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollLeft.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollLeft.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollRight.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollRight.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollRight.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollRight.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollRight.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollRight.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollUp.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollUp.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollUp.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollUp.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/ScrollUp.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollUp.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/Select.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/Select.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/Select.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/Select.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/Menu/Select.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/Select.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenGameOptions.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenGameOptions.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenGameOptions.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenGameOptions.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenGameOptions.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenGameOptions.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenMainMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenMainMenu.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenMainMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenMainMenu.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenMainMenu.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenMainMenu.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenPlayMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenPlayMenu.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenPlayMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenPlayMenu.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/OpenPlayMenu.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenPlayMenu.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToLose.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToLose.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToLose.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToWin.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToWin.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToWin.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToWin.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToWin.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToWin.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/Terminate.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/Terminate.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/Terminate.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/Terminate.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/Terminate.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/Terminate.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Engine/GameEngine.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Engine/GameEngine.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Engine/GameEngine.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Engine/GameEngine.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Engine/GameEngine.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Engine/GameEngine.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Base/InputModel.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Base/InputModel.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Base/InputModel.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Base/InputModel.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Base/InputModel.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Base/InputModel.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/File/File.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/File/File.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/File/File.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/File/File.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/File/File.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/File/File.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/SFML/SFMLInput.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/SFML/SFMLInput.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/SFML/SFMLInput.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/Menu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/Menu.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/Menu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/Menu.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/Menu.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/Menu.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/MenuEntry.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/MenuEntry.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/MenuEntry.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/MenuEntry.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/MenuEntry.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/MenuEntry.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/PlayerStatistics.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/PlayerStatistics.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Path.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Path.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Path.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Path.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/PlayerStatistics.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/PlayerStatistics.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/PlayerStatistics.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/PlayerStatistics.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/SFMLRender.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/SFMLRender.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/SFMLRender.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/SFMLRender.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Render/SFML/SFMLRender.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/SFMLRender.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/Tracker.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/Tracker.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/Tracker.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Render/Tracker.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Render/Tracker.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/Tracker.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Lose.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Lose.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Lose.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Lose.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Lose.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Lose.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/MainMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/MainMenu.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/MainMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/MainMenu.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/MainMenu.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/State/MainMenu.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Options.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Options.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Options.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Options.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Options.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Options.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Pause.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Pause.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Pause.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Pause.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Pause.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Pause.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Play.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Play.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Play.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Play.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Play.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Play.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/PlayMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/PlayMenu.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/PlayMenu.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/PlayMenu.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/PlayMenu.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/State/PlayMenu.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Terminate.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Terminate.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Terminate.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Terminate.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Terminate.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Terminate.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Win.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Win.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Win.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/State/Win.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/State/Win.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Win.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -O3 -DNDEBUG -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/main.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/main.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/main.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/main.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/main.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/main.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/CellTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/CellTest.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/CellTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/CellTest.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/tst/CellTest.cpp",
   "output": "tst/CMakeFiles/DungeonGame_tst.dir/CellTest.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/EventFactoryTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/EventFactoryTest.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/EventFactoryTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/EventFactoryTest.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/tst/EventFactoryTest.cpp",
   "output": "tst/CMakeFiles/DungeonGame_tst.dir/EventFactoryTest.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/FileInputTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/FileInputTest.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/FileInputTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/FileInputTest.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/tst/FileInputTest.cpp",
   "output": "tst/CMakeFiles/DungeonGame_tst.dir/FileInputTest.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/GameEngineTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/GameEngineTest.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/GameEngineTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/GameEngineTest.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/tst/GameEngineTest.cpp",
   "output": "tst/CMakeFiles/DungeonGame_tst.dir/GameEngineTest.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/GameFieldTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/GameFieldTest.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/GameFieldTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/GameFieldTest.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/tst/GameFieldTest.cpp",
   "output": "tst/CMakeFiles/DungeonGame_tst.dir/GameFieldTest.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/PlayerHandlerTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/PlayerHandlerTest.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/PlayerHandlerTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/PlayerHandlerTest.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/tst/PlayerHandlerTest.cpp",
   "output": "tst/CMakeFiles/DungeonGame_tst.dir/PlayerHandlerTest.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/PlayerTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/PlayerTest.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/PlayerTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/PlayerTest.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/tst/PlayerTest.cpp",
   "output": "tst/CMakeFiles/DungeonGame_tst.dir/PlayerTest.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/RandomLevelGenTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/RandomLevelGenTest.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/RandomLevelGenTest.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/RandomLevelGenTest.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/tst/RandomLevelGenTest.cpp",
   "output": "tst/CMakeFiles/DungeonGame_tst.dir/RandomLevelGenTest.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/main.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/main.cpp",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=gnu++2b -o tst/CMakeFiles/DungeonGame_tst.dir/main.cpp.o -c /home/shard/VSCode/OOP/Dungeon/tst/main.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/tst/main.cpp",
   "output": "tst/CMakeFiles/DungeonGame_tst.dir/main.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -I/home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock/include -I/home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=c++2b -Wall -Wshadow -Wconversion -Wundef -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Winline -Wredundant-decls -Wchar-subscripts -o lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock/src/gmock-all.cc",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -I/home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock/include -I/home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=c++2b -Wall -Wshadow -Wconversion -Wundef -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Winline -Wredundant-decls -Wchar-subscripts -o lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock/src/gmock-all.cc",
   "file": "/home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock/src/gmock-all.cc",
   "output": "lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=c++2b -Wall -Wshadow -Wconversion -Wundef -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Winline -Wredundant-decls -Wchar-subscripts -o lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock/src/gmock_main.cc",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=c++2b -Wall -Wshadow -Wconversion -Wundef -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Winline -Wredundant-decls -Wchar-subscripts -o lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock/src/gmock_main.cc",
   "file": "/home/shard/VSCode/OOP/Dungeon/lib/googletest/googlemock/src/gmock_main.cc",
   "output": "lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -I/home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -I/home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=c++2b -Wall -Wshadow -Wconversion -Wundef -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Winline -Wredundant-decls -Wchar-subscripts -o lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/src/gtest-all.cc",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -I/home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -I/home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=c++2b -Wall -Wshadow -Wconversion -Wundef -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Winline -Wredundant-decls -Wchar-subscripts -o lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/src/gtest-all.cc",
   "file": "/home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/src/gtest-all.cc",
   "output": "lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
-  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -O3 -DNDEBUG -std=c++2b -Wall -Wshadow -Wconversion -Wundef -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Winline -Wredundant-decls -Wchar-subscripts -o lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/src/gtest_main.cc",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/include -isystem /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest -g -std=c++2b -Wall -Wshadow -Wconversion -Wundef -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Winline -Wredundant-decls -Wchar-subscripts -o lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/src/gtest_main.cc",
   "file": "/home/shard/VSCode/OOP/Dungeon/lib/googletest/googletest/src/gtest_main.cc",
   "output": "lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
 }

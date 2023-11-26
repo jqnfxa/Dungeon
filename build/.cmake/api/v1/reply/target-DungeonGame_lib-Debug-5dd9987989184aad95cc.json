@@ -53,7 +53,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -DNDEBUG -std=gnu++2b"
+					"fragment" : "-g -std=gnu++2b"
 				}
 			],
 			"includes" : 
@@ -117,10 +117,10 @@
 				116,
 				120,
 				122,
-				127,
+				124,
 				129,
 				131,
-				136,
+				133,
 				138,
 				140,
 				142,
@@ -128,7 +128,8 @@
 				146,
 				148,
 				150,
-				152
+				152,
+				154
 			]
 		}
 	],
@@ -179,9 +180,9 @@
 				112,
 				115,
 				119,
-				124,
 				126,
-				133
+				128,
+				135
 			]
 		},
 		{
@@ -241,11 +242,11 @@
 				121,
 				123,
 				125,
-				128,
+				127,
 				130,
 				132,
 				134,
-				135,
+				136,
 				137,
 				139,
 				141,
@@ -253,7 +254,8 @@
 				145,
 				147,
 				149,
-				151
+				151,
+				153
 			]
 		},
 		{
@@ -299,10 +301,10 @@
 				116,
 				120,
 				122,
-				127,
+				124,
 				129,
 				131,
-				136,
+				133,
 				138,
 				140,
 				142,
@@ -310,7 +312,8 @@
 				146,
 				148,
 				150,
-				152
+				152,
+				154
 			]
 		}
 	],
@@ -973,6 +976,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/game_client/MenuObject/MenuEntry.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/game_client/Path.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/game_client/Path.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{

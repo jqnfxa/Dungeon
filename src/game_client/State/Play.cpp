@@ -15,9 +15,7 @@ bool Play::handle_command(GameEngine &engine, ICommand *command)
 
 	bool is_handled = false;
 
-	if (typeid(*command) == typeid(MovePlayer) ||
-		typeid(*command) == typeid(Pause) ||
-		typeid(*command) == typeid(Terminate))
+	if (processable.contains(typeid(*command)))
 	{
 		command->execute(engine);
 		is_handled = true;

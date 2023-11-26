@@ -27,12 +27,7 @@ bool MainMenuState::handle_command(GameEngine &engine, ICommand *command)
 
 	bool is_handled = false;
 
-	if (typeid(*command) == typeid(OpenPlayMenu) ||
-		typeid(*command) == typeid(OpenGameOptions) ||
-		typeid(*command) == typeid(ScrollDown) ||
-		typeid(*command) == typeid(ScrollUp) ||
-		typeid(*command) == typeid(Select) ||
-		typeid(*command) == typeid(Terminate))
+	if (processable.contains(typeid(*command)))
 	{
 		command->execute(engine);
 		is_handled = true;

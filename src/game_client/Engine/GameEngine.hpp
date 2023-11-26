@@ -13,6 +13,7 @@
 #include "Input/InputObserver.hpp"
 #include "GameObserver.hpp"
 
+
 class GameEngine : public InputObserver
 {
 	IState * game_state_;
