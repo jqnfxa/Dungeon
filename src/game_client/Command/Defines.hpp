@@ -20,3 +20,7 @@
 #include "System/SwitchToLose.hpp"
 #include "System/SwitchToWin.hpp"
 #include "System/Terminate.hpp"
+#include "System/SetupLoggerBoth.hpp"
+#include "System/SetupLoggerConsole.hpp"
+#include "System/SetupLoggerFile.hpp"
+#include "System/SetupLoggerEmpty.hpp"

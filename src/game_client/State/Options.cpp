@@ -4,9 +4,15 @@
 
 Options::Options() : menu_()
 {
+	menu_.add_label("log type");
 	menu_.add_label("size");
 	menu_.add_label("difficulty");
 	menu_.add_label("menu");
+
+	menu_.add_item("log type", new SetupLoggerEmpty);
+	menu_.add_item("log type", new SetupLoggerConsole);
+	menu_.add_item("log type", new SetupLoggerFile);
+	menu_.add_item("log type", new SetupLoggerBoth);
 
 	menu_.add_item("size", new ChangeSize(MAP_SIZE::SMALL));
 	menu_.add_item("size", new ChangeSize(MAP_SIZE::MEDIUM));

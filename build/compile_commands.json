@@ -181,6 +181,30 @@
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerBoth.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerBoth.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerBoth.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerBoth.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerConsole.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerConsole.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerConsole.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerConsole.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerEmpty.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerEmpty.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerEmpty.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerEmpty.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerFile.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerFile.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerFile.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerFile.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
   "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToLose.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToLose.cpp.o"
@@ -220,6 +244,60 @@
   "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/SFML/SFMLInput.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/SFML/SFMLInput.cpp",
   "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/MessageBus.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/MessageBus.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/MessageBus.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/MessageBus.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/CommandHandledMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandHandledMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandHandledMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/CommandHandledMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/CommandUnhandledMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandUnhandledMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandUnhandledMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/CommandUnhandledMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/KeyPressedMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/KeyPressedMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/KeyPressedMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/KeyPressedMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/LoseMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/LoseMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/LoseMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/LoseMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/NewGameMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/NewGameMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/NewGameMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/NewGameMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/WinMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/WinMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/WinMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/WinMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers/ConsolePrinter.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/ConsolePrinter.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/ConsolePrinter.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers/ConsolePrinter.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers/FilePrinter.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/FilePrinter.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/FilePrinter.cpp",
+  "output": "src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers/FilePrinter.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
@@ -493,6 +571,30 @@
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerBoth.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerBoth.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerBoth.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerBoth.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerConsole.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerConsole.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerConsole.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerConsole.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerEmpty.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerEmpty.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerEmpty.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerEmpty.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerFile.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerFile.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerFile.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerFile.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
   "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToLose.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToLose.cpp.o"
@@ -532,6 +634,60 @@
   "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/SFML/SFMLInput.cpp",
   "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Input/Implementation/SFML/SFMLInput.cpp",
   "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/MessageBus.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/MessageBus.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/MessageBus.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/MessageBus.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/CommandHandledMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandHandledMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandHandledMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/CommandHandledMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/CommandUnhandledMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandUnhandledMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandUnhandledMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/CommandUnhandledMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/KeyPressedMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/KeyPressedMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/KeyPressedMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/KeyPressedMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/LoseMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/LoseMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/LoseMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/LoseMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/NewGameMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/NewGameMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/NewGameMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/NewGameMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/WinMessage.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/WinMessage.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/WinMessage.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/WinMessage.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers/ConsolePrinter.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/ConsolePrinter.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/ConsolePrinter.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers/ConsolePrinter.cpp.o"
+},
+{
+  "directory": "/home/shard/VSCode/OOP/Dungeon/build",
+  "command": "/usr/bin/clang++ -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features -g -std=gnu++2b -o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers/FilePrinter.cpp.o -c /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/FilePrinter.cpp",
+  "file": "/home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/FilePrinter.cpp",
+  "output": "src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers/FilePrinter.cpp.o"
 },
 {
   "directory": "/home/shard/VSCode/OOP/Dungeon/build",

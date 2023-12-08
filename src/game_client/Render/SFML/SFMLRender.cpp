@@ -34,7 +34,7 @@ std::unordered_map<std::type_index, std::pair<sf::Texture, std::string>> menu_te
 	{typeid(MainMenuState), {{}, menues_path + "main_menu.png"}},
 	{typeid(PlayMenu), {{}, menues_path + "play_menu.png"}},
 	{typeid(Options), {{}, menues_path + "settings.png"}},
-	{typeid(HoldState), {{}, menues_path + "trash.png"}},
+	{typeid(HoldState), {{}, menues_path + "pause_menu.jpg"}},
 	{typeid(Win), {{}, menues_path + "win.png"}},
 	{typeid(Lose), {{}, menues_path + "lose.png"}}
 };

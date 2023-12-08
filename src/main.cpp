@@ -7,16 +7,18 @@
 #include "Render/Tracker.hpp"
 #include "Command/Defines.hpp"
 #include "Path.hpp"
+#include "Logger/MessageBus.hpp"
 
 
 int main()
 {
 	try
 	{
-		GameEngine engine;
+		MessageBus logger;
+		GameEngine engine(logger);
 
 		sf::RenderWindow window(sf::VideoMode(1366, 768), "Dungeon");
-		SFMLInput input(game_dir + "/settings.cfg", window);
+		SFMLInput input(game_dir + "/settings.cfg", window, logger);
 		SFMLRender render(window);
 		Tracker tracker(&render);
 

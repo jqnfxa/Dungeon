@@ -12,6 +12,10 @@ class Options : public IState
 	Menu menu_;
 
 	const std::unordered_set<std::type_index> processable = {
+		typeid(SetupLoggerEmpty),
+		typeid(SetupLoggerConsole),
+		typeid(SetupLoggerFile),
+		typeid(SetupLoggerBoth),
 		typeid(ChangeSize),
 		typeid(ChangeDifficulty),
 		typeid(OpenMainMenu),

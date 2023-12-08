@@ -329,6 +329,34 @@ build src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenPlayMenu
   OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System
 
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerBoth.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerBoth.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerBoth.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerConsole.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerConsole.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerConsole.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerEmpty.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerEmpty.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerEmpty.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerFile.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerFile.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerFile.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System
+
 build src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToLose.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp || cmake_object_order_depends_target_DungeonGame_run
   DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToLose.cpp.o.d
   FLAGS = -g -std=gnu++2b
@@ -377,6 +405,69 @@ build src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/SFML/S
   INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
   OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/SFML
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/MessageBus.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/MessageBus.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/MessageBus.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/CommandHandledMessage.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandHandledMessage.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/CommandHandledMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/CommandUnhandledMessage.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandUnhandledMessage.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/CommandUnhandledMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/KeyPressedMessage.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/KeyPressedMessage.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/KeyPressedMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/LoseMessage.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/LoseMessage.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/LoseMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/NewGameMessage.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/NewGameMessage.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/NewGameMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/WinMessage.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/WinMessage.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/WinMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers/ConsolePrinter.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/ConsolePrinter.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers/ConsolePrinter.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers
+
+build src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers/FilePrinter.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/FilePrinter.cpp || cmake_object_order_depends_target_DungeonGame_run
+  DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers/FilePrinter.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers
 
 build src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/Menu.cpp.o: CXX_COMPILER__DungeonGame_run_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/Menu.cpp || cmake_object_order_depends_target_DungeonGame_run
   DEP_FILE = src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/Menu.cpp.o.d
@@ -491,7 +582,7 @@ build src/CMakeFiles/DungeonGame_run.dir/main.cpp.o: CXX_COMPILER__DungeonGame_r
 #############################################
 # Link the executable src/DungeonGame_run
 
-build src/DungeonGame_run: CXX_EXECUTABLE_LINKER__DungeonGame_run_Debug src/CMakeFiles/DungeonGame_run.dir/features/Entities/Player/Player.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/Factory/EventFactory.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/RandomMine.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/NegativeEvents/Spikes.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/Potion.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/ShieldKit.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/Star.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Handlers/PlayerHandler/PlayerHandler.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/MapGenerator/RandomLevelGen/Generator.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Movement/Direction.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Profiler/Timer.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Random/Random.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/World/Cell.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/World/GameField.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ChangeDifficulty.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ChangeSize.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/CreateSession.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/MovePlayer.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/Pause.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/RestartSession.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ResumeGame.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollDown.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollLeft.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollRight.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollUp.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/Select.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenGameOptions.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenMainMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenPlayMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToLose.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToWin.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/Terminate.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Engine/GameEngine.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Base/InputModel.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/File/File.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/Menu.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/MenuEntry.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Path.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/PlayerStatistics.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/SFMLRender.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/Tracker.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Lose.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/MainMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Options.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Pause.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Play.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/PlayMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Terminate.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Win.cpp.o src/CMakeFiles/DungeonGame_run.dir/main.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
+build src/DungeonGame_run: CXX_EXECUTABLE_LINKER__DungeonGame_run_Debug src/CMakeFiles/DungeonGame_run.dir/features/Entities/Player/Player.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/Factory/EventFactory.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/MovementEvents/RandomMine.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/NegativeEvents/Spikes.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/Potion.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/ShieldKit.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Event/PositiveEvents/Star.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Handlers/PlayerHandler/PlayerHandler.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/MapGenerator/RandomLevelGen/Generator.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Movement/Direction.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Profiler/Timer.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/Random/Random.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/World/Cell.cpp.o src/CMakeFiles/DungeonGame_run.dir/features/World/GameField.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ChangeDifficulty.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ChangeSize.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/CreateSession.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/MovePlayer.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/Pause.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/RestartSession.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Gameplay/ResumeGame.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollDown.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollLeft.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollRight.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/ScrollUp.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/Menu/Select.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenGameOptions.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenMainMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/OpenPlayMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerBoth.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerConsole.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerEmpty.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SetupLoggerFile.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToLose.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/SwitchToWin.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Command/System/Terminate.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Engine/GameEngine.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Base/InputModel.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/File/File.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/MessageBus.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/CommandHandledMessage.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/CommandUnhandledMessage.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/KeyPressedMessage.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/LoseMessage.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/NewGameMessage.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Messages/WinMessage.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers/ConsolePrinter.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Logger/Printers/FilePrinter.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/Menu.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/MenuObject/MenuEntry.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Path.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/PlayerStatistics.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/SFML/SFMLRender.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/Render/Tracker.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Lose.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/MainMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Options.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Pause.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Play.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/PlayMenu.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Terminate.cpp.o src/CMakeFiles/DungeonGame_run.dir/game_client/State/Win.cpp.o src/CMakeFiles/DungeonGame_run.dir/main.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   OBJECT_DIR = src/CMakeFiles/DungeonGame_run.dir
@@ -719,6 +810,34 @@ build src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenPlayMenu
   OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System
 
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerBoth.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerBoth.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerBoth.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerConsole.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerConsole.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerConsole.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerEmpty.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerEmpty.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerEmpty.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerFile.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SetupLoggerFile.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerFile.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System
+
 build src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToLose.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Command/System/SwitchToLose.cpp || cmake_object_order_depends_target_DungeonGame_lib
   DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToLose.cpp.o.d
   FLAGS = -g -std=gnu++2b
@@ -767,6 +886,69 @@ build src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/SFML/S
   INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
   OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
   OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/SFML
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/MessageBus.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/MessageBus.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/MessageBus.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/CommandHandledMessage.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandHandledMessage.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/CommandHandledMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/CommandUnhandledMessage.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/CommandUnhandledMessage.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/CommandUnhandledMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/KeyPressedMessage.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/KeyPressedMessage.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/KeyPressedMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/LoseMessage.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/LoseMessage.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/LoseMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/NewGameMessage.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/NewGameMessage.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/NewGameMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/WinMessage.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Messages/WinMessage.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/WinMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers/ConsolePrinter.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/ConsolePrinter.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers/ConsolePrinter.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers
+
+build src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers/FilePrinter.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/Logger/Printers/FilePrinter.cpp || cmake_object_order_depends_target_DungeonGame_lib
+  DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers/FilePrinter.cpp.o.d
+  FLAGS = -g -std=gnu++2b
+  INCLUDES = -I/home/shard/VSCode/OOP/Dungeon/src/game_client -I/home/shard/VSCode/OOP/Dungeon/src/features
+  OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers
 
 build src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/Menu.cpp.o: CXX_COMPILER__DungeonGame_lib_unscanned_Debug /home/shard/VSCode/OOP/Dungeon/src/game_client/MenuObject/Menu.cpp || cmake_object_order_depends_target_DungeonGame_lib
   DEP_FILE = src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/Menu.cpp.o.d
@@ -881,7 +1063,7 @@ build src/CMakeFiles/DungeonGame_lib.dir/main.cpp.o: CXX_COMPILER__DungeonGame_l
 #############################################
 # Link the static library src/libDungeonGame_lib.a
 
-build src/libDungeonGame_lib.a: CXX_STATIC_LIBRARY_LINKER__DungeonGame_lib_Debug src/CMakeFiles/DungeonGame_lib.dir/features/Entities/Player/Player.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/Factory/EventFactory.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/MovementEvents/RandomMine.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/NegativeEvents/Spikes.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/Potion.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/ShieldKit.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/Star.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Handlers/PlayerHandler/PlayerHandler.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/MapGenerator/RandomLevelGen/Generator.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Movement/Direction.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Profiler/Timer.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Random/Random.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/World/Cell.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/World/GameField.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ChangeDifficulty.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ChangeSize.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/CreateSession.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/MovePlayer.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/Pause.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/RestartSession.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ResumeGame.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollDown.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollLeft.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollRight.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollUp.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/Select.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenGameOptions.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenMainMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenPlayMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToLose.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToWin.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/Terminate.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Engine/GameEngine.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Base/InputModel.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/File/File.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/Menu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/MenuEntry.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Path.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/PlayerStatistics.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/SFMLRender.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/Tracker.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Lose.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/MainMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Options.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Pause.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Play.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/PlayMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Terminate.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Win.cpp.o src/CMakeFiles/DungeonGame_lib.dir/main.cpp.o
+build src/libDungeonGame_lib.a: CXX_STATIC_LIBRARY_LINKER__DungeonGame_lib_Debug src/CMakeFiles/DungeonGame_lib.dir/features/Entities/Player/Player.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/Factory/EventFactory.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/MovementEvents/RandomMine.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/NegativeEvents/Spikes.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/Potion.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/ShieldKit.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Event/PositiveEvents/Star.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Handlers/PlayerHandler/PlayerHandler.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/MapGenerator/DefaultLevels/DefaultLevelGenerator.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/MapGenerator/RandomLevelGen/Generator.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Movement/Direction.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Profiler/Timer.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/Random/Random.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/World/Cell.cpp.o src/CMakeFiles/DungeonGame_lib.dir/features/World/GameField.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ChangeDifficulty.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ChangeSize.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/CreateSession.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/MovePlayer.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/Pause.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/RestartSession.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Gameplay/ResumeGame.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollDown.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollLeft.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollRight.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/ScrollUp.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/Menu/Select.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenGameOptions.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenMainMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/OpenPlayMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerBoth.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerConsole.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerEmpty.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SetupLoggerFile.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToLose.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/SwitchToWin.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Command/System/Terminate.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Engine/GameEngine.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Base/InputModel.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/File/File.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Input/Implementation/SFML/SFMLInput.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/MessageBus.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/CommandHandledMessage.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/CommandUnhandledMessage.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/KeyPressedMessage.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/LoseMessage.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/NewGameMessage.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Messages/WinMessage.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers/ConsolePrinter.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Logger/Printers/FilePrinter.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/Menu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/MenuObject/MenuEntry.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Path.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/PlayerStatistics.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/SFML/SFMLRender.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/Render/Tracker.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Lose.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/MainMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Options.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Pause.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Play.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/PlayMenu.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Terminate.cpp.o src/CMakeFiles/DungeonGame_lib.dir/game_client/State/Win.cpp.o src/CMakeFiles/DungeonGame_lib.dir/main.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = src/CMakeFiles/DungeonGame_lib.dir
   POST_BUILD = :

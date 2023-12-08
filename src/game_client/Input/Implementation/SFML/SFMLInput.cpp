@@ -1,8 +1,12 @@
 #include "SFMLInput.hpp"
+#include "Logger/Messages/KeyPressedMessage.hpp"
+#include "Logger/MessageBus.hpp"
 
 
-SFMLInput::SFMLInput(const std::string & config_path, sf::RenderWindow &window)
-	: InputModel(config_path), window_(window) {}
+SFMLInput::SFMLInput(const std::string & config_path, sf::RenderWindow &window, MessageBus &logger)
+	: InputModel(config_path)
+	, window_(window)
+	, logger_(logger) {}
 
 void SFMLInput::update()
 {
@@ -18,6 +22,7 @@ void SFMLInput::update()
 				break;
 			case sf::Event::KeyPressed:
 				cmd = command(event.key.code);
+				logger_.send_message(new KeyPressedMessage(event.key.code));
 				break;
 			default:
 				// we don't process other commands

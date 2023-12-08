@@ -12,11 +12,12 @@
 #include "Command/ICommand.hpp"
 #include "Input/InputObserver.hpp"
 #include "GameObserver.hpp"
+#include "Logger/MessageBus.hpp"
 
 
 class GameEngine : public InputObserver
 {
-	IState * game_state_;
+	IState *game_state_;
 
 	MAP_SIZE size_;
 	DIFFICULTY difficulty_;
@@ -30,9 +31,11 @@ class GameEngine : public InputObserver
 	std::queue<ICommand *> command_queue_;
 	std::vector<GameObserver *> observers_;
 
+	MessageBus &logger_;
+
 	void clean_up();
 public:
-	GameEngine();
+	GameEngine(MessageBus &logger);
 	~GameEngine();
 
 	[[nodiscard]] bool is_running() const;
@@ -56,6 +59,11 @@ public:
 	void resume_game();
 	void change_difficulty(DIFFICULTY difficulty);
 	void change_size(MAP_SIZE size);
+
+	void setup_logger_empty();
+	void setup_logger_console();
+	void setup_logger_file();
+	void setup_logger_both();
 
 	void open_game_options();
 	void open_main_menu();
