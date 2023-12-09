@@ -39,6 +39,12 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+	catch (const std::ios_base::failure& e)
+	{
+		std::cout << "Caught an ios_base::failure.\n"
+			<< "Explanatory string: " << e.what() << '\n'
+			<< "Error code: " << e.code() << '\n';
+	}
 	catch(...)
 	{
 		std::cerr << "Unknown exception" << '\n';
